@@ -1,22 +1,19 @@
 <!DOCTYPE html>
-
 <html lang="zh-Hant">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
-
     <title>
         {{ title or "Article Archive" }}
     </title>
 
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@3.2.6/dist/purify.min.js"></script>
 
+    <style>
         * {
             box-sizing: border-box;
         }
@@ -318,6 +315,128 @@
             text-align: center;
         }
 
+        .chat-message-markdown {
+            white-space: normal;
+            overflow-wrap: anywhere;
+        }
+
+        .chat-message-markdown h1,
+        .chat-message-markdown h2,
+        .chat-message-markdown h3,
+        .chat-message-markdown h4,
+        .chat-message-markdown h5,
+        .chat-message-markdown h6 {
+            margin: 14px 0 8px;
+            line-height: 1.4;
+            color: #111827;
+        }
+
+        .chat-message-markdown h1 {
+            font-size: 1.4em;
+        }
+
+        .chat-message-markdown h2 {
+            font-size: 1.25em;
+        }
+
+        .chat-message-markdown h3 {
+            font-size: 1.1em;
+        }
+
+        .chat-message-markdown p {
+            margin: 8px 0;
+        }
+
+        .chat-message-markdown ul,
+        .chat-message-markdown ol {
+            padding-left: 24px;
+            margin: 8px 0;
+        }
+
+        .chat-message-markdown li {
+            margin: 4px 0;
+        }
+
+        .chat-message-markdown table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+
+        .chat-message-markdown th,
+        .chat-message-markdown td {
+            border: 1px solid #d1d5db;
+            padding: 8px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .chat-message-markdown th {
+            background: #f3f4f6;
+            font-weight: 600;
+        }
+
+        .chat-message-markdown pre {
+            overflow-x: auto;
+            padding: 10px;
+            background: #f3f4f6;
+            border-radius: 6px;
+            white-space: pre;
+        }
+
+        .chat-message-markdown code {
+            font-family:
+                Consolas,
+                "Courier New",
+                monospace;
+        }
+
+        .chat-message-markdown :not(pre) > code {
+            padding: 2px 4px;
+            background: #f3f4f6;
+            border-radius: 4px;
+        }
+
+        .chat-message-markdown blockquote {
+            margin: 10px 0;
+            padding-left: 12px;
+            border-left: 4px solid #d1d5db;
+            color: #6b7280;
+        }
+
+        .chat-message-markdown a {
+            color: #2563eb;
+            overflow-wrap: anywhere;
+        }
+
+        .chat-message-markdown img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .chat-message-markdown hr {
+            margin: 14px 0;
+            border: 0;
+            border-top: 1px solid #ddd;
+        }
+
+        .copy-answer-button {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 6px 10px;
+            border: 1px solid #d1d5db;
+            border-radius: 5px;
+            background: #e5e7eb;
+            color: #374151;
+            font-size: 12px;
+            cursor: pointer;
+        }
+
+        .copy-answer-button:hover {
+            background: #d1d5db;
+        }
+
         .chat-sources {
             margin-top: 10px;
             padding-top: 10px;
@@ -410,7 +529,6 @@
         }
 
         @media (max-width: 768px) {
-
             .container {
                 padding: 12px;
             }
@@ -461,6 +579,11 @@
                 max-width: 95%;
             }
 
+            .chat-message-markdown table {
+                display: block;
+                overflow-x: auto;
+            }
+
             .archive-chat-input-area {
                 flex-direction: column;
                 padding: 12px 15px;
@@ -474,9 +597,7 @@
                 padding: 10px 15px;
             }
         }
-
     </style>
-
 </head>
 
 <body>
@@ -720,6 +841,7 @@
             id="archive-chat-context"
             class="archive-chat-context"
         >
+
             {% if selected_version %}
 
                 目前問答模式：Latest Article +
@@ -730,6 +852,7 @@
                 目前問答模式：Latest Article
 
             {% endif %}
+
         </div>
 
         <div
@@ -779,13 +902,10 @@
 </div>
 
 <script>
-
 (function () {
-
     "use strict";
 
     const articleUrl = {{ url | tojson }};
-
     const selectedVersion = {{ selected_version | tojson }};
 
     const messagesElement =
@@ -817,11 +937,218 @@
         return;
     }
 
-    function setStatus(
-        text
+    function setStatus(text) {
+        statusElement.textContent = text;
+    }
+
+    function getPlainTextFromMarkdownElement(element) {
+        if (!element) {
+            return "";
+        }
+
+        function extractNode(node) {
+            if (node.nodeType === Node.TEXT_NODE) {
+                return node.nodeValue || "";
+            }
+
+            if (node.nodeType !== Node.ELEMENT_NODE) {
+                return "";
+            }
+
+            const tag = node.tagName.toLowerCase();
+
+            if (tag === "br") {
+                return "\n";
+            }
+
+            if (tag === "table") {
+                const rows = Array.from(
+                    node.querySelectorAll("tr")
+                );
+
+                return rows
+                    .map(function (row) {
+                        return Array.from(row.children)
+                            .map(function (cell) {
+                                return cell.innerText.trim();
+                            })
+                            .join(" | ");
+                    })
+                    .join("\n") + "\n\n";
+            }
+
+            if (tag === "pre") {
+                return (
+                    node.innerText.trimEnd() +
+                    "\n\n"
+                );
+            }
+
+            if (
+                /^h[1-6]$/.test(tag) ||
+                tag === "p" ||
+                tag === "blockquote"
+            ) {
+                return (
+                    Array.from(node.childNodes)
+                        .map(extractNode)
+                        .join("")
+                        .trim() +
+                    "\n\n"
+                );
+            }
+
+            if (tag === "li") {
+                const parent = node.parentElement;
+
+                let marker = "• ";
+
+                if (
+                    parent &&
+                    parent.tagName.toLowerCase() === "ol"
+                ) {
+                    const index =
+                        Array.from(
+                            parent.children
+                        ).indexOf(node) + 1;
+
+                    marker = index + ". ";
+                }
+
+                return (
+                    marker +
+                    Array.from(node.childNodes)
+                        .map(extractNode)
+                        .join("")
+                        .trim() +
+                    "\n"
+                );
+            }
+
+            if (
+                tag === "ul" ||
+                tag === "ol"
+            ) {
+                return (
+                    Array.from(node.childNodes)
+                        .map(extractNode)
+                        .join("") +
+                    "\n"
+                );
+            }
+
+            return Array.from(node.childNodes)
+                .map(extractNode)
+                .join("");
+        }
+
+        return extractNode(element)
+            .replace(/[ \t]+\n/g, "\n")
+            .replace(/\n{3,}/g, "\n\n")
+            .trim();
+    }
+
+    function copyTextFallback(text) {
+        const textarea =
+            document.createElement("textarea");
+
+        textarea.value = text;
+        textarea.setAttribute(
+            "readonly",
+            ""
+        );
+
+        textarea.style.position =
+            "fixed";
+        textarea.style.left = "-9999px";
+        textarea.style.top = "0";
+
+        document.body.appendChild(
+            textarea
+        );
+
+        textarea.select();
+
+        let success = false;
+
+        try {
+            success =
+                document.execCommand(
+                    "copy"
+                );
+        } catch (error) {
+            success = false;
+        }
+
+        document.body.removeChild(
+            textarea
+        );
+
+        return success;
+    }
+
+    async function copyAssistantAnswer(
+        button,
+        contentElement
     ) {
-        statusElement.textContent =
-            text;
+        const plainText =
+            getPlainTextFromMarkdownElement(
+                contentElement
+            );
+
+        if (!plainText) {
+            return;
+        }
+
+        const originalText =
+            button.textContent;
+
+        try {
+            if (
+                navigator.clipboard &&
+                typeof navigator.clipboard.writeText ===
+                    "function"
+            ) {
+                await navigator.clipboard.writeText(
+                    plainText
+                );
+            } else if (
+                !copyTextFallback(
+                    plainText
+                )
+            ) {
+                throw new Error(
+                    "Clipboard unavailable."
+                );
+            }
+
+            button.textContent =
+                "已複製";
+
+            setTimeout(
+                function () {
+                    button.textContent =
+                        originalText;
+                },
+                1500
+            );
+        } catch (error) {
+            console.error(
+                "Copy Answer Error:",
+                error
+            );
+
+            button.textContent =
+                "複製失敗";
+
+            setTimeout(
+                function () {
+                    button.textContent =
+                        originalText;
+                },
+                1500
+            );
+        }
     }
 
     function addMessage(
@@ -837,15 +1164,78 @@
         message.className =
             "chat-message " + type;
 
-        message.textContent =
-            text;
+        let contentElement =
+            null;
+
+        if (
+            type === "assistant" &&
+            window.marked &&
+            window.DOMPurify
+        ) {
+            contentElement =
+                document.createElement(
+                    "div"
+                );
+
+            contentElement.className =
+                "chat-message-markdown";
+
+            const renderedMarkdown =
+                window.marked.parse(
+                    text || ""
+                );
+
+            contentElement.innerHTML =
+                window.DOMPurify.sanitize(
+                    renderedMarkdown
+                );
+
+            message.appendChild(
+                contentElement
+            );
+
+            if (
+                text &&
+                text.trim()
+            ) {
+                const copyButton =
+                    document.createElement(
+                        "button"
+                    );
+
+                copyButton.type =
+                    "button";
+
+                copyButton.className =
+                    "copy-answer-button";
+
+                copyButton.textContent =
+                    "複製回答";
+
+                copyButton.addEventListener(
+                    "click",
+                    function () {
+                        copyAssistantAnswer(
+                            copyButton,
+                            contentElement
+                        );
+                    }
+                );
+
+                message.appendChild(
+                    copyButton
+                );
+            }
+        } else {
+            message.textContent =
+                text;
+        }
 
         if (
             type === "assistant" &&
             Array.isArray(sources) &&
             sources.length > 0
         ) {
-
             const sourcesElement =
                 document.createElement(
                     "div"
@@ -871,7 +1261,6 @@
 
             sources.forEach(
                 function (source) {
-
                     const sourceElement =
                         document.createElement(
                             "div"
@@ -885,10 +1274,7 @@
                             ? source
                             : source.url;
 
-                    if (
-                        sourceUrl
-                    ) {
-
+                    if (sourceUrl) {
                         const link =
                             document.createElement(
                                 "a"
@@ -909,20 +1295,16 @@
                         sourceElement.appendChild(
                             link
                         );
-
                     } else {
-
                         sourceElement.textContent =
                             JSON.stringify(
                                 source
                             );
-
                     }
 
                     sourcesElement.appendChild(
                         sourceElement
                     );
-
                 }
             );
 
@@ -940,7 +1322,6 @@
     }
 
     async function sendMessage() {
-
         const query =
             inputElement.value.trim();
 
@@ -949,18 +1330,16 @@
         }
 
         if (!articleUrl) {
-
             addMessage(
                 "system",
-                "目前頁面沒有 Article URL。",
+                "目前頁面沒有 Article URL。"
             );
-
             return;
         }
 
         addMessage(
             "user",
-            query,
+            query
         );
 
         inputElement.value = "";
@@ -976,7 +1355,6 @@
         );
 
         try {
-
             const response =
                 await fetch(
                     "/archive/chat",
@@ -986,36 +1364,31 @@
                             "Content-Type":
                                 "application/json",
                         },
-                        body: JSON.stringify(
-                            {
-                                url: articleUrl,
-                                query: query,
-                                version:
-                                    selectedVersion || null,
-                            }
-                        ),
+                        body:
+                            JSON.stringify(
+                                {
+                                    url:
+                                        articleUrl,
+                                    query:
+                                        query,
+                                    version:
+                                        selectedVersion ||
+                                        null,
+                                }
+                            ),
                     }
                 );
 
             let data = null;
 
             try {
-
                 data =
                     await response.json();
-
-            } catch (
-                error
-            ) {
-
+            } catch (error) {
                 data = null;
-
             }
 
-            if (
-                !response.ok
-            ) {
-
+            if (!response.ok) {
                 const detail =
                     data &&
                     data.detail
@@ -1029,59 +1402,52 @@
 
             const answer =
                 data &&
-                typeof data.answer === "string"
+                typeof data.answer ===
+                    "string"
                     ? data.answer
                     : "";
 
             const sources =
                 data &&
-                Array.isArray(data.sources)
+                Array.isArray(
+                    data.sources
+                )
                     ? data.sources
                     : [];
 
             if (!answer.trim()) {
-
                 addMessage(
                     "assistant",
                     "目前沒有可用的回答。",
                     sources
                 );
-
             } else {
-
                 addMessage(
                     "assistant",
                     answer,
                     sources
                 );
-
             }
 
             setStatus(
                 "Ready"
             );
-
-        } catch (
-            error
-        ) {
-
+        } catch (error) {
             addMessage(
                 "system",
                 "Robot Error: " +
-                (
-                    error &&
-                    error.message
-                        ? error.message
-                        : "Archive Chat failed."
-                )
+                    (
+                        error &&
+                        error.message
+                            ? error.message
+                            : "Archive Chat failed."
+                    )
             );
 
             setStatus(
                 "Error"
             );
-
         } finally {
-
             sendButton.disabled =
                 false;
 
@@ -1089,9 +1455,7 @@
                 false;
 
             inputElement.focus();
-
         }
-
     }
 
     sendButton.addEventListener(
@@ -1101,28 +1465,19 @@
 
     inputElement.addEventListener(
         "keydown",
-        function (
-            event
-        ) {
-
+        function (event) {
             if (
                 event.key === "Enter" &&
                 !event.shiftKey
             ) {
-
                 event.preventDefault();
-
                 sendMessage();
-
             }
-
         }
     );
 
 })();
-
 </script>
 
 </body>
-
 </html>

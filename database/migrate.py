@@ -94,7 +94,10 @@ MIGRATION_FILES = [
     # Target Crawler URL
     # ======================================
 
-    "database/migration_v6_p6_1.sql"
+    "database/migration_v6_p6_1.sql",
+    "database/migration_v6_p6_2.sql",
+    "database/migration_v6_p6_3.sql",
+    "database/migration_v6_p6_4.sql"
 
 ]
 

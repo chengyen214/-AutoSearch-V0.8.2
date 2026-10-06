@@ -1,0 +1,2 @@
+ALTER TABLE robots_cache
+ADD COLUMN base_url VARCHAR(512) NOT NULL;

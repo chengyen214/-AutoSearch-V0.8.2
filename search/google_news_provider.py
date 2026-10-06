@@ -12,46 +12,7 @@ Google News Search Provider
     將 V4 既有 Google News RSS Search
     包裝成 V5 SearchProvider。
 
-架構：
-
-    User Keyword
-        ↓
-    GoogleNewsProvider
-        ↓
-    V4 Google News Search Engine
-        ↓
-    30 Candidate SearchResult[]
-        ↓
-    Target crawler_url Exclusion
-        ↓
-    Database URL Priority
-        ↓
-    10 Valid SearchResult[]
-        ↓
-    ProviderSearchAdapter
-        ↓
-    SearchExecutionBridge
-        ↓
-    SearchResult[]
-
-設計原則：
-
-    V5 P2.3 不重新實作 Google News RSS。
-
-    直接沿用：
-
-        search/search_engine.py
-
-    已有能力：
-
-        - Google News RSS
-        - URL Encode
-        - RSS Parsing
-        - Google News URL Decode
-        - URL Deduplication
-        - SearchResult 建立
-
-本模組只負責：
+本模組負責：
 
     - Google News Provider
     - Provider Identity
@@ -59,11 +20,17 @@ Google News Search Provider
     - Result Limit
     - 取得全部 Target crawler_url
     - 呼叫 V4 Google News Search
-    - 近 7 天搜尋條件
+    - Google News 時間範圍搜尋
+    - Google Search 時間範圍搜尋
+    - IC semiconductor 多階段時間補充搜尋
     - Target Source Exclusion
-    - articles.url Database Priority
+    - Google News URL Exclusion
     - SearchResult Validation
     - SearchResult Normalization
+    - 7 天結果優先
+    - 延伸候選隨機補足
+    - Google News URL Decode
+    - Final Result URL Output
 
 本模組不負責：
 
@@ -79,67 +46,35 @@ Google News Search Provider
     - Target INSERT / UPDATE
 """
 
-
-# ==================================================
-#
-# V4 Google News Search Engine
-#
-# ==================================================
+import random
 
 from search.search_engine import (
     search as google_news_search,
 )
 
+from search.search_engine import (
+    resolve_google_news_urls,
+)
 
-# ==================================================
-#
-# V5 Search Provider Base
-#
-# ==================================================
+from search.google_search_provider import (
+    GoogleSearchProvider,
+)
 
 from search.search_provider import (
     SearchProvider,
 )
 
-
-# ==================================================
-#
-# Search Result
-#
-# ==================================================
-
 from models.search_result import (
     SearchResult,
 )
-
-
-# ==================================================
-#
-# URL Source Grouping Service
-#
-# ==================================================
 
 from services.url_source_grouping_service import (
     URLSourceGroupingService,
 )
 
-
-# ==================================================
-#
-# Database
-#
-# ==================================================
-
 from database.connection import (
     get_connection,
 )
-
-
-# ==================================================
-#
-# Logger
-#
-# ==================================================
 
 from utils.logger import (
     logger,
@@ -149,83 +84,15 @@ from utils.logger import (
 class GoogleNewsProvider(SearchProvider):
     """
     V5 Google News Search Provider。
-
-    P2.3
-
-    使用 V4：
-
-        search/search_engine.py
-
-    作為 Google News RSS 的實際搜尋實作。
-
-    Provider 本身：
-
-        - 不建立 Adapter
-        - 不執行 Crawler
-        - 不執行 Parser
-        - 不處理 Archive
-        - 不處理 AI
-
-    Provider 負責：
-
-        keyword
-            ↓
-        取得全部 Target crawler_url
-            ↓
-        V4 Google News Search
-            ↓
-        近 7 天
-            ↓
-        30 Candidate Results
-            ↓
-        排除所有 Target Source
-            ↓
-        查 articles.url
-            ↓
-        New URL 優先
-            ↓
-        Existing URL 補足
-            ↓
-        10 Valid Results
     """
-
-    # ==================================================
-    #
-    # Provider Identity
-    #
-    # ==================================================
 
     provider_name = "google_news"
 
-    # ==================================================
-    #
-    # Default Result Limit
-    #
-    # ==================================================
-
     max_results = 10
 
-    # ==================================================
-    #
-    # Candidate Result Limit
-    #
-    # ==================================================
-
-    candidate_results = 30
-
-    # ==================================================
-    #
-    # Search Time Range
-    #
-    # ==================================================
+    candidate_results = 45
 
     search_time_range = "when:7d"
-
-    # ==================================================
-    #
-    # Constructor
-    #
-    # ==================================================
 
     def __init__(
         self,
@@ -233,36 +100,19 @@ class GoogleNewsProvider(SearchProvider):
     ):
         """
         建立 GoogleNewsProvider。
-
-        Parameters
-        ----------
-        timeout :
-            Provider Timeout 設定。
-
-            目前 V4 search_engine.py
-            使用 feedparser.parse()
-            建立 RSS Search。
-
-            P2.3 不修改 V4 Search Engine，
-            因此此 timeout 暫時只保留
-            Provider Configuration Interface。
         """
 
         self.timeout = timeout
-
-        # --------------------------------------------------
-        # URL Source Grouping Service
-        # --------------------------------------------------
 
         self.url_source_grouping_service = (
             URLSourceGroupingService()
         )
 
-    # ==================================================
-    #
-    # Search
-    #
-    # ==================================================
+        self.google_search_provider = (
+            GoogleSearchProvider(
+                timeout=timeout,
+            )
+        )
 
     def search(
         self,
@@ -270,67 +120,15 @@ class GoogleNewsProvider(SearchProvider):
         max_results=None,
     ):
         """
-        執行 Google News Search。
-
-        Pipeline：
-
-            keyword
-                ↓
-            取得全部 Target crawler_url
-                ↓
-            keyword + when:7d
-                ↓
-            V4 search_engine.search()
-                ↓
-            30 Candidate Results
-                ↓
-            Target crawler_url exclusion
-                ↓
-            articles.url Database Priority
-                ↓
-            New URL 優先
-                ↓
-            Existing URL 補足
-                ↓
-            最多 10 Valid Results
-
-        Parameters
-        ----------
-        keyword :
-            Search Keyword。
-
-        max_results :
-            最大回傳結果數量。
-
-            None：
-                使用 Provider max_results。
-
-            注意：
-
-                V4 Google News Search
-                固定先取得 candidate_results
-                筆候選結果。
+        執行 Google News + Google Search。
         """
-
-        # ==================================================
-        #
-        # Keyword Validation
-        #
-        # ==================================================
 
         keyword = self._normalize_keyword(
             keyword
         )
 
         if not keyword:
-
             return []
-
-        # ==================================================
-        #
-        # Result Limit
-        #
-        # ==================================================
 
         max_results = (
             self._normalize_max_results(
@@ -339,255 +137,149 @@ class GoogleNewsProvider(SearchProvider):
         )
 
         if max_results <= 0:
-
             return []
-
-        # ==================================================
-        #
-        # Fetch ALL Target crawler_urls
-        #
-        # 不限制 keyword。
-        #
-        # Google News 永遠排除
-        # targets 裡所有 crawler_url。
-        #
-        # ==================================================
 
         crawler_urls = (
             self.url_source_grouping_service
             .fetch_crawler_urls()
         )
 
-        # ==================================================
-        #
-        # Google News Search Query
-        #
-        # 近 7 天：
-        #
-        #     when:7d
-        #
-        # ==================================================
-
         search_keyword = (
             f"{keyword} "
             f"{self.search_time_range}"
         )
 
-        # ==================================================
-        #
-        # V4 Google News Search
-        #
-        # 先取得 30 筆候選結果。
-        #
-        # ==================================================
-
-        source_results = (
+        primary_results = (
             google_news_search(
                 search_keyword,
                 max_results=self.candidate_results,
+                resolve_urls=False,
             )
         )
 
-        # ==================================================
-        #
-        # Normalize / Filter Results
-        #
-        # ==================================================
+        source_results = list(
+            primary_results
+        )
 
-        return self._normalize_results(
+        if (
+            keyword.lower()
+            == "ic semiconductor"
+            and len(source_results)
+            < self.candidate_results
+        ):
+            remaining_candidates = (
+                self.candidate_results
+                - len(source_results)
+            )
+
+            additional_results = (
+                google_news_search(
+                    (
+                        f"{keyword} "
+                        f"when:1m"
+                    ),
+                    max_results=remaining_candidates,
+                    resolve_urls=False,
+                )
+            )
+
+            source_results.extend(
+                additional_results
+            )
+
+            if (
+                len(source_results)
+                < self.candidate_results
+            ):
+                remaining_candidates = (
+                    self.candidate_results
+                    - len(source_results)
+                )
+
+                additional_results = (
+                    google_news_search(
+                        (
+                            f"{keyword} "
+                            f"when:6m"
+                        ),
+                        max_results=remaining_candidates,
+                        resolve_urls=False,
+                    )
+                )
+
+                source_results.extend(
+                    additional_results
+                )
+
+        results = self._normalize_results(
             source_results=source_results,
             keyword=keyword,
             max_results=max_results,
             crawler_urls=crawler_urls,
+            primary_results=primary_results,
         )
 
-    # ==================================================
-    #
-    # Normalize Keyword
-    #
-    # ==================================================
+        results = self._decode_selected_news_results(
+            results
+        )
+
+        google_news_urls = {
+            str(
+                getattr(
+                    item,
+                    "url",
+                    "",
+                )
+            ).strip()
+            for item in results
+            if getattr(
+                item,
+                "url",
+                None,
+            )
+        }
+
+        google_search_results = (
+            self._search_google_results(
+                keyword=keyword,
+                crawler_urls=crawler_urls,
+                exclude_urls=google_news_urls,
+                max_results=max_results,
+            )
+        )
+
+        final_results = (
+            results
+            +
+            google_search_results
+        )
+
+        self._print_final_results(
+            final_results
+        )
+
+        return final_results
 
     @staticmethod
-    def _normalize_keyword(
-        keyword,
+    def _decode_selected_news_results(
+        results,
     ):
         """
-        Normalize Search Keyword。
-
-        None / Empty：
-
-            回傳空字串。
+        並行 Decode 最終選出的 Google News Results。
         """
 
-        if keyword is None:
-
-            return ""
-
-        keyword = str(
-            keyword
-        ).strip()
-
-        return keyword
-
-    # ==================================================
-    #
-    # Normalize Max Results
-    #
-    # ==================================================
-
-    @classmethod
-    def _normalize_max_results(
-        cls,
-        max_results,
-    ):
-        """
-        Normalize Result Limit。
-
-        None：
-
-            使用 Provider max_results。
-
-        Invalid：
-
-            使用 Provider max_results。
-
-        <= 0：
-
-            保留為 <= 0，
-            由 search() 判斷為空結果。
-
-        最大回傳數：
-
-            10
-        """
-
-        if max_results is None:
-
-            return cls.max_results
-
-        try:
-
-            value = int(
-                max_results
-            )
-
-        except (
-            TypeError,
-            ValueError,
-        ):
-
-            return cls.max_results
-
-        return min(
-            value,
-            cls.max_results,
-        )
-
-    # ==================================================
-    #
-    # Normalize Results
-    #
-    # ==================================================
-
-    @classmethod
-    def _normalize_results(
-        cls,
-        source_results,
-        keyword,
-        max_results,
-        crawler_urls=None,
-    ):
-        """
-        Validate / Normalize V4 Search Results。
-
-        本方法處理：
-
-            - None
-            - list validation
-            - SearchResult validation
-            - URL validation
-            - Target crawler_url exclusion
-            - articles.url Database Priority
-            - keyword normalization
-            - search_source normalization
-            - rank normalization
-            - result limit
-
-        流程：
-
-            30 Candidate Results
-                    ↓
-            Target crawler_url exclusion
-                    ↓
-            Valid Candidate URLs
-                    ↓
-            articles.url lookup
-                    ↓
-            New URLs
-                    ↓
-            Existing URLs
-                    ↓
-            New URLs 優先
-                    ↓
-            Existing URLs 補足
-                    ↓
-            最多 10 筆
-
-        URL Deduplication：
-
-            V4 search_engine.py
-            已經負責 URL Deduplication。
-
-            Provider 不重新實作
-            V4 Search Engine 的
-            Deduplication。
-        """
-
-        if source_results is None:
-
+        if not results:
             return []
 
-        if not isinstance(
-            source_results,
-            list,
-        ):
+        valid_results = []
 
-            raise TypeError(
-                "Google News Search "
-                "must return a list"
-            )
-
-        if crawler_urls is None:
-
-            crawler_urls = []
-
-        # ==================================================
-        #
-        # First Stage:
-        # Validate / Target Exclusion
-        #
-        # ==================================================
-
-        candidates = []
-
-        seen_urls = set()
-
-        for item in source_results:
-
-            # ------------------------------------------
-            # SearchResult Validation
-            # ------------------------------------------
+        for item in results:
 
             if not isinstance(
                 item,
                 SearchResult,
             ):
-
                 continue
-
-            # ------------------------------------------
-            # URL Validation
-            # ------------------------------------------
 
             url = getattr(
                 item,
@@ -596,7 +288,211 @@ class GoogleNewsProvider(SearchProvider):
             )
 
             if not url:
+                continue
 
+            valid_results.append(
+                item
+            )
+
+        if not valid_results:
+            return []
+
+        urls = [
+            str(
+                getattr(
+                    item,
+                    "url",
+                    "",
+                )
+            ).strip()
+            for item in valid_results
+        ]
+
+        decoded_urls = (
+            resolve_google_news_urls(
+                urls
+            )
+        )
+
+        decoded_results = []
+
+        for item in valid_results:
+
+            url = str(
+                getattr(
+                    item,
+                    "url",
+                    "",
+                )
+            ).strip()
+
+            decoded_url = decoded_urls.get(
+                url,
+                url,
+            )
+
+            if not decoded_url:
+                continue
+
+            item.url = str(
+                decoded_url
+            ).strip()
+
+            decoded_results.append(
+                item
+            )
+
+        for index, item in enumerate(
+            decoded_results,
+            start=1,
+        ):
+            item.rank = index
+
+        return decoded_results
+
+    def _search_google_results(
+        self,
+        keyword,
+        crawler_urls,
+        exclude_urls=None,
+        max_results=10,
+    ):
+        """
+        執行 Google Search。
+        """
+
+        primary_results = (
+            self.google_search_provider.search(
+                (
+                    f"{keyword} "
+                    f"{self.search_time_range}"
+                ),
+                max_results=self.candidate_results,
+                exclude_urls=exclude_urls,
+            )
+        )
+
+        source_results = list(
+            primary_results
+        )
+
+        if (
+            keyword.lower()
+            == "ic semiconductor"
+            and len(source_results)
+            < self.candidate_results
+        ):
+            remaining_candidates = (
+                self.candidate_results
+                - len(source_results)
+            )
+
+            additional_results = (
+                self.google_search_provider.search(
+                    (
+                        f"{keyword} "
+                        f"when:1m"
+                    ),
+                    max_results=remaining_candidates,
+                    exclude_urls=exclude_urls,
+                )
+            )
+
+            source_results.extend(
+                additional_results
+            )
+
+            if (
+                len(source_results)
+                < self.candidate_results
+            ):
+                remaining_candidates = (
+                    self.candidate_results
+                    - len(source_results)
+                )
+
+                additional_results = (
+                    self.google_search_provider.search(
+                        (
+                            f"{keyword} "
+                            f"when:6m"
+                        ),
+                        max_results=remaining_candidates,
+                        exclude_urls=exclude_urls,
+                    )
+                )
+
+                source_results.extend(
+                    additional_results
+                )
+
+        return self._normalize_google_search_results(
+            source_results=source_results,
+            primary_results=primary_results,
+            keyword=keyword,
+            max_results=max_results,
+            crawler_urls=crawler_urls,
+            exclude_urls=exclude_urls,
+        )
+
+    @classmethod
+    def _normalize_google_search_results(
+        cls,
+        source_results,
+        primary_results=None,
+        keyword="",
+        max_results=10,
+        crawler_urls=None,
+        exclude_urls=None,
+    ):
+        """
+        Validate / Normalize Google Search Results。
+        """
+
+        if source_results is None:
+            return []
+
+        if not isinstance(
+            source_results,
+            list,
+        ):
+            raise TypeError(
+                "Google Search "
+                "must return a list"
+            )
+
+        if primary_results is None:
+            primary_results = []
+
+        if crawler_urls is None:
+            crawler_urls = []
+
+        if exclude_urls is None:
+            exclude_urls = set()
+
+        exclude_urls = {
+            str(url).strip()
+            for url in exclude_urls
+            if url
+        }
+
+        primary_urls = set()
+
+        for item in primary_results:
+
+            if not isinstance(
+                item,
+                SearchResult,
+            ):
+                continue
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
                 continue
 
             url = str(
@@ -604,27 +500,47 @@ class GoogleNewsProvider(SearchProvider):
             ).strip()
 
             if not url:
-
                 continue
 
-            # ------------------------------------------
-            # Local Deduplication Safety
-            #
-            # V4 本身已負責 Deduplication，
-            # 這裡只保護 Provider 自身
-            # 不重複處理。
-            # ------------------------------------------
+            primary_urls.add(
+                url
+            )
+
+        primary_candidates = []
+
+        extended_candidates = []
+
+        seen_urls = set()
+
+        for item in source_results:
+
+            if not isinstance(
+                item,
+                SearchResult,
+            ):
+                continue
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
+                continue
+
+            url = str(
+                url
+            ).strip()
+
+            if not url:
+                continue
+
+            if url in exclude_urls:
+                continue
 
             if url in seen_urls:
-
                 continue
-
-            # ------------------------------------------
-            # Target crawler_url Exclusion
-            #
-            # 只要符合任何一個 Target crawler_url
-            # 就排除。
-            # ------------------------------------------
 
             excluded = False
 
@@ -637,104 +553,42 @@ class GoogleNewsProvider(SearchProvider):
                         crawler_url,
                     )
                 ):
-
                     excluded = True
                     break
 
             if excluded:
-
                 continue
 
             seen_urls.add(
                 url
             )
 
-            candidates.append(
-                (
-                    item,
-                    url,
-                )
-            )
-
-        # ==================================================
-        #
-        # No Candidates
-        #
-        # ==================================================
-
-        if not candidates:
-
-            return []
-
-        # ==================================================
-        #
-        # Database Existing URL Lookup
-        #
-        # ==================================================
-
-        candidate_urls = [
-            url
-            for _, url in candidates
-        ]
-
-        existing_url_set = (
-            cls._get_existing_urls(
-                candidate_urls
-            )
-        )
-
-        # ==================================================
-        #
-        # Split New / Existing
-        #
-        # ==================================================
-
-        new_results = []
-        existing_results = []
-
-        for item, url in candidates:
-
-            if url in existing_url_set:
-
-                existing_results.append(
+            if url in primary_urls:
+                primary_candidates.append(
                     item
                 )
 
             else:
-
-                new_results.append(
+                extended_candidates.append(
                     item
                 )
 
-        # ==================================================
-        #
-        # New URL Priority
-        #
-        # ==================================================
+        if (
+            not primary_candidates
+            and not extended_candidates
+        ):
+            return []
 
         results = []
 
-        # ------------------------------------------
-        #
-        # First: New URLs
-        #
-        # ------------------------------------------
-
-        for item in new_results:
+        for item in primary_candidates:
 
             results.append(
                 item
             )
 
             if len(results) >= max_results:
-
                 break
-
-        # ------------------------------------------
-        #
-        # Second: Existing URLs
-        #
-        # ------------------------------------------
 
         if len(results) < max_results:
 
@@ -743,25 +597,25 @@ class GoogleNewsProvider(SearchProvider):
                 - len(results)
             )
 
-            results.extend(
-                existing_results[
-                    :remaining
-                ]
-            )
+            if (
+                len(extended_candidates)
+                <= remaining
+            ):
+                results.extend(
+                    extended_candidates
+                )
 
-        # ==================================================
-        #
-        # Final Normalize
-        #
-        # ==================================================
+            else:
+                results.extend(
+                    random.sample(
+                        extended_candidates,
+                        remaining,
+                    )
+                )
 
         normalized_results = []
 
         for item in results:
-
-            # ------------------------------------------
-            # Normalize URL
-            # ------------------------------------------
 
             url = getattr(
                 item,
@@ -770,58 +624,37 @@ class GoogleNewsProvider(SearchProvider):
             )
 
             if not url:
-
                 continue
 
             try:
-
                 item.url = str(
                     url
                 ).strip()
 
             except AttributeError:
-
                 pass
 
-            # ------------------------------------------
-            # Normalize Keyword
-            # ------------------------------------------
-
             try:
-
                 item.keyword = keyword
 
             except AttributeError:
-
                 pass
 
-            # ------------------------------------------
-            # Normalize Search Source
-            # ------------------------------------------
-
             try:
-
                 item.search_source = (
-                    cls.provider_name
+                    "google_search"
                 )
 
             except AttributeError:
-
                 pass
 
-            # ------------------------------------------
-            # Normalize Rank
-            # ------------------------------------------
-
             try:
-
                 item.rank = (
                     len(normalized_results)
                     + 1
                 )
 
             except AttributeError:
-
                 pass
 
             normalized_results.append(
@@ -830,11 +663,292 @@ class GoogleNewsProvider(SearchProvider):
 
         return normalized_results
 
-    # ==================================================
-    #
-    # Existing URL Lookup
-    #
-    # ==================================================
+    @staticmethod
+    def _normalize_keyword(
+        keyword,
+    ):
+        """
+        Normalize Search Keyword。
+        """
+
+        if keyword is None:
+            return ""
+
+        keyword = str(
+            keyword
+        ).strip()
+
+        return keyword
+
+    @classmethod
+    def _normalize_max_results(
+        cls,
+        max_results,
+    ):
+        """
+        Normalize Result Limit。
+        """
+
+        if max_results is None:
+            return cls.max_results
+
+        try:
+            value = int(
+                max_results
+            )
+
+        except (
+            TypeError,
+            ValueError,
+        ):
+            return cls.max_results
+
+        return min(
+            value,
+            cls.max_results,
+        )
+
+    @classmethod
+    def _normalize_results(
+        cls,
+        source_results,
+        keyword,
+        max_results,
+        crawler_urls=None,
+        primary_results=None,
+    ):
+        """
+        Validate / Normalize V4 Search Results。
+        """
+
+        if source_results is None:
+            return []
+
+        if not isinstance(
+            source_results,
+            list,
+        ):
+            raise TypeError(
+                "Google News Search "
+                "must return a list"
+            )
+
+        if crawler_urls is None:
+            crawler_urls = []
+
+        if primary_results is None:
+            primary_results = []
+
+        primary_urls = set()
+
+        for item in primary_results:
+
+            if not isinstance(
+                item,
+                SearchResult,
+            ):
+                continue
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
+                continue
+
+            url = str(
+                url
+            ).strip()
+
+            if not url:
+                continue
+
+            primary_urls.add(
+                url
+            )
+
+        primary_candidates = []
+
+        extended_candidates = []
+
+        seen_urls = set()
+
+        for item in source_results:
+
+            if not isinstance(
+                item,
+                SearchResult,
+            ):
+                continue
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
+                continue
+
+            url = str(
+                url
+            ).strip()
+
+            if not url:
+                continue
+
+            if url in seen_urls:
+                continue
+
+            seen_urls.add(
+                url
+            )
+
+            if url in primary_urls:
+                primary_candidates.append(
+                    item
+                )
+
+            else:
+                extended_candidates.append(
+                    item
+                )
+
+        if (
+            not primary_candidates
+            and not extended_candidates
+        ):
+            return []
+
+        results = []
+
+        for item in primary_candidates:
+
+            results.append(
+                item
+            )
+
+            if len(results) >= max_results:
+                break
+
+        if len(results) < max_results:
+
+            remaining = (
+                max_results
+                - len(results)
+            )
+
+            if (
+                len(extended_candidates)
+                <= remaining
+            ):
+                results.extend(
+                    extended_candidates
+                )
+
+            else:
+                results.extend(
+                    random.sample(
+                        extended_candidates,
+                        remaining,
+                    )
+                )
+
+        normalized_results = []
+
+        for item in results:
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
+                continue
+
+            try:
+                item.url = str(
+                    url
+                ).strip()
+
+            except AttributeError:
+                pass
+
+            try:
+                item.keyword = keyword
+
+            except AttributeError:
+                pass
+
+            try:
+                item.search_source = (
+                    cls.provider_name
+                )
+
+            except AttributeError:
+                pass
+
+            try:
+                item.rank = (
+                    len(normalized_results)
+                    + 1
+                )
+
+            except AttributeError:
+                pass
+
+            normalized_results.append(
+                item
+            )
+
+        return normalized_results
+
+    @staticmethod
+    def _print_final_results(
+        results,
+    ):
+        """
+        只顯示 Provider 最終結果 URL。
+        """
+
+        print()
+
+        print(
+            "=" * 50
+        )
+
+        print(
+            "Google News + Google Search Final Results"
+        )
+
+        print(
+            "=" * 50
+        )
+
+        for index, item in enumerate(
+            results,
+            start=1,
+        ):
+
+            url = getattr(
+                item,
+                "url",
+                None,
+            )
+
+            if not url:
+                continue
+
+            print(
+                f"{index}. URL: {url}"
+            )
+
+        print(
+            "=" * 50
+        )
 
     @staticmethod
     def _get_existing_urls(
@@ -842,41 +956,15 @@ class GoogleNewsProvider(SearchProvider):
     ):
         """
         查詢 MySQL articles.url。
-
-        Parameters
-        ----------
-        urls :
-            Candidate URL list。
-
-        Returns
-        -------
-        set[str]
-
-            已存在於：
-
-                articles.url
-
-            的 URL 集合。
-
-        SQL：
-
-            SELECT url
-            FROM articles
-            WHERE url IN (...)
         """
 
         if not urls:
-
             return set()
 
         conn = None
         cursor = None
 
         try:
-
-            # --------------------------------------------------
-            # Connection
-            # --------------------------------------------------
 
             conn = get_connection()
 
@@ -889,23 +977,11 @@ class GoogleNewsProvider(SearchProvider):
 
                 return set()
 
-            # --------------------------------------------------
-            # Cursor
-            # --------------------------------------------------
-
             cursor = conn.cursor()
-
-            # --------------------------------------------------
-            # Placeholder
-            # --------------------------------------------------
 
             placeholders = ", ".join(
                 ["%s"] * len(urls)
             )
-
-            # --------------------------------------------------
-            # SQL
-            # --------------------------------------------------
 
             query = f"""
                 SELECT url
@@ -920,22 +996,16 @@ class GoogleNewsProvider(SearchProvider):
 
             rows = cursor.fetchall()
 
-            # --------------------------------------------------
-            # Result
-            # --------------------------------------------------
-
             existing_urls = set()
 
             for row in rows:
 
                 if not row:
-
                     continue
 
                 url = row[0]
 
                 if url is None:
-
                     continue
 
                 existing_urls.add(
@@ -952,53 +1022,26 @@ class GoogleNewsProvider(SearchProvider):
                 f"error={exc}"
             )
 
-            # SQL 查詢失敗：
-            #
-            # 不阻斷 Google News Search。
-            #
-            # 視為目前沒有確認到
-            # 已存在的 URL。
-            #
-            # 因此全部視為 new URLs。
-
             return set()
 
         finally:
 
-            # --------------------------------------------------
-            # Close Cursor
-            # --------------------------------------------------
-
             if cursor is not None:
 
                 try:
-
                     cursor.close()
 
                 except Exception:
-
                     pass
-
-            # --------------------------------------------------
-            # Close Connection
-            # --------------------------------------------------
 
             if conn is not None:
 
                 try:
-
                     conn.close()
 
                 except Exception:
-
                     pass
 
-
-# ==================================================
-#
-# Public API
-#
-# ==================================================
 
 __all__ = [
     "GoogleNewsProvider",

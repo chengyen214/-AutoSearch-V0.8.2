@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS robots_cache (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    robots_url VARCHAR(2048) NOT NULL,
+    allowed BOOLEAN NOT NULL,
+    checked_at DATETIME NOT NULL
+);

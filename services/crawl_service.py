@@ -72,6 +72,7 @@ Raw HTML MongoDB Structure：
 責任：
 
     - Crawl URL
+    - 檢查 robots.txt Crawl Permission
     - 呼叫 crawler.download()
     - 呼叫 crawler.download_resources()
     - 保留原始 URL
@@ -86,7 +87,7 @@ Raw HTML MongoDB Structure：
     - 建立 CrawlResult
     - 將成功 CrawlResult 保存至 MongoDB
     - Crawl Error Handling
-    - 基本 URL Validation
+    - Basic URL Validation
 
 
 不負責：
@@ -128,6 +129,8 @@ Raw HTML MongoDB Structure：
 
             V5 Pipeline
                 ↓
+            Robots Check
+                ↓
             Crawl
                 ↓
             Raw HTML
@@ -149,6 +152,30 @@ Raw HTML MongoDB Structure：
             CrawlResult
                 ↓
             Raw HTML Persistence
+
+
+    RobotsCacheRepository
+        負責：
+
+            URL
+             ↓
+            Base URL
+             ↓
+            MySQL robots_cache
+             │
+             ├── Cache Hit
+             │      ↓
+             │   robots_content
+             │      ↓
+             │   判斷 CURRENT URL
+             │
+             └── Cache Miss
+                    ↓
+                 GET robots.txt
+                    ↓
+                 儲存 robots_content
+                    ↓
+                 判斷 CURRENT URL
 
 
     KeywordLinkDetector
@@ -267,6 +294,66 @@ Keyword Link Detection Policy：
             RelatedCrawlService
 
 
+Robots Crawl Policy：
+
+    Original URL
+        ↓
+    RobotsCacheRepository
+        ↓
+    MySQL robots_cache
+        │
+        ├── Cache Hit
+        │      ↓
+        │   robots_content
+        │      ↓
+        │   判斷目前 URL
+        │
+        └── Cache Miss
+               ↓
+            GET /robots.txt
+               ↓
+            儲存 robots_content
+               ↓
+            判斷目前 URL
+
+
+    allowed：
+
+        只代表目前 URL
+        是否允許 Crawl。
+
+        不代表整個網站
+        是否允許 Crawl。
+
+
+    robots_content：
+
+        儲存完整 robots.txt。
+
+        同一 Base URL 下：
+
+            /research/report/
+                ↓
+            可以允許
+
+            /tech/webad/
+                ↓
+            可以禁止
+
+        必須依目前 URL
+        重新判斷。
+
+
+    CrawlService：
+
+        Robots Check
+        必須發生在：
+
+            crawler.download()
+
+        之前。
+
+
 Related Crawl Policy：
 
     Original Crawl 與 Related Crawl 是兩條流程。
@@ -275,6 +362,8 @@ Related Crawl Policy：
     Original Crawl：
 
         原始 URL
+            ↓
+        Robots Check
             ↓
         Original HTML
             ↓
@@ -304,6 +393,8 @@ Related Crawl Policy：
         RelatedCrawlService
             ↓
         Crawl
+            ↓
+        Robots Check
             ↓
         Parser
             ↓
@@ -364,48 +455,59 @@ Pipeline：
           ↓
     CrawlService
           ↓
-    crawler.resolve_url()
+    RobotsCacheRepository
           ↓
-    crawler.download()
-          ↓
-       Raw HTML
+    robots.txt Permission Check
           │
-          ├────────────────────────────┐
-          │                            │
-          ▼                            ▼
-    KeywordProcessor               SHA-256 Hash
-          │                            │
-          ▼                            ▼
-    Processed Keyword            Content Hash
-          │                            │
-          ▼                            │
-    KeywordLinkDetector                │
-          │                            │
-          │                            │
-          ▼                            │
-    SQL articles.url                   │
-          │                            │
-          ▼                            │
-   未存在 URL 優先                     │
-          │                            │
-          ▼                            │
-      Related URLs                     │
-          │                            │
-          ▼                            │
-  RelatedCrawlService                  │
-          │                            │
-      Crawl / Parser / Article         │
-                                       │
-                         Resource Download
-                                       │
-                                       ▼
-                                  CrawlResult
-                                       │
-                                       ▼
-                                RawHTMLRepository
-                                       │
-                                       ▼
-                                    MongoDB
+          ├──→ Blocked
+          │      ↓
+          │   CrawlResult
+          │   success=False
+          │
+          └──→ Allowed
+                 ↓
+          crawler.resolve_url()
+                 ↓
+          crawler.download()
+                 ↓
+              Raw HTML
+                 │
+                 ├────────────────────────────┐
+                 │                            │
+                 ▼                            ▼
+           KeywordProcessor               SHA-256 Hash
+                 │                            │
+                 ▼                            ▼
+           Processed Keyword            Content Hash
+                 │                            │
+                 ▼                            │
+          KeywordLinkDetector                │
+                 │                            │
+                 │                            │
+                 ▼                            │
+          SQL articles.url                   │
+                 │                            │
+                 ▼                            │
+           未存在 URL 優先                    │
+                 │                            │
+                 ▼                            │
+             Related URLs                    │
+                 │                            │
+                 ▼                            │
+         RelatedCrawlService                 │
+                 │                            │
+             Crawl / Parser / Article         │
+                                              │
+                                  Resource Download
+                                              │
+                                              ▼
+                                         CrawlResult
+                                              │
+                                              ▼
+                                       RawHTMLRepository
+                                              │
+                                              ▼
+                                           MongoDB
 """
 
 import hashlib
@@ -432,6 +534,10 @@ from crawler.crawler import (
 
 from database.raw_html_repository import (
     RawHTMLRepository,
+)
+
+from database.robots_cache_repository import (
+    RobotsCacheRepository,
 )
 
 from utils.keyword_processor import (
@@ -579,6 +685,8 @@ class CrawlService:
 
         URL
          ↓
+        Robots Check
+         ↓
         crawler.py
          ↓
         Raw HTML
@@ -617,6 +725,13 @@ class CrawlService:
         Lazy Import 後直接呼叫。
 
 
+    Robots：
+
+        RobotsCacheRepository
+        負責 robots.txt Cache
+        與目前 URL Permission Check。
+
+
     注意：
 
         不在 Module Import 階段
@@ -631,6 +746,7 @@ class CrawlService:
         url_resolver=None,
         resource_downloader=None,
         raw_html_repository=None,
+        robots_cache_repository=None,
         save_raw_html=True,
         keyword_processor=None,
         keyword_link_detector=None,
@@ -676,6 +792,15 @@ class CrawlService:
             預設：
 
                 RawHTMLRepository()
+
+
+        robots_cache_repository :
+
+            Robots Cache Repository。
+
+            預設：
+
+                RobotsCacheRepository()
 
 
         save_raw_html :
@@ -769,6 +894,15 @@ class CrawlService:
 
         self.raw_html_repository = (
             raw_html_repository
+        )
+
+        if robots_cache_repository is None:
+            robots_cache_repository = (
+                RobotsCacheRepository()
+            )
+
+        self.robots_cache_repository = (
+            robots_cache_repository
         )
 
         self.save_raw_html = bool(
@@ -1048,6 +1182,8 @@ class CrawlService:
              ↓
             resolve_url()
              ↓
+            Robots Check
+             ↓
             download()
              ↓
             Raw HTML
@@ -1125,6 +1261,60 @@ class CrawlService:
                 "URL resolution failed: "
                 f"url={normalized_url}, "
                 f"error={exc}"
+            )
+
+        try:
+            allowed = (
+                self.robots_cache_repository.check(
+                    normalized_url
+                )
+            )
+
+        except Exception as exc:
+            logger.exception(
+                "Robots check failed: "
+                f"url={normalized_url}, "
+                f"error={exc}"
+            )
+
+            return CrawlResult(
+                url=normalized_url,
+                resolved_url=resolved_url,
+                html=None,
+                content_hash=None,
+                article_id=None,
+                document_id=None,
+                resources={
+                    "css": [],
+                    "images": [],
+                },
+                success=False,
+                error=str(
+                    exc
+                ),
+            )
+
+        if not allowed:
+            logger.warning(
+                "Crawl blocked by robots.txt: "
+                f"url={normalized_url}"
+            )
+
+            return CrawlResult(
+                url=normalized_url,
+                resolved_url=resolved_url,
+                html=None,
+                content_hash=None,
+                article_id=None,
+                document_id=None,
+                resources={
+                    "css": [],
+                    "images": [],
+                },
+                success=False,
+                error=(
+                    "Crawl blocked by robots.txt"
+                ),
             )
 
         try:
@@ -1715,6 +1905,10 @@ class CrawlService:
               CrawlService
                     ↓
               CrawlResult[]
+                    │
+                    ├──→ RobotsCacheRepository
+                    │          ↓
+                    │   robots.txt Permission
                     │
                     ├──→ KeywordProcessor
                     │          ↓

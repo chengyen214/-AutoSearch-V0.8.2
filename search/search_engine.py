@@ -3,207 +3,234 @@ search/search_engine.py
 
 AutoSearch V4
 
-P4.2 Google News Search
+Google News RSS Search
 
-功能:
+功能：
+    - Google News RSS 搜尋
+    - Google News URL 解碼
+    - URL 去重
+    - 搜尋數量限制
+    - RSS 資料解析
+    - SearchResult 統一回傳
 
-1. Google News RSS 搜尋
-2. Google News URL 解碼
-3. URL 去重
-4. Google News 搜尋數量限制
-5. RSS 資料解析
-6. 統一回傳 SearchResult
-
-P4.2 架構:
-
-    Google News RSS
-            ↓
-    search_engine.search()
-            ↓
-        SearchResult
-            ↓
-    GoogleNewsAdapter
-            ↓
-    SearchAdapterManager
-            ↓
-    SearchResult → Article
-
-
-注意:
-
-search_engine.py 不負責:
-
-- Article 建立
-- HTML Download
-- Parser
-- Archive
-- AI Analysis
-- AI Worker
-- Database Storage
-
-Article 建立由:
-
-    SearchResult.to_article()
-
-負責。
-
-Search Adapter 負責:
-
-    SearchResult → Multi-Source Search
-
+不負責：
+    - Article 建立
+    - HTML Download
+    - Parser
+    - Archive
+    - AI Analysis
+    - Database Storage
 """
 
+from concurrent.futures import (
+    ThreadPoolExecutor,
+    as_completed,
+)
 
+from datetime import datetime, timedelta
 from urllib.parse import quote
-
+import re
 
 import feedparser
 
+from googlenewsdecoder import gnewsdecoder
 
-from googlenewsdecoder import (
-    gnewsdecoder,
-)
-
-
-from models.search_result import (
-    SearchResult,
-)
+from models.search_result import SearchResult
 
 
-# ==================================================
-#
-# Google News URL Decode
-#
-# ==================================================
+DEFAULT_USER_AGENT = "*"
 
 
-def resolve_google_news_url(
-    url,
-):
+def resolve_google_news_url(url):
     """
-    Google News URL 解碼。
-
-    將:
-
-        https://news.google.com/rss/articles/xxxxx
-
-    嘗試轉換成:
-
-        真正新聞網址
-
-    如果解碼失敗:
-
-        回傳原始 URL
-
-    Parameters
-    ----------
-    url:
-        Google News URL
-
-    Returns
-    -------
-    str
-        解碼後 URL
+    將 Google News URL 解碼成原始新聞 URL。
     """
-
-    # ----------------------------------------------
-    # Empty URL
-    # ----------------------------------------------
 
     if not url:
-
         return url
 
     try:
+        result = gnewsdecoder(url)
 
-        result = gnewsdecoder(
-            url
-        )
-
-        # ------------------------------------------
-        # Decoder Success
-        # ------------------------------------------
-
-        if (
-            isinstance(
-                result,
-                dict,
-            )
-            and result.get("status")
-        ):
-
+        if isinstance(
+            result,
+            dict,
+        ) and result.get("status"):
             decoded_url = result.get(
                 "decoded_url"
             )
 
             if decoded_url:
-
                 return decoded_url
-
-        # ------------------------------------------
-        # Decoder Failed
-        # ------------------------------------------
 
         return url
 
     except Exception as e:
-
         print(
             "Google News URL 解碼失敗:",
             e,
         )
-
         return url
 
 
-# ==================================================
-#
-# Google News RSS Search
-#
-# ==================================================
+def resolve_google_news_urls(
+    urls,
+    max_workers=10,
+):
+    """
+    並行解碼多個 Google News URL。
+    """
+
+    if not urls:
+        return {}
+
+    valid_urls = []
+
+    for url in urls:
+
+        if not url:
+            continue
+
+        url = str(
+            url
+        ).strip()
+
+        if not url:
+            continue
+
+        if url in valid_urls:
+            continue
+
+        valid_urls.append(
+            url
+        )
+
+    if not valid_urls:
+        return {}
+
+    try:
+        max_workers = int(
+            max_workers
+        )
+
+    except (
+        TypeError,
+        ValueError,
+    ):
+        max_workers = 10
+
+    max_workers = max(
+        1,
+        min(
+            max_workers,
+            len(valid_urls),
+        ),
+    )
+
+    decoded_urls = {}
+
+    with ThreadPoolExecutor(
+        max_workers=max_workers
+    ) as executor:
+
+        future_map = {
+            executor.submit(
+                resolve_google_news_url,
+                url,
+            ): url
+            for url in valid_urls
+        }
+
+        for future in as_completed(
+            future_map
+        ):
+            source_url = future_map[
+                future
+            ]
+
+            try:
+                decoded_url = future.result()
+
+            except Exception:
+                decoded_url = source_url
+
+            if not decoded_url:
+                decoded_url = source_url
+
+            decoded_urls[
+                source_url
+            ] = str(
+                decoded_url
+            ).strip()
+
+    return decoded_urls
+
+
+def _build_google_news_query(keyword):
+    """
+    將 when:7d、when:1m、when:6m 轉換成 Google News 時間查詢。
+    """
+
+    match = re.search(
+        r"\bwhen:(\d+)([dwm])\b",
+        keyword,
+        re.IGNORECASE,
+    )
+
+    if not match:
+        return keyword
+
+    value = int(match.group(1))
+    unit = match.group(2).lower()
+
+    if value <= 0:
+        return keyword
+
+    if unit == "d":
+        delta = timedelta(days=value)
+
+    elif unit == "w":
+        delta = timedelta(weeks=value)
+
+    elif unit == "m":
+        delta = timedelta(days=value * 30)
+
+    else:
+        return keyword
+
+    after_date = (
+        datetime.now() - delta
+    ).strftime("%Y-%m-%d")
+
+    query = re.sub(
+        r"\s+when:\d+[dwm]\b",
+        "",
+        keyword,
+        flags=re.IGNORECASE,
+    ).strip()
+
+    if not query:
+        return f"after:{after_date}"
+
+    return f"{query} after:{after_date}"
 
 
 def search(
     keyword,
     max_results=10,
+    resolve_urls=True,
 ):
     """
-    Google News RSS 搜尋。
-
-    Parameters
-    ----------
-    keyword:
-        搜尋關鍵字
-
-    max_results:
-        最大搜尋結果數量
-
-    Returns
-    -------
-    list[SearchResult]
-
-    P4.2:
-
-        Google News RSS
-                ↓
-            SearchResult
+    執行 Google News RSS 搜尋並回傳 SearchResult。
     """
 
-    # ==================================================
-    #
-    # Validate Keyword
-    #
-    # ==================================================
-
     if keyword is None:
-
         keyword = ""
 
     if not isinstance(
         keyword,
         str,
     ):
-
         keyword = str(
             keyword
         )
@@ -211,17 +238,9 @@ def search(
     keyword = keyword.strip()
 
     if not keyword:
-
         return []
 
-    # ==================================================
-    #
-    # Validate Result Limit
-    #
-    # ==================================================
-
     try:
-
         max_results = int(
             max_results
         )
@@ -230,96 +249,51 @@ def search(
         TypeError,
         ValueError,
     ):
-
         max_results = 10
 
     if max_results <= 0:
-
         return []
 
-    # ==================================================
-    #
-    # Search Log
-    #
-    # ==================================================
-
     print()
-
-    print(
-        "=" * 50
-    )
-
+    print("=" * 50)
     print(
         f"開始搜尋：{keyword}"
     )
+    print("=" * 50)
 
-    print(
-        "=" * 50
-    )
-
-    # ==================================================
-    #
-    # URL Encode
-    #
-    # ==================================================
-
-    keyword_encode = quote(
+    search_query = _build_google_news_query(
         keyword
     )
 
-    # ==================================================
-    #
-    # Google News RSS URL
-    #
-    # ==================================================
-
-    rss_url = (
-
-        "https://news.google.com/rss/search?"
-
-        f"q={keyword_encode}"
-
-        "&hl=zh-TW"
-
-        "&gl=TW"
-
-        "&ceid=TW:zh-Hant"
-
+    keyword_encode = quote(
+        search_query
     )
 
-    # ==================================================
-    #
-    # RSS Request
-    #
-    # ==================================================
+    rss_url = (
+        "https://news.google.com/rss/search?"
+        f"q={keyword_encode}"
+        "&hl=zh-TW"
+        "&gl=TW"
+        "&ceid=TW:zh-Hant"
+    )
 
     try:
-
         feed = feedparser.parse(
             rss_url
         )
 
     except Exception as e:
-
         print(
             "Google News RSS 搜尋失敗:",
             e,
         )
-
         return []
-
-    # ==================================================
-    #
-    # RSS Parse Error
-    #
-    # ==================================================
 
     if getattr(
         feed,
         "bozo",
         False,
     ):
-
         exception = getattr(
             feed,
             "bozo_exception",
@@ -327,60 +301,63 @@ def search(
         )
 
         if exception:
-
             print(
                 "Google News RSS 解析警告:",
                 exception,
             )
 
-    # ==================================================
-    #
-    # Result
-    #
-    # ==================================================
-
     results = []
-
-    # ==================================================
-    #
-    # URL Deduplication
-    #
-    # ==================================================
-
     url_set = set()
 
-    # ==================================================
-    #
-    # RSS Entries
-    #
-    # ==================================================
+    total_candidates = min(
+        len(feed.entries),
+        max_results,
+    )
 
-    for item in feed.entries:
+    if total_candidates > 0:
+        print(
+            f"Candidate {max_results}: "
+            f"[{'░' * 20}] "
+            f"0% "
+            f"(0/{total_candidates})",
+            end="",
+            flush=True,
+        )
 
-        # ------------------------------------------
-        # Result Limit
-        # ------------------------------------------
-
+    for index, item in enumerate(
+        feed.entries,
+        start=1,
+    ):
         if len(results) >= max_results:
-
             break
 
-        # ==================================================
-        #
-        # Title
-        #
-        # ==================================================
+        if total_candidates > 0:
+            percentage = int(
+                index / total_candidates * 100
+            )
+
+            filled = int(
+                index / total_candidates * 20
+            )
+
+            bar = (
+                "█" * filled
+                + "░" * (20 - filled)
+            )
+
+            print(
+                f"\rCandidate {max_results}: "
+                f"[{bar}] "
+                f"{percentage}% "
+                f"({index}/{total_candidates})",
+                end="",
+                flush=True,
+            )
 
         title = item.get(
             "title",
             "",
         )
-
-        # ==================================================
-        #
-        # URL
-        #
-        # ==================================================
 
         url = item.get(
             "link",
@@ -388,25 +365,12 @@ def search(
         )
 
         if not url:
-
             continue
-
-        # ==================================================
-        #
-        # Published
-        #
-        # ==================================================
 
         published = item.get(
             "published",
             None,
         )
-
-        # ==================================================
-        #
-        # Source
-        #
-        # ==================================================
 
         source = ""
 
@@ -417,9 +381,7 @@ def search(
         )
 
         if item_source:
-
             try:
-
                 source = item_source.get(
                     "title",
                     "",
@@ -429,73 +391,34 @@ def search(
                 AttributeError,
                 TypeError,
             ):
-
                 source = ""
 
-        # ==================================================
-        #
-        # Google News URL Decode
-        #
-        # ==================================================
-
-        url = resolve_google_news_url(
-            url
-        )
-
-        print(
-            "URL:",
-            url,
-        )
-
-        # ==================================================
-        #
-        # URL Deduplication
-        #
-        # ==================================================
+        if resolve_urls:
+            url = resolve_google_news_url(
+                url
+            )
 
         if url in url_set:
-
             continue
 
-        url_set.add(
-            url
-        )
-
-        # ==================================================
-        #
-        # Create SearchResult
-        #
-        # ==================================================
+        url_set.add(url)
 
         result = SearchResult(
-
             keyword=keyword,
-
             title=title,
-
             url=url,
-
             source=source,
-
             published=published,
-
             search_source="google_news",
-
             rank=len(results) + 1,
-
         )
 
         results.append(
             result
         )
 
-    # ==================================================
-    #
-    # Search Complete
-    #
-    # ==================================================
-
-    print()
+    if total_candidates > 0:
+        print()
 
     print(
         f"搜尋完成：{keyword}"
@@ -508,17 +431,8 @@ def search(
     return results
 
 
-# ==================================================
-#
-# Export
-#
-# ==================================================
-
-
 __all__ = [
-
     "resolve_google_news_url",
-
+    "resolve_google_news_urls",
     "search",
-
 ]
