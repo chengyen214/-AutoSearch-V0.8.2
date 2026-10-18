@@ -50,7 +50,6 @@ Context Builder
     6. Prompt
 """
 
-
 from rag.context.formatter import (
     ContextFormatter,
 )
@@ -175,10 +174,7 @@ class ContextBuilder:
 
         for entry in entries:
             metadata = self.metadata_handler.handle(
-                {
-                    "title": entry["title"],
-                    "url": entry["url"],
-                }
+                entry.get("metadata", {})
             )
 
             entry["source_metadata"] = (

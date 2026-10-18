@@ -1,0 +1,336 @@
+{
+  "version": "1.0",
+  "description": "Paper RAG P5.4 Retrieval Evaluation Dataset with initial human relevance judgments",
+  "collection_name": "autosearch_papers_qwen3",
+  "evaluation_settings": {
+    "top_k": 5,
+    "relevance_levels": {
+      "0": "Not relevant",
+      "1": "Partially relevant",
+      "2": "Highly relevant"
+    },
+    "annotation_note": "Initial judgments based on the uploaded real retrieval results and inspected candidate chunks. Expand the judged relevant chunk pool before treating Recall@5 as corpus-level recall."
+  },
+  "queries": [
+    {
+      "id": "E01",
+      "query": "What fabrication approach is used to release suspended silicon nanowires?",
+      "expected_document_ids": [
+        "openalex:W7221458118"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221458118:0",
+          "document_id": "openalex:W7221458118",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221458118:10",
+          "document_id": "openalex:W7221458118",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221458118:11",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:21",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:65",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        }
+      ],
+      "reason": "Focuses on release/fabrication techniques, including the paper's DRIE-based release process and furnace-free passivation approach."
+    },
+    {
+      "id": "E02",
+      "query": "How does palladium functionalization affect hydrogen sensing in suspended silicon nanowires?",
+      "expected_document_ids": [
+        "openalex:W7221458118"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221458118:57",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:58",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:61",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:63",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221458118:64",
+          "document_id": "openalex:W7221458118",
+          "relevance": 2
+        }
+      ],
+      "reason": "Describes the Pd layer, current response to hydrogen, repeatability, and recovery."
+    },
+    {
+      "id": "E03",
+      "query": "How can AI and machine learning support the design of g-C3N4-based nanoplatforms?",
+      "expected_document_ids": [
+        "openalex:W7221558939"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221558939:169",
+          "document_id": "openalex:W7221558939",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221558939:170",
+          "document_id": "openalex:W7221558939",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221558939:171",
+          "document_id": "openalex:W7221558939",
+          "relevance": 1
+        }
+      ],
+      "reason": "Covers AI/ML-assisted design, candidate input features, predictive optimization, and data-standardization prerequisites."
+    },
+    {
+      "id": "E04",
+      "query": "Which azo dye shows a selective response to Ni2+ ions?",
+      "expected_document_ids": [
+        "openalex:W7221570648"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221570648:40",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:41",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:43",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:44",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:45",
+          "document_id": "openalex:W7221570648",
+          "relevance": 1
+        }
+      ],
+      "reason": "The paper identifies azo dye 3d as selectively responsive to Ni2+, including color and UV-visible spectral evidence."
+    },
+    {
+      "id": "E05",
+      "query": "What evidence supports the selective response of azo dye 3d to Ni2+?",
+      "expected_document_ids": [
+        "openalex:W7221570648"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221570648:20",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:41",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:43",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:44",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221570648:47",
+          "document_id": "openalex:W7221570648",
+          "relevance": 2
+        }
+      ],
+      "reason": "Includes visible color change, a new absorption band near 560 nm, comparison against other dyes, and binding evidence."
+    },
+    {
+      "id": "E06",
+      "query": "What monitoring modalities are integrated into the CardioNeural-SoC?",
+      "expected_document_ids": [
+        "openalex:W7221469030"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221469030:0",
+          "document_id": "openalex:W7221469030",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221469030:1",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221469030:6",
+          "document_id": "openalex:W7221469030",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221469030:28",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221469030:31",
+          "document_id": "openalex:W7221469030",
+          "relevance": 1
+        }
+      ],
+      "reason": "The paper integrates ECG, EEG, and PPG; the abstract and comparison table state these modalities directly."
+    },
+    {
+      "id": "E07",
+      "query": "What verification results are reported for the CardioNeural-SoC design?",
+      "expected_document_ids": [
+        "openalex:W7221469030"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221469030:0",
+          "document_id": "openalex:W7221469030",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221469030:1",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221469030:6",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221469030:28",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221469030:31",
+          "document_id": "openalex:W7221469030",
+          "relevance": 2
+        }
+      ],
+      "reason": "Covers the 9-case RTL regression and gate-level synthesis results; reported results are pre-silicon rather than fabricated-silicon measurements."
+    },
+    {
+      "id": "E08",
+      "query": "Why is transparency important in the semiconductor supply chain?",
+      "expected_document_ids": [
+        "openalex:W7221471520"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221471520:26",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:48",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:75",
+          "document_id": "openalex:W7221471520",
+          "relevance": 1
+        }
+      ],
+      "reason": "Explains visibility into materials, water/mineral use, emissions, manufacturing processes, traceability, and accountability."
+    },
+    {
+      "id": "E09",
+      "query": "How can high capital expenditure and export restrictions contribute to global inequality in AI?",
+      "expected_document_ids": [
+        "openalex:W7221471520"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221471520:51",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:52",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:67",
+          "document_id": "openalex:W7221471520",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221471520:68",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        }
+      ],
+      "reason": "Discusses how high CAPEX and export restrictions exclude regions from chip access, AI participation, research, and education."
+    },
+    {
+      "id": "E10",
+      "query": "Why should AI ethics include semiconductor hardware rather than focus only on software?",
+      "expected_document_ids": [
+        "openalex:W7221471520"
+      ],
+      "relevant_chunks": [
+        {
+          "chunk_id": "openalex:W7221471520:2",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:12",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        },
+        {
+          "chunk_id": "openalex:W7221471520:28",
+          "document_id": "openalex:W7221471520",
+          "relevance": 1
+        },
+        {
+          "chunk_id": "openalex:W7221471520:76",
+          "document_id": "openalex:W7221471520",
+          "relevance": 2
+        }
+      ],
+      "reason": "Supports extending AI ethics upstream to hardware, chip fabrication, supply-chain impacts, fairness, sustainability, and global access."
+    }
+  ]
+}

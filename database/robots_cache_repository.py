@@ -6,77 +6,46 @@ AutoSearch V6
 Robots Cache Repository
 
 用途：
-
     Robots.txt Crawl Permission Cache
 
 負責：
-
     - robots_cache 查詢
     - robots_cache 新增
     - 依 base_url 取得 Robots.txt
-    - 依指定 URL 判斷 Crawl Permission
-
-Table:
-
-    robots_cache
+    - 委派 robots.txt 權限檢查
 """
 
-from datetime import datetime
-from urllib.robotparser import RobotFileParser
-
 from database.connection import get_connection
-from crawler.robots_checker import (
-    get_base_url,
-    get_robots_url,
-    get_robots_content,
-)
 
 
 class RobotsCacheRepository:
     """
-    Robots Cache Repository
+    Robots Cache Repository。
 
-    負責操作：
-
-        robots_cache
-
-    主要用途：
-
-        Robots.txt Crawl Permission Cache
+    負責 robots_cache 的 SQL 操作。
+    Robots.txt 檢查流程由 crawler.robots_checker 統一協調。
     """
 
-    def get_by_base_url(
-        self,
-        base_url
-    ):
-        """
-        依 Base URL 取得 Robots Cache。
-        """
+    def get_by_base_url(self, base_url):
+        """依 Base URL 取得 Robots Cache。"""
 
         conn = get_connection()
-
-        cursor = conn.cursor(
-            dictionary=True
-        )
+        cursor = conn.cursor(dictionary=True)
 
         try:
-
             cursor.execute(
                 """
                 SELECT *
                 FROM robots_cache
-                WHERE base_url=%s
+                WHERE base_url = %s
                 LIMIT 1
                 """,
-                (
-                    base_url,
-                )
+                (base_url,),
             )
 
             return cursor.fetchone()
 
         finally:
-
             cursor.close()
             conn.close()
 
@@ -85,18 +54,15 @@ class RobotsCacheRepository:
         base_url,
         robots_url,
         robots_content,
-        checked_at
+        rule_group,
+        checked_at,
     ):
-        """
-        新增 Robots Cache。
-        """
+        """新增 Robots Cache。"""
 
         conn = get_connection()
-
         cursor = conn.cursor()
 
         try:
-
             cursor.execute(
                 """
                 INSERT INTO robots_cache
@@ -104,114 +70,44 @@ class RobotsCacheRepository:
                     base_url,
                     robots_url,
                     robots_content,
-                    allowed,
+                    rule_group,
                     checked_at
                 )
-                VALUES
-                (
-                    %s,
-                    %s,
-                    %s,
-                    %s,
-                    %s
-                )
+                VALUES (%s, %s, %s, %s, %s)
                 """,
                 (
                     base_url,
                     robots_url,
                     robots_content,
-                    True,
-                    checked_at
-                )
+                    rule_group,
+                    checked_at,
+                ),
             )
 
             conn.commit()
-
             return cursor.lastrowid
 
         except Exception:
-
             conn.rollback()
-
             raise
 
         finally:
-
             cursor.close()
             conn.close()
 
-    def check(
-        self,
-        url
-    ):
+    def check(self, url):
         """
-        取得指定 URL 的 Robots Crawl Permission。
+        委派至 robots_checker 的單一入口。
+
+        不在 module import 階段匯入，
+        避免 Circular Import。
         """
 
-        base_url = get_base_url(
-            url
-        )
+        from crawler.robots_checker import check_robots
 
-        cached = self.get_by_base_url(
-            base_url
-        )
-
-        if cached is not None:
-
-            parser = RobotFileParser()
-
-            parser.set_url(
-                cached["robots_url"]
-            )
-
-            parser.parse(
-                cached["robots_content"].splitlines()
-            )
-
-            return parser.can_fetch(
-                "*",
-                url
-            )
-
-        robots_url = get_robots_url(
-            url
-        )
-
-        try:
-
-            robots_content = get_robots_content(
-                url
-            )
-
-        except Exception:
-
-            return False
-
-        parser = RobotFileParser()
-
-        parser.set_url(
-            robots_url
-        )
-
-        parser.parse(
-            robots_content.splitlines()
-        )
-
-        allowed = parser.can_fetch(
-            "*",
-            url
-        )
-
-        self.insert(
-            base_url=base_url,
-            robots_url=robots_url,
-            robots_content=robots_content,
-            checked_at=datetime.now()
-        )
-
-        return allowed
+        return check_robots(url)
 
 
 __all__ = [
-    "RobotsCacheRepository"
+    "RobotsCacheRepository",
 ]

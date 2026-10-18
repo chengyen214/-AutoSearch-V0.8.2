@@ -1,8 +1,6 @@
 """
 crawler.py
-
 AutoSearch V5
-
 Web Downloader
 
 功能：
@@ -715,13 +713,19 @@ def download_css_resource(
             "strategy": strategy,
         }
 
-        if strategy != "browser":
-            if retrieval_context is not None:
-                kwargs["session"] = (
-                    retrieval_context.get_session(
-                        strategy
-                    )
+        if (
+            strategy in (
+                "session",
+                "referer",
+                "cookie_session",
+            )
+            and retrieval_context is not None
+        ):
+            kwargs["session"] = (
+                retrieval_context.get_session(
+                    strategy
                 )
+            )
 
         result = retrieve_css(
             url,

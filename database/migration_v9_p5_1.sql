@@ -1,0 +1,5 @@
+ALTER TABLE articles
+ADD COLUMN ispaper TINYINT(1) NOT NULL DEFAULT 0
+AFTER status,
+ADD COLUMN authors TEXT NULL
+AFTER ispaper;

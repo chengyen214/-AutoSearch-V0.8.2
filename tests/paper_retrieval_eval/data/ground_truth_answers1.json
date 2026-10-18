@@ -1,0 +1,31 @@
+{
+  "document_id": "openalex:W7221469030",
+  "paper_title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System-on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+  "ground_truth_answers": [
+    {
+      "id": "Q01",
+      "question": "What is the main objective of the CardioNeural-SoC project, and what problem is it designed to address?",
+      "standard_answer": "The main objective of CardioNeural-SoC is to develop an indigenous 28 nm mixed-signal System-on-Chip that integrates cardiac and neurological signal acquisition, digital processing, classification, and wireless communication into a single chip. It is intended to reduce dependence on imported medical monitoring integrated circuits and replace the multiple separate chips typically required for multi-parameter patient monitoring. By integrating ECG, EEG, and PPG capabilities, the design aims to reduce system complexity and cost and improve access to cardiac and neurological monitoring in resource-constrained healthcare facilities. The work demonstrates a pre-silicon design and verification effort rather than a completed, clinically validated medical device."
+    },
+    {
+      "id": "Q02",
+      "question": "What are the main architectural components of CardioNeural-SoC, and how does the RISC-V processor interact with the mixed-signal components?",
+      "standard_answer": "CardioNeural-SoC integrates analog front-end circuits for four-channel ECG acquisition, two-channel EEG acquisition, and dual-wavelength PPG sensing; a 16-bit, six-channel successive-approximation-register ADC array; a 32-bit RISC-V processor; hardware accelerators for cardiac signal analysis and seizure-onset detection; BLE 5.3 wireless connectivity with AES-128 encryption; and a power-management unit supporting DC-DC conversion and low-dropout regulators. The analog front ends acquire physiological signals, which are converted into digital samples by the ADC array. The RISC-V-based digital subsystem processes the acquired data and coordinates specialized hardware accelerators for tasks such as QRS detection, atrial-fibrillation classification, and seizure-onset detection. Processed data can then be protected using encryption and transmitted wirelessly. The architecture also targets low-power operation for wearable and duty-cycled monitoring."
+    },
+    {
+      "id": "Q03",
+      "question": "Which cardiac and neurological signals or physiological modalities does CardioNeural-SoC support, and how are they acquired or monitored?",
+      "standard_answer": "CardioNeural-SoC supports three principal physiological modalities: electrocardiography (ECG), electroencephalography (EEG), and photoplethysmography (PPG). ECG is acquired through a four-channel analog front end to monitor cardiac electrical activity. EEG is acquired through a two-channel chopper-stabilized analog front end to monitor neurological electrical activity. PPG uses a dual-wavelength sensor interface to support optical monitoring related to blood flow and blood oxygenation. The acquired analog signals are converted into digital samples by a 16-bit, six-channel SAR ADC array. The digital processing subsystem is designed to analyze cardiac rhythm features and detect potential seizure onsets. These capabilities are described at the design and simulation stage; clinical performance has not been established through patient testing."
+    },
+    {
+      "id": "Q04",
+      "question": "What RTL verification methods and test scenarios are used to evaluate the functional correctness of CardioNeural-SoC?",
+      "standard_answer": "The design is evaluated using a system-level RTL testbench named tb_cardioneural_soc_top.v in Cadence Xcelium. The verification regression contains nine test cases covering multi-channel ECG acquisition sequencing, multi-rate clock generation, ADC/DAC sequencing and handshaking, cardiac arrhythmia classification, seizure-related classification behavior, AES-128 encryption, BLE communication handshakes, and power-gating sequences. The reported regression completed with all nine test cases passing, providing simulation-based evidence that the tested digital functions operate as intended. These results establish pre-silicon functional verification only; they do not demonstrate the behavior of fabricated silicon or clinical validation."
+    },
+    {
+      "id": "Q05",
+      "question": "What pre-silicon synthesis results are reported, including the available area, timing, power, or resource utilization metrics?",
+      "standard_answer": "The reported synthesis results focus on the DWT-based sub-band energy feature-extraction block named layer1_top, synthesized using Cadence Genus for a 28 nm standard-cell library. The block contains 21,703 standard-cell instances, including 6,789 flip-flops and 13,647 combinational gates, and occupies 299,895 square micrometers. Sequential elements account for approximately 59.0% of the reported area. At a 200 MHz target frequency, corresponding to a 5,000 ps clock period, the reported critical-path arrival time is 4,916 ps, with zero-slack timing closure reported by the study. Estimated power for this block is 46.06 mW, with sequential-register switching accounting for approximately 74.83% and combinational logic for 25.17%. The full-chip design is reported to contain approximately 129,000 leaf cells and targets active power below 2.3 mW and duty-cycled wearable power below 180 microwatts. These are pre-silicon synthesis estimates and design targets, not measurements from fabricated hardware."
+    }
+  ]
+}

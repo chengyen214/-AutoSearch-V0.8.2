@@ -154,28 +154,15 @@ Raw HTML MongoDB Structure：
             Raw HTML Persistence
 
 
-    RobotsCacheRepository
+    Robots Check
         負責：
 
             URL
              ↓
-            Base URL
+            check_robots()
              ↓
-            MySQL robots_cache
-             │
-             ├── Cache Hit
-             │      ↓
-             │   robots_content
-             │      ↓
-             │   判斷 CURRENT URL
-             │
-             └── Cache Miss
-                    ↓
-                 GET robots.txt
-                    ↓
-                 儲存 robots_content
-                    ↓
-                 判斷 CURRENT URL
+            判斷目前 URL
+            是否允許 Crawl
 
 
     KeywordLinkDetector
@@ -298,23 +285,9 @@ Robots Crawl Policy：
 
     Original URL
         ↓
-    RobotsCacheRepository
+    check_robots()
         ↓
-    MySQL robots_cache
-        │
-        ├── Cache Hit
-        │      ↓
-        │   robots_content
-        │      ↓
-        │   判斷目前 URL
-        │
-        └── Cache Miss
-               ↓
-            GET /robots.txt
-               ↓
-            儲存 robots_content
-               ↓
-            判斷目前 URL
+    判斷目前 URL 的 Crawl Permission
 
 
     allowed：
@@ -328,20 +301,9 @@ Robots Crawl Policy：
 
     robots_content：
 
-        儲存完整 robots.txt。
-
-        同一 Base URL 下：
-
-            /research/report/
-                ↓
-            可以允許
-
-            /tech/webad/
-                ↓
-            可以禁止
-
-        必須依目前 URL
-        重新判斷。
+        若需要快取，
+        由 robots_checker 模組
+        負責整合快取與權限判斷。
 
 
     CrawlService：
@@ -455,7 +417,7 @@ Pipeline：
           ↓
     CrawlService
           ↓
-    RobotsCacheRepository
+    check_robots()
           ↓
     robots.txt Permission Check
           │
@@ -532,12 +494,12 @@ from crawler.crawler import (
     download_resources,
 )
 
-from database.raw_html_repository import (
-    RawHTMLRepository,
+from crawler.robots_checker import (
+    check_robots,
 )
 
-from database.robots_cache_repository import (
-    RobotsCacheRepository,
+from database.raw_html_repository import (
+    RawHTMLRepository,
 )
 
 from utils.keyword_processor import (
@@ -727,9 +689,8 @@ class CrawlService:
 
     Robots：
 
-        RobotsCacheRepository
-        負責 robots.txt Cache
-        與目前 URL Permission Check。
+        直接呼叫 crawler.robots_checker
+        的 check_robots() 判斷目前 URL。
 
 
     注意：
@@ -746,7 +707,6 @@ class CrawlService:
         url_resolver=None,
         resource_downloader=None,
         raw_html_repository=None,
-        robots_cache_repository=None,
         save_raw_html=True,
         keyword_processor=None,
         keyword_link_detector=None,
@@ -792,15 +752,6 @@ class CrawlService:
             預設：
 
                 RawHTMLRepository()
-
-
-        robots_cache_repository :
-
-            Robots Cache Repository。
-
-            預設：
-
-                RobotsCacheRepository()
 
 
         save_raw_html :
@@ -894,15 +845,6 @@ class CrawlService:
 
         self.raw_html_repository = (
             raw_html_repository
-        )
-
-        if robots_cache_repository is None:
-            robots_cache_repository = (
-                RobotsCacheRepository()
-            )
-
-        self.robots_cache_repository = (
-            robots_cache_repository
         )
 
         self.save_raw_html = bool(
@@ -1264,10 +1206,8 @@ class CrawlService:
             )
 
         try:
-            allowed = (
-                self.robots_cache_repository.check(
-                    normalized_url
-                )
+            allowed = check_robots(
+                normalized_url
             )
 
         except Exception as exc:
@@ -1906,7 +1846,7 @@ class CrawlService:
                     ↓
               CrawlResult[]
                     │
-                    ├──→ RobotsCacheRepository
+                    ├──→ check_robots()
                     │          ↓
                     │   robots.txt Permission
                     │

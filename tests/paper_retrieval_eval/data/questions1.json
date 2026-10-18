@@ -1,0 +1,28 @@
+
+{
+  "document_id": "openalex:W7221469030",
+  "paper_title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System-on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+  "round": 1,
+  "questions": [
+    {
+      "id": "Q01",
+      "question": "What is the main objective of the CardioNeural-SoC project, and what problem is it designed to address?"
+    },
+    {
+      "id": "Q02",
+      "question": "What are the main architectural components of CardioNeural-SoC, and how does the RISC-V processor interact with the mixed-signal components?"
+    },
+    {
+      "id": "Q03",
+      "question": "Which cardiac and neurological signals or physiological modalities does CardioNeural-SoC support, and how are they acquired or monitored?"
+    },
+    {
+      "id": "Q04",
+      "question": "What RTL verification methods and test scenarios are used to evaluate the functional correctness of CardioNeural-SoC?"
+    },
+    {
+      "id": "Q05",
+      "question": "What pre-silicon synthesis results are reported, including the available area, timing, power, or resource utilization metrics?"
+    }
+  ]
+}

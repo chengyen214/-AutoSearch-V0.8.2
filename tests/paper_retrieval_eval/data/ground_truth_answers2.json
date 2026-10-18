@@ -1,0 +1,32 @@
+{
+  "document_id": "openalex:W7221469030",
+  "paper_title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System-on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+  "round": 2,
+  "ground_truth_answers": [
+    {
+      "id": "Q06",
+      "question": "How does CardioNeural-SoC process and transfer physiological sensor data between the analog front-end, digital processing components, and the RISC-V processor?",
+      "standard_answer": "CardioNeural-SoC processes physiological data through a mixed-signal acquisition and digital processing pipeline. Its analog front ends acquire ECG, EEG, and PPG signals and condition them for conversion. A six-channel, 16-bit successive-approximation-register ADC array converts the analog signals into digital samples. The digital subsystem, centered on a 32-bit RISC-V processor, processes the sampled data and coordinates specialized hardware accelerators for cardiac signal analysis and seizure-onset detection. Processed information can then be prepared for secure wireless transmission through the BLE 5.3 subsystem, which supports AES-128 encryption. The precise internal bus topology, register-transfer protocol, and peripheral transaction sequence must be confirmed from the paper's architecture description and RTL implementation."
+    },
+    {
+      "id": "Q07",
+      "question": "What communication interfaces, buses, or peripheral interfaces are implemented in CardioNeural-SoC, and what roles do they serve?",
+      "standard_answer": "The described CardioNeural-SoC architecture includes a BLE 5.3 wireless communication subsystem for transmitting physiological monitoring data, an AES-128 encryption function for protecting data, analog sensor interfaces for ECG, EEG, and PPG acquisition, and an ADC interface for transferring converted samples into the digital processing subsystem. These interfaces support physiological signal acquisition, digital processing, data protection, and wireless communication. The exact internal processor bus, peripheral bus, and control interface names, such as whether the implementation uses a particular AMBA or custom bus, cannot be established from the available information and should not be inferred without checking the original paper."
+    },
+    {
+      "id": "Q08",
+      "question": "What specific RTL verification scenarios, test cases, or coverage results are reported, and what do they demonstrate about the design?",
+      "standard_answer": "The reported RTL verification uses a system-level testbench identified as tb_cardioneural_soc_top.v and the Cadence Xcelium simulation environment. The described regression includes nine test cases covering multi-channel ECG acquisition sequencing, multi-rate clock generation, ADC/DAC sequencing and handshaking, cardiac arrhythmia classification, seizure-related classification behavior, AES-128 encryption, BLE communication handshakes, and power-gating sequences. The reported result is that all nine test cases passed. This provides simulation-based evidence that the tested functional scenarios behave as expected. A passing regression does not by itself establish complete functional coverage, exhaustive verification, successful fabricated-silicon operation, or clinical validity. Quantitative coverage percentages should only be reported if the paper explicitly provides them."
+    },
+    {
+      "id": "Q09",
+      "question": "What synthesis tools, target technology, clock frequency, or hardware configuration are specified, and how do they affect the reported implementation results?",
+      "standard_answer": "The described implementation uses Cadence Genus synthesis and a 28 nm standard-cell technology library for the reported hardware synthesis analysis. The feature-extraction block named layer1_top is evaluated at a target clock frequency of 200 MHz, corresponding to a 5 ns clock period. Its reported critical-path arrival time is 4.916 ns, which is close to the target period and therefore indicates limited timing margin. The reported block contains 21,703 standard-cell instances and occupies 299,895 square micrometers, with estimated power of 46.06 mW. These figures characterize the specified synthesized block and should not be treated as whole-chip measured results. The full-chip cell count, power targets, and block-level synthesis figures describe different scopes and must be distinguished when comparing implementation results."
+    },
+    {
+      "id": "Q10",
+      "question": "What limitations, unresolved engineering challenges, or future improvements do the authors identify for CardioNeural-SoC?",
+      "standard_answer": "The reported work is centered on architecture development, RTL verification, and pre-silicon synthesis. Consequently, its results do not establish that fabricated silicon has achieved the reported performance, power consumption, or area, and they do not demonstrate clinical effectiveness using real patients. Important remaining validation steps include fabrication and post-silicon testing, measurement of actual power and timing under realistic operating conditions, and evaluation of the signal-processing functions using representative physiological data. Further work may also be needed to validate the integrated analog front ends, ADC performance, wireless reliability, security implementation, and low-power operation in a practical wearable system. These are engineering considerations arising from the pre-silicon scope; specific limitations or future-work items explicitly stated by the authors must be verified against the original paper before being attributed to them."
+    }
+  ]
+}

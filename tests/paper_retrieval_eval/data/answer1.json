@@ -1,0 +1,490 @@
+{
+  "document_id": "openalex:W7221469030",
+  "paper_title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System-on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+  "round": 1,
+  "question_file": "questions1.json",
+  "top_k": 5,
+  "evaluation_method": "manual_chunk_relevance",
+  "relevance_scale": {
+    "2": "Directly relevant: the chunk contains information that answers the question.",
+    "1": "Partially relevant: the chunk contains useful but incomplete or indirect information.",
+    "0": "Not relevant: the chunk does not provide useful information for answering the question."
+  },
+  "results": [
+    {
+      "question_id": "Q01",
+      "question": "What is the main objective of the CardioNeural-SoC project, and what problem is it designed to address?",
+      "retrieval_query": "What is the main objective of the CardioNeural-SoC project, and what problem is it designed to address?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221469030:6",
+          "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221469030:6",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "page_number": 3,
+            "document_id": "openalex:W7221469030",
+            "chunk_index": 6
+          },
+          "distance": 0.35195833444595337,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221469030:1",
+          "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+          "metadata": {
+            "chunk_id": "openalex:W7221469030:1",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "document_id": "openalex:W7221469030",
+            "source_type": "paper_pdf",
+            "page_number": 2,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 1
+          },
+          "distance": 0.36343854665756226,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221469030:31",
+          "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221469030:31",
+            "page_number": 11,
+            "chunk_index": 31,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.37820446491241455,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221469030:28",
+          "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+          "metadata": {
+            "document_id": "openalex:W7221469030",
+            "chunk_id": "openalex:W7221469030:28",
+            "page_number": 10,
+            "chunk_index": 28,
+            "source_type": "paper_pdf",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1"
+          },
+          "distance": 0.38375431299209595,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221469030:12",
+          "text": "₹8–₹10 Cr/yr\nTotal projected (Year 5)\n—\n—\n₹57–₹82 Cr/yr\nTable 2. Projected addressable-market revenue by segment for CardioNeural-SoC, Year 3–5 of\ncommercialization (planning-stage estimate).\nPage 4/14",
+          "metadata": {
+            "chunk_index": 12,
+            "document_id": "openalex:W7221469030",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:12",
+            "page_number": 4,
+            "source_type": "paper_pdf",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results"
+          },
+          "distance": 0.39543575048446655,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q02",
+      "question": "What are the main architectural components of CardioNeural-SoC, and how does the RISC-V processor interact with the mixed-signal components?",
+      "retrieval_query": "What are the main architectural components of CardioNeural-SoC, and how does the RISC-V processor interact with the mixed-signal components?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221469030:6",
+          "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+          "metadata": {
+            "document_id": "openalex:W7221469030",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_index": 6,
+            "source_type": "paper_pdf",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "page_number": 3,
+            "chunk_id": "openalex:W7221469030:6"
+          },
+          "distance": 0.21589809656143188,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221469030:0",
+          "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+          "metadata": {
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:0",
+            "document_id": "openalex:W7221469030",
+            "chunk_index": 0,
+            "page_number": 1,
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.24000072479248047,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221469030:1",
+          "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+          "metadata": {
+            "document_id": "openalex:W7221469030",
+            "chunk_index": 1,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:1",
+            "source_type": "paper_pdf",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "page_number": 2
+          },
+          "distance": 0.2621404528617859,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221469030:28",
+          "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+          "metadata": {
+            "chunk_id": "openalex:W7221469030:28",
+            "document_id": "openalex:W7221469030",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 28,
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "page_number": 10,
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.26515018939971924,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221469030:15",
+          "text": "Dynamic range 120 dB;\n16-bit resolution\n28\nnm\n< 15 µW\n16-bit ADC\nArray\n6-channel SAR ADC with\nnoise shaping\nSNR > 94 dB; 4 kSPS\n28\nnm\n< 45 µW\ntotal\nRISC-V DSP\nCore\n32-bit in-order core +\nhardware accelerators\nQRS detection; AF\nclassifier; seizure-onset\nLSTM-lite\n28\nnm\n< 400 µW\nactive\nBLE 5.3 +\nSecurity\nRF transceiver + AES-128\nencryption\n2.4 GHz; 15 m range; 250\nkbps\n28\nnm\n< 1.8 mW TX\nPower\nManagement\nPMU: DC-DC + LDO +\nsequencer\nVIN 1.8–3.6 V; η > 87%;\ncoin-cell capable\n28\nnm\n< 30 µW idle\nTable 3. CardioNeural-SoC subsystem-level architecture and target specifications.\nPage 5/14",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_id": "openalex:W7221469030:15",
+            "source_type": "paper_pdf",
+            "page_number": 5,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 15,
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.28688186407089233,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q03",
+      "question": "Which cardiac and neurological signals or physiological modalities does CardioNeural-SoC support, and how are they acquired or monitored?",
+      "retrieval_query": "Which cardiac and neurological signals or physiological modalities does CardioNeural-SoC support, and how are they acquired or monitored?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221469030:1",
+          "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+          "metadata": {
+            "page_number": 2,
+            "chunk_id": "openalex:W7221469030:1",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_index": 1,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.3013186454772949,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221469030:0",
+          "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "page_number": 1,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 0,
+            "chunk_id": "openalex:W7221469030:0",
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.301960825920105,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221469030:6",
+          "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+          "metadata": {
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 6,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221469030",
+            "chunk_id": "openalex:W7221469030:6",
+            "page_number": 3,
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results"
+          },
+          "distance": 0.3047707676887512,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221469030:28",
+          "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "chunk_index": 28,
+            "document_id": "openalex:W7221469030",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:28",
+            "page_number": 10
+          },
+          "distance": 0.3088216185569763,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221469030:31",
+          "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+          "metadata": {
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:31",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "page_number": 11,
+            "source_type": "paper_pdf",
+            "chunk_index": 31,
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.34785109758377075,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q04",
+      "question": "What RTL verification methods and test scenarios are used to evaluate the functional correctness of CardioNeural-SoC?",
+      "retrieval_query": "What RTL verification methods and test scenarios are used to evaluate the functional correctness of CardioNeural-SoC?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221469030:28",
+          "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf",
+            "page_number": 10,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 28,
+            "chunk_id": "openalex:W7221469030:28",
+            "document_id": "openalex:W7221469030"
+          },
+          "distance": 0.30031532049179077,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221469030:31",
+          "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+          "metadata": {
+            "document_id": "openalex:W7221469030",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "page_number": 11,
+            "chunk_index": 31,
+            "chunk_id": "openalex:W7221469030:31",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.35521823167800903,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221469030:6",
+          "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_id": "openalex:W7221469030:6",
+            "document_id": "openalex:W7221469030",
+            "page_number": 3,
+            "chunk_index": 6
+          },
+          "distance": 0.3589617609977722,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221469030:1",
+          "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "document_id": "openalex:W7221469030",
+            "page_number": 2,
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221469030:1",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "chunk_index": 1
+          },
+          "distance": 0.36341726779937744,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221469030:0",
+          "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "chunk_index": 0,
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "document_id": "openalex:W7221469030",
+            "chunk_id": "openalex:W7221469030:0",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "page_number": 1
+          },
+          "distance": 0.3642174005508423,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q05",
+      "question": "What pre-silicon synthesis results are reported, including the available area, timing, power, or resource utilization metrics?",
+      "retrieval_query": "What pre-silicon synthesis results are reported, including the available area, timing, power, or resource utilization metrics?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221469030:29",
+          "text": "Table 9. Architectural-feature comparison of CardioNeural-SoC against commercial and academic prior art.\nRows for fabricated designs report validation at the measured-silicon stage; the CardioNeural-SoC row\nreports validation at the RTL/synthesis (pre-silicon) stage, consistent with the project's current status.\n8. Discussion\nThe principal contribution of this work is architectural and pre-silicon: a verified RTL implementation and\na synthesized sub-block (layer1_top) demonstrating that the proposed multi-modal acquisition and on-\nchip classification architecture is implementable within a digital-logic budget consistent with the system-\nlevel power target in Table 3, once duty-cycling is applied. The zero-slack timing closure reported in\nSection 6.3 and the 46.06 mW worst-case synthesis-stage power figure for layer1_top both warrant\ncontinued attention during physical implementation: zero slack at the gate level typically requires either a",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_index": 29,
+            "chunk_id": "openalex:W7221469030:29",
+            "document_id": "openalex:W7221469030",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "source_type": "paper_pdf",
+            "page_number": 11
+          },
+          "distance": 0.3693191409111023,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221469030:33",
+          "text": "Acknowledgments\n[Insert acknowledgment of host institution, MEitY Design Linked Incentive (DLI) Scheme support if and\nwhen granted, clinical and academic partner institutions, and the Semiconductor Laboratory (SCL)\nChandigarh for foundry access, as applicable.]\nAuthor Contributions\n[Insert per CRediT taxonomy, e.g.: conceptualization and system architecture Author 1; RTL design and\nverification Author 1/2; digital synthesis and timing closure Author 2; market and societal-impact\nanalysis Author 1; writing original draft, review and editing Author 1 and Author 2.]\nFunding\nNo funding source is identified.\nData Availability Statement\nRTL source, the system-level testbench (tb_cardioneural_soc_top.v), and the layer1_top synthesis reports\n(area, power, timing) underlying this paper are available from the corresponding author upon reasonable\nrequest, subject to institutional IP-disclosure timing constraints noted in Section 9.\nConflict of Interest\nThe authors declare no conflict of interest.",
+          "metadata": {
+            "chunk_index": 33,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "source_type": "paper_pdf",
+            "page_number": 12,
+            "document_id": "openalex:W7221469030",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_id": "openalex:W7221469030:33"
+          },
+          "distance": 0.4016491174697876,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221469030:20",
+          "text": "arrhythmia and seizure-onset classifiers. This block was synthesized from RTL to gate level using\nCadence Genus (version 20.11-s111_1) targeting a typical-corner standard-cell library under enclosed\nwireload conditions. The resulting netlist, area, power, and static timing results are reported below in full,\nwithout omission, as obtained from the synthesis tool.\n6.1 Area and Gate-Count Summary\nThe synthesized layer1_top module maps to 21,703 standard-cell instances spanning over 90 distinct\ncell types, totaling 299,895.12 µm² of cell area. Sequential elements predominantly SDFFRHQX1 flip-\nflops (6,789 instances) supporting the wide energy-accumulator registers   account for 59.0% of total\narea, with combinational logic (full adders, multiplexers, AOI/OAI gates, and the XOR-based wavelet\nbutterfly structures) accounting for the remaining 40.2%. Table 5 summarizes the area distribution by\ncell category.\nCell Type\nInstances\nArea (µm²)\nArea %\nSequential (DFF/SDFF cells)\n7,131\n177,060.85",
+          "metadata": {
+            "document_id": "openalex:W7221469030",
+            "source_type": "paper_pdf",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "chunk_index": 20,
+            "page_number": 7,
+            "chunk_id": "openalex:W7221469030:20",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1"
+          },
+          "distance": 0.4370763301849365,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221469030:23",
+          "text": "(W)\nSwitching\n(W)\nTotal (W), Row %\nRegister\n9.316e-04\n3.230e-02\n1.234e-03\n3.446e-02\n(74.83%)\nLogic\n4.574e-04\n6.953e-03\n4.185e-03\n1.160e-02\n(25.17%)\nMemory / Latch / Clock / Pad /\nPM\n0\n0\n0\n0 (0.00%)\nSubtotal\n1.389e-03\n3.925e-02\n5.419e-03\n4.606e-02\n(100%)\nTable 6. Post-synthesis power report for layer1_top by design category (leakage, internal, and switching\npower, in watts).\n6.3 Static Timing Analysis\nTable 7 summarizes the worst-case timing path reported for the clk path group of layer1_top. The critical\npath originates at the launch flip-flop of the DWT/GSR (sub-band index) accumulator and propagates\nthrough a Boolean reduction and carry-propagate structure to the capture flip-flop at the most significant\nbit of the 48-bit sub-band energy accumulator, with a data-path arrival time of 4,916 ps against a 5,000\nps required time, yielding exactly zero slack at the synthesis (typical) corner.\nPage 8/14",
+          "metadata": {
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "document_id": "openalex:W7221469030",
+            "chunk_id": "openalex:W7221469030:23",
+            "chunk_index": 23,
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "source_type": "paper_pdf",
+            "page_number": 8
+          },
+          "distance": 0.45423424243927,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221469030:32",
+          "text": "cases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703\ncells, 299,895 µm², 46.06 mW worst-case, zero-slack timing closure) were reported in full. Future work\nwill proceed through full-custom analog front-end design and layout, digital place-and-route and post-\nlayout static timing closure, GDS-II tape-out via a Semiconductor Laboratory (SCL) Chandigarh multi-\nproject-wafer run, post-silicon probe-station characterization against the Table 3 specifications, and a\npilot clinical validation study (target: 100 ECG and 50 EEG patients against gold-standard equipment) at\na partner hospital, prior to any claim of clinical-grade performance.\nDeclarations\nPage 11/14",
+          "metadata": {
+            "chunk_id": "openalex:W7221469030:32",
+            "chunk_index": 32,
+            "document_id": "openalex:W7221469030",
+            "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+            "source_type": "paper_pdf",
+            "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+            "page_number": 11
+          },
+          "distance": 0.4547663927078247,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    }
+  ]
+}

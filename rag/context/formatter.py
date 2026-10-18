@@ -43,7 +43,6 @@ Context Formatting
     8. Prompt
 """
 
-
 from rag.retriever.retrieval_result import (
     RetrievalResult
 )
@@ -54,10 +53,6 @@ from rag.context.config import (
     SOURCE_SEPARATOR,
 )
 
-
-# ============================================================
-# Context Formatter
-# ============================================================
 
 class ContextFormatter:
     """
@@ -115,10 +110,6 @@ class ContextFormatter:
             raise TypeError(
                 "source_separator must be a string."
             )
-
-    # ========================================================
-    # Public API
-    # ========================================================
 
     def format(
         self,
@@ -180,10 +171,6 @@ class ContextFormatter:
             "count": len(entries),
         }
 
-    # ========================================================
-    # Context Entry
-    # ========================================================
-
     def _format_entry(
         self,
         result,
@@ -216,11 +203,8 @@ class ContextFormatter:
                 "url"
             ),
             "content": result.chunk,
+            "metadata": dict(metadata),
         }
-
-    # ========================================================
-    # Context Text
-    # ========================================================
 
     def _build_context_text(
         self,
@@ -233,10 +217,17 @@ class ContextFormatter:
         formatted_sources = []
 
         for entry in entries:
+            metadata = entry.get(
+                "metadata",
+                {}
+            )
+
             source_text = (
                 f"[Source {entry['source_index']}]\n"
                 f"Title: {entry['title'] or ''}\n"
                 f"URL: {entry['url'] or ''}\n"
+                f"Crawl Time: "
+                f"{metadata.get('crawl_time') or ''}\n"
                 f"Content:\n"
                 f"{entry['content']}"
             )
@@ -260,10 +251,6 @@ class ContextFormatter:
 
         return context_text
 
-
-# ============================================================
-# Public API
-# ============================================================
 
 __all__ = [
     "ContextFormatter",

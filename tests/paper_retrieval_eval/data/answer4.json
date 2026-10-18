@@ -1,0 +1,490 @@
+{
+  "document_id": "openalex:W7221458118",
+  "paper_title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+  "round": 4,
+  "question_file": "questions4.json",
+  "top_k": 5,
+  "evaluation_method": "manual_chunk_relevance",
+  "relevance_scale": {
+    "2": "Directly relevant: the chunk contains information that answers the question.",
+    "1": "Partially relevant: the chunk contains useful but incomplete or indirect information.",
+    "0": "Not relevant: the chunk does not provide useful information for answering the question."
+  },
+  "results": [
+    {
+      "question_id": "Q16",
+      "question": "製程中的 conformal Cr 側壁鍍層與深反應離子蝕刻（DRIE）分別扮演什麼角色？它們如何共同保護奈米線的線寬，並完成懸浮結構的釋放？",
+      "retrieval_query": "製程中的 conformal Cr 側壁鍍層與深反應離子蝕刻（DRIE）分別扮演什麼角色？它們如何共同保護奈米線的線寬，並完成懸浮結構的釋放？",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221458118:32",
+          "text": "anchoring at shared support clamps, indicating good\ndimensional control and repeatability. The nominal geo-\nmetry is again preserved across all AR without observable\ndeformation, reﬂecting effective sidewall protection dur-\ning DRIE.\nThe out-of-plane thickness of the suspended Si NWs is\ndetermined by the shallow Si etch step used to deﬁne the\nnanoscale preform (Fig. 1e). Cross-sectional TEM analysis\n(Fig. 1k, l) reveals a NW thickness of approximately\n60 nm, which remains consistent across fabricated sus-\npended NW structures. This conﬁrms that the NW\nthickness is governed by the preform deﬁnition and is\nlargely independent of NW length and layout. The pre-\nservation of this thickness after DRIE release further\nindicates that the conformal sidewall passivation effec-\ntively protects the NW geometry during etching. For in-\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 5 of 13",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_index": 32,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source_type": "paper_pdf",
+            "page_number": 5,
+            "chunk_id": "openalex:W7221458118:32",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.34629929065704346,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221458118:31",
+          "text": "achieved across all geometries, indicating reliable transfer\nfrom preform deﬁnition to the ﬁnal suspended structure.\nEven at AR = 100, the NWs exhibit no visible sagging,\nbuckling, or deformation, conﬁrming structural integrity\nand effective sidewall protection during DRIE. The con-\nsistent undercut observed in the array structures, char-\nacterized by typical DRIE scalloping, further conﬁrms\ncontrolled release with limited lateral over-etching. Fig-\nure 3b shows NW arrays with identical CDs and varying\nARs of 20, 50, and 100, demonstrating process uniformity\nand scalability. The arrays are deﬁned with a pitch of\n5 µm, consistent with the design and conﬁrming con-\ntrolled\nlayout\ndeﬁnition.\nHigh-magniﬁcation\nimages\nreveal consistent linewidth across the arrays and robust\nanchoring at shared support clamps, indicating good\ndimensional control and repeatability. The nominal geo-\nmetry is again preserved across all AR without observable",
+          "metadata": {
+            "page_number": 5,
+            "chunk_index": 31,
+            "chunk_id": "openalex:W7221458118:31",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.3566672205924988,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221458118:21",
+          "text": "underlying hard mask. After removal of the oxide layer,\nthe preform retains Cr sidewall protection while main-\ntaining top-surface coverage (Fig. 1g). The complete layer\nremoval is ensured through endpoint detection. Nomin-\nally, the recipes used are highly selective: the Cr removal\nrecipe yields a 65–70 nm/min etch rate, and the SiO2\nremoval recipe yields roughly 50 nm/min, with no mea-\nsurable SiO2/Cr removal under the applied conditions.\nRelease of the suspended NW is achieved using Bosch-\ntype DRIE with alternating etch (SF6/O2) and passivation\n(C4F8) cycles. The isotropic etch component generates the\nundercut required to release the structure from the bot-\ntom surface, forming the suspended Si NW geometry\n(Fig. 1h). DRIE is performed at the chip level using a\ncarrier wafer, with the platen set to ~1 °C. Etching is\nperformed with 5 s of etch and 2 s of passivation cycles to\nachieve a release depth of 2 µm.\nFollowing DRIE release, residual polymeric and inor-",
+          "metadata": {
+            "chunk_index": 21,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "page_number": 4,
+            "chunk_id": "openalex:W7221458118:21",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.3646291494369507,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221458118:25",
+          "text": "f, g conformal sidewall passivation followed by directional etch to retain sidewall protection; h DRIE undercut for NW release; i ﬁnal suspended Si NW\nafter removal of masking and passivation layers. Cross-sectional analysis: j schematic cross-section along A–A’ after step (e); k corresponding TEM\nimage showing the Si preform and oxide mask; l EDX map conﬁrming Si and O distribution. Scale bars: 20 nm\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 4 of 13",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "openalex:W7221458118:25",
+            "source_type": "paper_pdf",
+            "chunk_index": 25,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "page_number": 4
+          },
+          "distance": 0.3700571060180664,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221458118:54",
+          "text": "uniformity, structural stability, and scalability conﬁrm the\nrobustness of the fabrication process for integrated device\narchitectures. Overall, the results demonstrate the func-\ntionality of the fabricated NWs across single-NW, array,\nand transistor conﬁgurations on SOI substrates, sup-\nporting their use in chemiresistive gas and biochemical\nsensing after surface functionalization10,56,64. A central\nfeature of the developed approach is the elimination of\nfurnace-based high-temperature steps, such as thermal\noxidation and LPCVD, commonly used in conventional\nsuspended NW fabrication. These steps can introduce\nresidual stress in nanoscale beams and impose stringent\ncontamination constraints, as they require ultraclean\nsubstrates. In contrast, the present process uses sputtered\nCr for sidewall passivation, enabling high etch selectivity\nduring DRIE while maintaining a low thermal budget. The\nonly thermal step in the process is the 180 °C PMMA soft",
+          "metadata": {
+            "chunk_index": 54,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221458118",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_id": "openalex:W7221458118:54",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "page_number": 10
+          },
+          "distance": 0.40179556608200073,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q17",
+      "question": "論文展示了哪些懸浮矽奈米線元件架構，例如雙端電性量測元件、平行奈米線陣列與側閘極 junctionless FET？各種架構的電性量測結果與用途有何不同？",
+      "retrieval_query": "論文展示了哪些懸浮矽奈米線元件架構，例如雙端電性量測元件、平行奈米線陣列與側閘極 junctionless FET？各種架構的電性量測結果與用途有何不同？",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221458118:83",
+          "text": "59.\nColinge, J.-P. et al. Nanowire transistors without junctions. Nat. Nanotechnol. 5,\n225–229 (2010).\n60.\nTsuchiya, Y. et al. Characteristic resonance features of SOI-CMOS-compatible\nsilicon nanoelectromechanical doubly-clamped beams up to 330 MHz. in\nProc. 2018 IEEE Micro Electro Mechanical Systems (MEMS) 515–518 (IEEE, 2018).\nhttps://doi.org/10.1109/MEMSYS.2018.8346603.\n61.\nLale, A. et al. Top-down integration of suspended N+/P/N+ silicon-nanowire-\nbased ion-sensitive ﬁeld effect transistors for pH analysis at the submicronic\nscale. Thin Solid Films 764, 139609 (2023).\n62.\nTilke, A., Pescini, L., Erbe, A., Lorenz, H. & Blick, R. H. Electron-phonon\ninteraction in suspended highly doped silicon nanowires. Nano-\ntechnology 13, 310 (2002).\n63.\nOh, J. Y., Park, J. T., Jang, H. J., Cho, W. J. & Islam, M. S. 3D-transistor array based\non horizontally suspended silicon Nano-bridges grown via a bottom-up\ntechnique. Adv. Mater. 26, 1929–1934 (2014).\n64.",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_id": "openalex:W7221458118:83",
+            "document_id": "openalex:W7221458118",
+            "source_type": "paper_pdf",
+            "page_number": 13,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_index": 83
+          },
+          "distance": 0.38901036977767944,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221458118:52",
+          "text": "mechanical readout, noise, and any physical sensor\napplication, the focus of this work is placed on FET and\nrelated electrical characterization and chemical sensors.\nPrevious studies have demonstrated junctionless sus-\npended Si NW FET architectures with lateral electrostatic\ncontrol54,57,58. For example, Koumela et al. reported lat-\neral gating in oxide-encapsulated p-type Si NWs with CD\n\u0002 20 nm, achieving modulation at zero gate bias54. Has-\nsani et al. demonstrated FET operation in suspended\np-type Si NWs with CD ≈45 nm and gate spacing \u0002\n20 nm, with device turn-off occurring at gate voltages\naround −7 V57. Similarly, Bartsch et al. reported junc-\ntionless n-type Si NW FETs with CDs down to \u0002 35 nm\nand side-gate spacing of \u0002 60 nm, showing depletion-\nmode behavior with turn-on near 0 V and threshold vol-\ntages around −6 V under comparable bias conditions58.\nCollectively, these studies show that depletion-mode\noperation is a characteristic response of suspended junc-",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_index": 52,
+            "chunk_id": "openalex:W7221458118:52",
+            "page_number": 9,
+            "source_type": "paper_pdf",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+          },
+          "distance": 0.40420931577682495,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221458118:38",
+          "text": "Figure 4 presents the electrical characterization of var-\nious NW device architectures on SOI substrates, con-\nﬁrming their electrical functionality and suitability for\nsensing applications. The investigated structures comprise\na single NW, a ﬁve-NW parallel array, and a suspended\nNW integrated within a FET conﬁguration. Electrical\nmeasurements are carried out using an Agilent B1500A\nsemiconductor parameter analyzer connected to a probe\nstation. Figure 4a shows I–V characteristics of two-\nterminal devices, including a single NW and a ﬁve-NW\narray, under a voltage sweep from −100 mV to +100 mV.\nThe nominal NW length is 2 µm, and the CD is\napproximately 60 nm. Both devices exhibit linear I–V\nbehavior, conﬁrming ohmic conduction. At +100 mV, the\nsingle NW exhibits a current of ~330 nA, whereas the\nNW array reaches ~1500 nA, consistent with increased\nconduction through parallel NW channels. Similar beha-\nvior is observed under negative bias. This response indi-",
+          "metadata": {
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "document_id": "openalex:W7221458118",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_index": 38,
+            "page_number": 7,
+            "chunk_id": "openalex:W7221458118:38",
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.40446144342422485,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221458118:46",
+          "text": "NW array, showing linear ohmic behavior and increased current in the array conﬁguration. Insets show false-colored SEM micrographs of the\ncorresponding devices (scale bar: 5 µm). b Variation in the resistance of the NWs measured across multiple chips, indicating sufﬁcient fabrication\nrepeatability. c False-colored SEM micrograph of a suspended Si NW integrated with lateral gate electrodes; the close-up highlights the suspended\nNW channel and gate–NW spacing (scale bar: 1 µm). d Gate voltage-dependent drain current of the FET device in (c), showing depletion-mode\nmodulation. The analytical model is plotted for comparison. The gate leakage remains two orders of magnitude lower than the drain current\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 8 of 13",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_id": "openalex:W7221458118:46",
+            "chunk_index": 46,
+            "source_type": "paper_pdf",
+            "page_number": 8,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.409024715423584,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221458118:53",
+          "text": "tages around −6 V under comparable bias conditions58.\nCollectively, these studies show that depletion-mode\noperation is a characteristic response of suspended junc-\ntionless Si NW FETs, with threshold voltage strongly\ninﬂuenced by geometry, dielectric environment, and\ndevice\nconﬁguration.\nWhile\nsimilar\ndepletion-mode\nbehavior has been reported in suspended NW FETs, the\npresent results demonstrate this operation in a fully sus-\npended architecture fabricated using a furnace-free, low-\nthermal-budget process.\nThe ability to fabricate both isolated NWs and densely\npacked NW arrays enables complementary device con-\nﬁgurations\non\nthe\nsame\nplatform.\nThe\nobserved\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 9 of 13",
+          "metadata": {
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 53,
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221458118:53",
+            "page_number": 9,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y"
+          },
+          "distance": 0.40910494327545166,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q18",
+      "question": "論文透過哪些實驗結果支持此製程具有可擴展性、重複性與結構穩定性？請說明不同奈米線長寬比、陣列配置及跨晶片電性量測所提供的證據。",
+      "retrieval_query": "論文透過哪些實驗結果支持此製程具有可擴展性、重複性與結構穩定性？請說明不同奈米線長寬比、陣列配置及跨晶片電性量測所提供的證據。",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221458118:31",
+          "text": "achieved across all geometries, indicating reliable transfer\nfrom preform deﬁnition to the ﬁnal suspended structure.\nEven at AR = 100, the NWs exhibit no visible sagging,\nbuckling, or deformation, conﬁrming structural integrity\nand effective sidewall protection during DRIE. The con-\nsistent undercut observed in the array structures, char-\nacterized by typical DRIE scalloping, further conﬁrms\ncontrolled release with limited lateral over-etching. Fig-\nure 3b shows NW arrays with identical CDs and varying\nARs of 20, 50, and 100, demonstrating process uniformity\nand scalability. The arrays are deﬁned with a pitch of\n5 µm, consistent with the design and conﬁrming con-\ntrolled\nlayout\ndeﬁnition.\nHigh-magniﬁcation\nimages\nreveal consistent linewidth across the arrays and robust\nanchoring at shared support clamps, indicating good\ndimensional control and repeatability. The nominal geo-\nmetry is again preserved across all AR without observable",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "page_number": 5,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "chunk_index": 31,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_id": "openalex:W7221458118:31"
+          },
+          "distance": 0.42698395252227783,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221458118:33",
+          "text": "plane dimensions, with a nominal NW CD of 50 nm, CD\nuniformity and line edge roughness (LER) are evaluated\nusing top-view SEM images for AR = 20, 50, and 100\n(Fig. S1 and Text S2). LER values below 7 nm are obtained\nacross\nall\nstructures,\nconﬁrming\nconsistent\npattern\ntransfer through lithography, etching, and release. The\nextracted values depend on SEM resolution and contrast;\ntherefore, higher-magniﬁcation imaging could further\nreﬁne the analysis.\nThe fabrication was demonstrated at the chip level\nusing batch-compatible cleanroom processes, including\noptical\nlithography,\nPECVD/PVD deposition,\nplasma\netching, DRIE release, and stripping/cleaning. The process\ndoes not require serial NW placement, transfer printing,\nindividual device assembly, or manual manipulation of\nreleased nanostructures, supporting its scalability toward\nR&D and pilot-line fabrication. Statistical analysis is\nperformed on the overall 20 NWs per geometry from 3",
+          "metadata": {
+            "chunk_index": 33,
+            "page_number": 6,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221458118",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_id": "openalex:W7221458118:33"
+          },
+          "distance": 0.4314655065536499,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221458118:30",
+          "text": "beam lithography, while electrical routing is provided by\nmetal interconnects patterned by optical lithography. The\ninset highlights the three mask levels used: NW deﬁnition\n(PMMA), metallization, and isolation etch (AZ5214E).\nFigure 2m presents an optical image of a fabricated chip\ncontaining multiple devices. The SEM close-up highlights\na representative device containing a suspended Si NW\n(50 nm CD, 2 µm length), metal interconnects, and etched\nisolation structures.\nResults and discussion\nSuspended Si NWs with different dimensions and lay-\nouts are fabricated to evaluate the repeatability and\nrobustness of the proposed process (Fig. 3). Figure 3a\nshows suspended single Si NWs with a CD of 50 nm and\nAR of 20, 50, and 100, corresponding to NW lengths of\n1 µm, 2.5 µm, and 5 µm, respectively. Complete release is\nachieved across all geometries, indicating reliable transfer\nfrom preform deﬁnition to the ﬁnal suspended structure.\nEven at AR = 100, the NWs exhibit no visible sagging,",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "page_number": 5,
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 30,
+            "chunk_id": "openalex:W7221458118:30"
+          },
+          "distance": 0.4652232527732849,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221458118:34",
+          "text": "released nanostructures, supporting its scalability toward\nR&D and pilot-line fabrication. Statistical analysis is\nperformed on the overall 20 NWs per geometry from 3\nchips, using 100 sampling points per NW to estimate LER,\nthereby conﬁrming dimensional reproducibility across\nmultiple released structures. For SOI-based devices,\nresistance statistics from repeated measurements on sin-\ngle NWs and NW arrays are used to assess fabrication\nperformance and reproducibility. Wafer-level yield qua-\nliﬁcation would require extended process-control studies\nbeyond the scope of the present work.\nThe initial CD is deﬁned by EBL in PMMA and can be\ninﬂuenced by proximity effects, local dose variation, resist\ndevelopment, and charging. This variation is transferred\ninto the Cr hard mask, where lift-off quality, metal grain\nstructure, and edge roughness can further affect the mask\nboundary. During oxide and shallow Si etching, ﬁnite\nmask selectivity, lateral etching, and microloading can",
+          "metadata": {
+            "page_number": 6,
+            "chunk_index": 34,
+            "source_type": "paper_pdf",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "openalex:W7221458118:34",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+          },
+          "distance": 0.47257113456726074,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221458118:65",
+          "text": "Conclusion\nThe fabrication of suspended sub-100 nm Si NWs\nwithout furnace-based thermal processing posed a central\nchallenge, as conventional oxidation and LPCVD steps are\ncrucial for sidewall protection but can contribute to\nresidual-stress development and constrain process inte-\ngration due to their high thermal budgets. This work\naddressed\nthat\nchallenge\nby\nintroducing\nconformal\nmetallic passivation as a furnace-free alternative, enabling\nreproducible fabrication of single-crystal NWs with line-\nwidths down to 50 nm, aspect ratios up to 100, and\nscalable array pitches of 5 µm. The process is then\nextended to SOI substrates to realize two-terminal single-\nNW and NW-array devices, as well as FET architectures,\nwith\nelectrical\nmeasurements\nconﬁrming\npredictable\nresistive and transistor responses, and hydrogen sensitiv-\nity at sub-10 nW operating power in two-terminal single-\nNW devices via nominal 2 nm Pd functionalization. By\neliminating furnace-based thermal steps, the approach",
+          "metadata": {
+            "page_number": 12,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 65,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_id": "openalex:W7221458118:65"
+          },
+          "distance": 0.4848993420600891,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q19",
+      "question": "此製程的最高溫度是多少？哪些製程步驟決定了這個熱預算？相較於使用高溫熱氧化或 LPCVD 的傳統方法，低熱預算對殘留應力、製程彈性與後 CMOS 整合有何意義？",
+      "retrieval_query": "此製程的最高溫度是多少？哪些製程步驟決定了這個熱預算？相較於使用高溫熱氧化或 LPCVD 的傳統方法，低熱預算對殘留應力、製程彈性與後 CMOS 整合有何意義？",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221458118:55",
+          "text": "Cr for sidewall passivation, enabling high etch selectivity\nduring DRIE while maintaining a low thermal budget. The\nonly thermal step in the process is the 180 °C PMMA soft\nbake, which is inherent to electron-beam lithography and\ndoes not compromise structural integrity. The compar-\nison with previously reported processes in Table 1 high-\nlights the substantial reduction in maximum process\ntemperature achieved in this work.\nThe low-thermal-budget process avoids furnace-based\noxidation or deposition steps that can introduce intrinsic\nstress in suspended Si NWs. However, residual stress is\nnot directly quantiﬁed in the present sub-100 nm NW\ndevices. The absence of visible sagging, buckling, or\ndeformation during SEM inspection is therefore inter-\npreted as evidence of structural integrity after release,\nrather than as a quantitative measure of stress. Previous\nstudies have shown that intrinsic stress in suspended Si\nNWs can arise from fabrication and surface effects,",
+          "metadata": {
+            "chunk_id": "openalex:W7221458118:55",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_index": 55,
+            "page_number": 10,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221458118",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+          },
+          "distance": 0.3529064655303955,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221458118:14",
+          "text": "970 °C34. The SCREAM-based approach involves oxide\ndeposition and employs low-pressure chemical vapor\ndeposition (LPCVD) at 425 °C for sidewall passivation37.\nFinally, hybrid M&NEMS relies on additional Si deposi-\ntion steps, such as epitaxial growth or doped poly-Si\nformation, to integrate Si NWs with MEMS, which typi-\ncally involve high-temperature processing. Reducing this\nthermal budget is therefore important for simplifying the\nfabrication and minimizing intrinsic stresses in suspended\nSi NWs44. In addition, furnace-based processing limits\nprocess ﬂexibility because it requires ultraclean, metal-\nand polymer-free substrates to avoid contamination.\nThe present work builds on the conceptual framework\nof\nSCREAM-based\nsingle-crystal\nSi micromachining,\nwhile addressing a different dimensional and thermal-\nbudget regime. The original SCREAM I process enabled\nlow-temperature fabrication of suspended single-crystal Si\nMEMS using RIE-based patterning, sidewall protection,",
+          "metadata": {
+            "chunk_index": 14,
+            "document_id": "openalex:W7221458118",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_id": "openalex:W7221458118:14",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "page_number": 3
+          },
+          "distance": 0.3981274962425232,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221458118:54",
+          "text": "uniformity, structural stability, and scalability conﬁrm the\nrobustness of the fabrication process for integrated device\narchitectures. Overall, the results demonstrate the func-\ntionality of the fabricated NWs across single-NW, array,\nand transistor conﬁgurations on SOI substrates, sup-\nporting their use in chemiresistive gas and biochemical\nsensing after surface functionalization10,56,64. A central\nfeature of the developed approach is the elimination of\nfurnace-based high-temperature steps, such as thermal\noxidation and LPCVD, commonly used in conventional\nsuspended NW fabrication. These steps can introduce\nresidual stress in nanoscale beams and impose stringent\ncontamination constraints, as they require ultraclean\nsubstrates. In contrast, the present process uses sputtered\nCr for sidewall passivation, enabling high etch selectivity\nduring DRIE while maintaining a low thermal budget. The\nonly thermal step in the process is the 180 °C PMMA soft",
+          "metadata": {
+            "page_number": 10,
+            "chunk_id": "openalex:W7221458118:54",
+            "source_type": "paper_pdf",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 54
+          },
+          "distance": 0.41632699966430664,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221458118:0",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026) 12:343 \nMicrosystems & Nanoengineering\nhttps://doi.org/10.1038/s41378-026-01467-y\nwww.nature.com/micronano\nA R T I C L E\nO p e n A c c e s s\nScalable low-thermal-budget fabrication of\nsuspended silicon nanowire devices\nBasit Ali\n1, Arda Deniz Yalcinkaya\n2, Cagri Arslan3, Umut Kerimzade1,4 and Burhanettin Erdem Alaca\n1,3,4,5\nAbstract\nSilicon nanowires (Si NWs) are versatile one-dimensional building blocks for gas and biochemical sensors, MEMS/NEMS\nphysical transduction platforms, and integrated electronic devices because of their high surface-to-volume ratios and\ncompatibility with semiconductor processing. A key limitation of conventional top-down fabrication is its reliance on\nfurnace-based high-temperature steps, such as thermal oxidation and LPCVD, which can induce residual stress and\nconstrain post-CMOS integration because of thermal-budget limits above 400 °C. Here, we present a furnace-free, low-",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_index": 0,
+            "document_id": "openalex:W7221458118",
+            "page_number": 1,
+            "chunk_id": "openalex:W7221458118:0",
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.4371519088745117,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221458118:1",
+          "text": "constrain post-CMOS integration because of thermal-budget limits above 400 °C. Here, we present a furnace-free, low-\nthermal-budget fabrication approach for suspended Si NWs with a maximum process temperature of 180 °C. The\nprocess forms suspended Si NWs at the top surface of both bulk Si substrates and SOI substrates with a 2 µm device\nlayer. The method deﬁnes a nanoscale Si surface protrusion and uses a conformal Cr sidewall coating to preserve\nlinewidth during DRIE release. The process yields suspended Si NWs with critical dimensions down to 50 nm, aspect\nratios of up to 100, and array pitches of 5 µm, while supporting integration into junctionless ﬁeld-effect transistor\narchitectures. Electrical measurements conﬁrm ohmic behavior in two-terminal NW devices and demonstrate\ndepletion-mode current modulation in side-gated junctionless FETs, with a threshold voltage of 24 V and",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_index": 1,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_id": "openalex:W7221458118:1",
+            "document_id": "openalex:W7221458118",
+            "source_type": "paper_pdf",
+            "page_number": 1
+          },
+          "distance": 0.45154768228530884,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q20",
+      "question": "這項研究目前已完成哪些製程與元件層級的驗證？仍有哪些限制或尚未完成的工作，例如低電壓電晶體最佳化、實際 MEMS/NEMS 感測應用、製程整合或後續感測器驗證？哪些結論已有實驗支持，哪些仍屬未來發展方向？",
+      "retrieval_query": "這項研究目前已完成哪些製程與元件層級的驗證？仍有哪些限制或尚未完成的工作，例如低電壓電晶體最佳化、實際 MEMS/NEMS 感測應用、製程整合或後續感測器驗證？哪些結論已有實驗支持，哪些仍屬未來發展方向？",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221458118:2",
+          "text": "depletion-mode current modulation in side-gated junctionless FETs, with a threshold voltage of 24 V and\napproximately 40× current modulation. After nominal 2 nm Pd functionalization, single-NW devices exhibit repeatable\n1% H2 sensing, producing near-complete current suppression of the p-type NW channel at sub-10 nW operating\npower. By eliminating furnace-based processing, the approach supports post-CMOS-compatible integration, avoids\nhigh-temperature stress-inducing process steps, and establishes a scalable platform for suspended Si NW devices.\nIntroduction\nEmerging applications in biochemical sensing, inertial\nsensing, IoT systems, and low-power electronics continue\nto drive the development of nanoscale building blocks1–3.\nAmong these, one-dimensional (1D) structures such as\nnanowires (NWs), nanorods, and nanotubes have attrac-\nted signiﬁcant attention due to their high surface-to-\nvolume ratios and favorable electrical and mechanical",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221458118:2",
+            "document_id": "openalex:W7221458118",
+            "page_number": 1,
+            "chunk_index": 2,
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+          },
+          "distance": 0.5170677304267883,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221458118:34",
+          "text": "released nanostructures, supporting its scalability toward\nR&D and pilot-line fabrication. Statistical analysis is\nperformed on the overall 20 NWs per geometry from 3\nchips, using 100 sampling points per NW to estimate LER,\nthereby conﬁrming dimensional reproducibility across\nmultiple released structures. For SOI-based devices,\nresistance statistics from repeated measurements on sin-\ngle NWs and NW arrays are used to assess fabrication\nperformance and reproducibility. Wafer-level yield qua-\nliﬁcation would require extended process-control studies\nbeyond the scope of the present work.\nThe initial CD is deﬁned by EBL in PMMA and can be\ninﬂuenced by proximity effects, local dose variation, resist\ndevelopment, and charging. This variation is transferred\ninto the Cr hard mask, where lift-off quality, metal grain\nstructure, and edge roughness can further affect the mask\nboundary. During oxide and shallow Si etching, ﬁnite\nmask selectivity, lateral etching, and microloading can",
+          "metadata": {
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 34,
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221458118:34",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "page_number": 6
+          },
+          "distance": 0.5203497409820557,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221458118:66",
+          "text": "ity at sub-10 nW operating power in two-terminal single-\nNW devices via nominal 2 nm Pd functionalization. By\neliminating furnace-based thermal steps, the approach\nreduces thermal exposure, avoids the thermal exposure\nassociated with conventional furnace-based processes,\nand expands process compatibility, establishing a versa-\ntile, CMOS-compatible pathway for nanowire-based bio-\nchemical\nsensing,\nphysical\nsensing,\nand\nlow-power\nnanoelectronics devices.\nAcknowledgements\nThis work is supported by TÜBİTAK under grant numbers 118C155 and\n125E013. The authors acknowledge the utilization of the facilities of KUYTAM-\nKoç University Surface Science and Technologies Center and n2STAR-Koç\nUniversity Nanofabrication and Nanocharacterization Center for Scientiﬁc and\nTechnological Advanced Research. The authors would like to thank\nMuhammad Muzammil, Sarp Kaya, and Amin Mohammadpour of Koç\nUniversity for their support with Si NW-based device characterization.\nAuthor details",
+          "metadata": {
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "source_type": "paper_pdf",
+            "page_number": 12,
+            "document_id": "openalex:W7221458118",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "chunk_id": "openalex:W7221458118:66",
+            "chunk_index": 66
+          },
+          "distance": 0.5327272415161133,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221458118:14",
+          "text": "970 °C34. The SCREAM-based approach involves oxide\ndeposition and employs low-pressure chemical vapor\ndeposition (LPCVD) at 425 °C for sidewall passivation37.\nFinally, hybrid M&NEMS relies on additional Si deposi-\ntion steps, such as epitaxial growth or doped poly-Si\nformation, to integrate Si NWs with MEMS, which typi-\ncally involve high-temperature processing. Reducing this\nthermal budget is therefore important for simplifying the\nfabrication and minimizing intrinsic stresses in suspended\nSi NWs44. In addition, furnace-based processing limits\nprocess ﬂexibility because it requires ultraclean, metal-\nand polymer-free substrates to avoid contamination.\nThe present work builds on the conceptual framework\nof\nSCREAM-based\nsingle-crystal\nSi micromachining,\nwhile addressing a different dimensional and thermal-\nbudget regime. The original SCREAM I process enabled\nlow-temperature fabrication of suspended single-crystal Si\nMEMS using RIE-based patterning, sidewall protection,",
+          "metadata": {
+            "chunk_id": "openalex:W7221458118:14",
+            "document_id": "openalex:W7221458118",
+            "source_type": "paper_pdf",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "chunk_index": 14,
+            "page_number": 3,
+            "source": "https://www.nature.com/articles/s41378-026-01467-y"
+          },
+          "distance": 0.5377991795539856,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221458118:9",
+          "text": "functionalization can be performed without inducing\nelectrical shorts to nearby electrodes. This feature further\nbroadens their applicability in physical and biochemical\nsensing28.\nFrom an application perspective, the usefulness of a\nsuspended Si NW fabrication route is determined not\nonly by the minimum achievable linewidth, but also by\nhow well the process satisﬁes the manufacturing con-\nstraints imposed by the target device class. In biochemical\nand gas-sensing applications, the NW surface must\nremain accessible for post-fabrication functionalization,\ncatalytic decoration, or selective metallization, while the\nsuspended geometry can reduce substrate interactions\nand improve thermal or electrical isolation11,17,28,29. In\nMEMS/NEMS physical sensors, Si NWs are commonly\nused as piezoresistive or resonant transduction elements\ncoupled to larger microstructures; therefore, deterministic\nalignment, robust anchoring, and monolithic integration",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "openalex:W7221458118:9",
+            "source": "https://www.nature.com/articles/s41378-026-01467-y",
+            "page_number": 2,
+            "chunk_index": 9
+          },
+          "distance": 0.5387638211250305,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    }
+  ]
+}

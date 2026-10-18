@@ -27,6 +27,10 @@ from rag.retriever.chroma_retrieval import (
     ChromaDBRetrieval,
 )
 
+from rag.retriever.ranking import (
+    RetrievalRanking,
+)
+
 from rag.retriever.top_k import (
     TopKRetrieval,
 )
@@ -49,6 +53,7 @@ class RAGRetriever:
         chroma_collection=None,
         query_embedding=None,
         chroma_retrieval=None,
+        ranking=None,
         top_k_retrieval=None,
         retrieval_result_builder=None,
         candidate_k=None,
@@ -70,6 +75,9 @@ class RAGRetriever:
 
         chroma_retrieval:
             可注入 ChromaDBRetrieval。
+
+        ranking:
+            可注入 RetrievalRanking。
 
         top_k_retrieval:
             可注入 TopKRetrieval。
@@ -116,6 +124,11 @@ class RAGRetriever:
 
         self.chroma_retrieval = chroma_retrieval
 
+        if ranking is None:
+            ranking = RetrievalRanking()
+
+        self.ranking = ranking
+
         if top_k_retrieval is None:
             top_k_retrieval = TopKRetrieval(
                 top_k=top_k
@@ -127,6 +140,30 @@ class RAGRetriever:
             retrieval_result_builder = RetrievalResultBuilder()
 
         self.retrieval_result_builder = retrieval_result_builder
+
+    @staticmethod
+    def _ranking_result_to_chroma_result(
+        result
+    ):
+        """
+        將 Ranking flat result
+        轉成 ChromaDB nested result。
+        """
+
+        return {
+            "ids": [
+                result["ids"]
+            ],
+            "documents": [
+                result["documents"]
+            ],
+            "metadatas": [
+                result["metadatas"]
+            ],
+            "distances": [
+                result["distances"]
+            ],
+        }
 
     def search(
         self,
@@ -153,9 +190,22 @@ class RAGRetriever:
             )
         )
 
+        ranked_result = (
+            self.ranking.rank(
+                candidate_result,
+                query=query,
+            )
+        )
+
+        ranked_result = (
+            self._ranking_result_to_chroma_result(
+                ranked_result
+            )
+        )
+
         final_result = (
             self.top_k_retrieval.select(
-                candidate_result
+                ranked_result
             )
         )
 
@@ -206,6 +256,15 @@ class RAGRetriever:
         """
 
         return self.chroma_retrieval
+
+    def get_ranking(
+        self
+    ):
+        """
+        取得 RetrievalRanking。
+        """
+
+        return self.ranking
 
     def get_top_k_retrieval(
         self

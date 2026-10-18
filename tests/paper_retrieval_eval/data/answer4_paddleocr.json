@@ -1,0 +1,492 @@
+{
+  "document_id": "openalex:W7221458118",
+  "paper_title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+  "round": 4,
+  "question_file": "questions4.json",
+  "top_k": 5,
+  "retrieval_method": "paddleocr_vl_1_6",
+  "collection_name": "autosearch_papers_paddleocr_vl16",
+  "evaluation_method": "manual_chunk_relevance",
+  "relevance_scale": {
+    "2": "Directly relevant: the chunk contains information that answers the question.",
+    "1": "Partially relevant: the chunk contains useful but incomplete or indirect information.",
+    "0": "Not relevant: the chunk does not provide useful information for answering the question."
+  },
+  "results": [
+    {
+      "question_id": "Q16",
+      "question": "製程中的 conformal Cr 側壁鍍層與深反應離子蝕刻（DRIE）分別扮演什麼角色？它們如何共同保護奈米線的線寬，並完成懸浮結構的釋放？",
+      "retrieval_query": "製程中的 conformal Cr 側壁鍍層與深反應離子蝕刻（DRIE）分別扮演什麼角色？它們如何共同保護奈米線的線寬，並完成懸浮結構的釋放？",
+      "collection_name": "autosearch_papers_paddleocr_vl16",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:26",
+          "text": "limited lateral over-etching. Figure 3b shows NW arrays with identical CDs and varying ARs of 20, 50, and 100, demonstrating process uniformity and scalability. The arrays are defined with a pitch of \\(5\\,\\mu\\mathrm{m}\\), consistent with the design and confirming controlled layout definition. High-magnification images reveal consistent linewidth across the arrays and robust anchoring at shared support clamps, indicating good dimensional control and repeatability. The nominal geometry is again preserved across all AR without observable deformation, reflecting effective sidewall protection during DRIE.",
+          "metadata": {
+            "source": "mongodb:paper_ocr_results",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:26",
+            "title": "openalex:W7221458118",
+            "page_number": 5,
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_index": 26
+          },
+          "distance": 0.34490638971328735,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:18",
+          "text": "The Cr sidewall coating is used in this work as a sacrificial protection layer during DRIE and is removed after release using Chromium Etchant 18 at room temperature with a calibrated overetch margin (Figs. 1i and 2k). In the designed passivation stack, an intermediate SiO2 layer is deposited before Cr sidewall passivation, separating the sacrificial Cr coating from the Si NW sidewalls and minimizing direct Si–Cr contact during release. In addition, since no high-temperature step is performed after Cr passivation, thermally driven Cr transport across the oxide interlayer into the Si NW channel is expected to be negligible. Following Cr wet etching, subsequent HF vapor etching removes oxide from the exposed Si surfaces, including the NW sidewalls.",
+          "metadata": {
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "document_id": "openalex:W7221458118",
+            "page_number": 4,
+            "chunk_index": 18,
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:18"
+          },
+          "distance": 0.3451114296913147,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:16",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026)12:343\nPage 4 of 13\nunderlying hard mask. After removal of the oxide layer, the preform retains Cr sidewall protection while maintaining top-surface coverage (Fig. 1g). The complete layer removal is ensured through endpoint detection. Nominally, the recipes used are highly selective: the Cr removal recipe yields a 65–70 nm/min etch rate, and the SiO2 removal recipe yields roughly 50 nm/min, with no measurable SiO2/Cr removal under the applied conditions.\nRelease of the suspended NW is achieved using Bosch-type DRIE with alternating etch (SF6/O2) and passivation (C4F8) cycles. The isotropic etch component generates the undercut required to release the structure from the bottom surface, forming the suspended Si NW geometry (Fig. 1h). DRIE is performed at the chip level using a carrier wafer, with the platen set to ~1°C. Etching is performed with 5 s of etch and 2 s of passivation cycles to achieve a release depth of 2 µm.",
+          "metadata": {
+            "title": "openalex:W7221458118",
+            "document_id": "openalex:W7221458118",
+            "page_number": 4,
+            "chunk_index": 16,
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:16",
+            "source": "mongodb:paper_ocr_results",
+            "source_type": "paddleocr_vl_1_6"
+          },
+          "distance": 0.3646702170372009,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:25",
+          "text": "Suspended Si NWs with different dimensions and layouts are fabricated to evaluate the repeatability and robustness of the proposed process (Fig. 3). Figure 3a shows suspended single Si NWs with a CD of 50 nm and AR of 20, 50, and 100, corresponding to NW lengths of \\(1\\,\\mu\\mathrm{m}\\), \\(2.5\\,\\mu\\mathrm{m}\\), and \\(5\\,\\mu\\mathrm{m}\\), respectively. Complete release is achieved across all geometries, indicating reliable transfer from preform definition to the final suspended structure. Even at AR = 100, the NWs exhibit no visible sagging, buckling, or deformation, confirming structural integrity and effective sidewall protection during DRIE. The consistent undercut observed in the array structures, characterized by typical DRIE scalloping, further confirms controlled release with limited lateral over-etching. Figure 3b shows NW arrays with identical CDs and varying ARs of 20, 50, and 100, demonstrating process uniformity and scalability. The arrays are defined with a pitch of",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "source": "mongodb:paper_ocr_results",
+            "title": "openalex:W7221458118",
+            "chunk_index": 25,
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:25",
+            "page_number": 5
+          },
+          "distance": 0.370624303817749,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:17",
+          "text": "Following DRIE release, residual polymeric and inorganic protection layers are removed through a sequential stripping process. O2 plasma ashing first removes fluorocarbon polymer residues generated during the Bosch DRIE cycles. The exposed Cr hard mask and sacrificial Cr sidewall protection layer are then removed using Chromium Etchant 18 at room temperature, with the etch time selected from a calibrated Cr etch rate and an additional overetch margin. Since the NWs are already released after DRIE, the Cr etchant can access the Cr layer from the exposed top, sidewall, and underside regions of the suspended geometry. Finally, HF vapor removes the remaining PECVD SiO2 hard mask, the intermediate SiO2 layer, and the native oxide from the exposed Si surfaces. Vapor HF is used to avoid capillary-force-induced stiction during oxide removal from the released NWs. This sequential O2 plasma/Cr wet etch/vapor HF treatment yields the final suspended Si NW geometry shown in Fig. 1i.",
+          "metadata": {
+            "chunk_index": 17,
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:17",
+            "source": "mongodb:paper_ocr_results",
+            "page_number": 4,
+            "title": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6"
+          },
+          "distance": 0.3815760016441345,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q17",
+      "question": "論文展示了哪些懸浮矽奈米線元件架構，例如雙端電性量測元件、平行奈米線陣列與側閘極 junctionless FET？各種架構的電性量測結果與用途有何不同？",
+      "retrieval_query": "論文展示了哪些懸浮矽奈米線元件架構，例如雙端電性量測元件、平行奈米線陣列與側閘極 junctionless FET？各種架構的電性量測結果與用途有何不同？",
+      "collection_name": "autosearch_papers_paddleocr_vl16",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:46",
+          "text": "Such suspended Si NWs with adjacent electrodes separated by nanoscale air gaps enable several device concepts, including FETs, resonators, switches, and sensors\\(^{45,52-55,60-62}\\), as well as gate-all-around transistor configurations when combined with conformal coatings\\(^{63}\\). Although the suspended geometry is potentially compatible with future MEMS-style physical sensing platforms (through integration of a MEMS proof mass in the design), application-specific mechanical characterization, including MEMS-Si NW resonant frequency, electromechanical readout, noise, and any physical sensor application, the focus of this work is placed on FET and related electrical characterization and chemical sensors. Previous studies have demonstrated junctionless suspended Si NW FET architectures with lateral electrostatic control\\(^{54,57,58}\\). For example, Koumela et al. reported lateral gating in oxide-encapsulated p-type Si NWs with CD \\(\\approx 20 \\, \\text{nm}\\), achieving modulation at",
+          "metadata": {
+            "source": "mongodb:paper_ocr_results",
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:46",
+            "chunk_index": 46,
+            "title": "openalex:W7221458118",
+            "document_id": "openalex:W7221458118",
+            "page_number": 9
+          },
+          "distance": 0.34439361095428467,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:37",
+          "text": "Figure 4c shows a false-colored SEM micrograph of a suspended 2 µm-long NW located between the gate electrodes, separated by a well-defined air gap of approximately 120 nm on each side. A close-up view confirms that the NW is fabricated without stiction or deformation, maintaining structural integrity despite the small spacing. This configuration constitutes a multi-terminal architecture in which the suspended Si NW channel with source and drain contacts at both ends is integrated with gate electrodes, forming a junctionless FET. While preserving the mechanical functions of suspended NWs, this approach also maintains direct surface accessibility of the NW channel for post-processing and functionalization\\(^{11,56}\\). The gate electrode width is approximately 50% of the NW length.",
+          "metadata": {
+            "source": "mongodb:paper_ocr_results",
+            "chunk_index": 37,
+            "page_number": 7,
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:37",
+            "title": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.36551666259765625,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:33",
+          "text": "Figure 4 presents the electrical characterization of various NW device architectures on SOI substrates, confirming their electrical functionality and suitability for sensing applications. The investigated structures comprise a single NW, a five-NW parallel array, and a suspended NW integrated within a FET configuration. Electrical measurements are carried out using an Agilent B1500A semiconductor parameter analyzer connected to a probe station. Figure 4a shows I–V characteristics of two terminal devices, including a single NW and a five-NW array, under a voltage sweep from −100 mV to +100 mV. The nominal NW length is 2 µm, and the CD is approximately 60 nm. Both devices exhibit linear I–V behavior, confirming ohmic conduction. At +100 mV, the single NW exhibits a current of ~330 nA, whereas the NW array reaches ~1500 nA, consistent with increased conduction through parallel NW channels. Similar behavior is observed under negative bias. This response indicates uniform electrical",
+          "metadata": {
+            "page_number": 7,
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:33",
+            "title": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_index": 33,
+            "source": "mongodb:paper_ocr_results",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.38222599029541016,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:48",
+          "text": "show that depletion-mode operation is a characteristic response of suspended junctionless Si NW FETs, with threshold voltage strongly influenced by geometry, dielectric environment, and device configuration. While similar depletion-mode behavior has been reported in suspended NW FETs, the present results demonstrate this operation in a fully suspended architecture fabricated using a furnace-free, low-thermal-budget process.",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:48",
+            "title": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "page_number": 9,
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_index": 48
+          },
+          "distance": 0.40284204483032227,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:31",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026)12:343\nPage 7 of 13\n\nFig. 3 Suspended Si NWs fabricated with different geometries. a SEM images of single NWs with a CD of 50 nm and AR of 20, 50, and 100 (from left to right). b Five-NW arrays with identical CDs (50 nm) and varying AR: (i) AR = 20, (ii) AR = 50, and (iii) AR = 100. Corresponding high-magnification views highlight uniform linewidth, controlled sidewall profiles, and robust anchoring at common support clamps. Scale bar: 5 µm",
+          "metadata": {
+            "chunk_index": 31,
+            "title": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "document_id": "openalex:W7221458118",
+            "page_number": 7,
+            "source": "mongodb:paper_ocr_results",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:31"
+          },
+          "distance": 0.4127693176269531,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q18",
+      "question": "論文透過哪些實驗結果支持此製程具有可擴展性、重複性與結構穩定性？請說明不同奈米線長寬比、陣列配置及跨晶片電性量測所提供的證據。",
+      "retrieval_query": "論文透過哪些實驗結果支持此製程具有可擴展性、重複性與結構穩定性？請說明不同奈米線長寬比、陣列配置及跨晶片電性量測所提供的證據。",
+      "collection_name": "autosearch_papers_paddleocr_vl16",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:25",
+          "text": "Suspended Si NWs with different dimensions and layouts are fabricated to evaluate the repeatability and robustness of the proposed process (Fig. 3). Figure 3a shows suspended single Si NWs with a CD of 50 nm and AR of 20, 50, and 100, corresponding to NW lengths of \\(1\\,\\mu\\mathrm{m}\\), \\(2.5\\,\\mu\\mathrm{m}\\), and \\(5\\,\\mu\\mathrm{m}\\), respectively. Complete release is achieved across all geometries, indicating reliable transfer from preform definition to the final suspended structure. Even at AR = 100, the NWs exhibit no visible sagging, buckling, or deformation, confirming structural integrity and effective sidewall protection during DRIE. The consistent undercut observed in the array structures, characterized by typical DRIE scalloping, further confirms controlled release with limited lateral over-etching. Figure 3b shows NW arrays with identical CDs and varying ARs of 20, 50, and 100, demonstrating process uniformity and scalability. The arrays are defined with a pitch of",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 25,
+            "page_number": 5,
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:25"
+          },
+          "distance": 0.38765233755111694,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:26",
+          "text": "limited lateral over-etching. Figure 3b shows NW arrays with identical CDs and varying ARs of 20, 50, and 100, demonstrating process uniformity and scalability. The arrays are defined with a pitch of \\(5\\,\\mu\\mathrm{m}\\), consistent with the design and confirming controlled layout definition. High-magnification images reveal consistent linewidth across the arrays and robust anchoring at shared support clamps, indicating good dimensional control and repeatability. The nominal geometry is again preserved across all AR without observable deformation, reflecting effective sidewall protection during DRIE.",
+          "metadata": {
+            "chunk_index": 26,
+            "source": "mongodb:paper_ocr_results",
+            "document_id": "openalex:W7221458118",
+            "page_number": 5,
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:26",
+            "title": "openalex:W7221458118"
+          },
+          "distance": 0.39864200353622437,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:29",
+          "text": "The fabrication was demonstrated at the chip level using batch-compatible cleanroom processes, including optical lithography, PECVD/PVD deposition, plasma etching, DRIE release, and stripping/cleaning. The process does not require serial NW placement, transfer printing, individual device assembly, or manual manipulation of released nanostructures, supporting its scalability toward R&D and pilot-line fabrication. Statistical analysis is performed on the overall 20 NWs per geometry from 3 chips, using 100 sampling points per NW to estimate LER, thereby confirming dimensional reproducibility across multiple released structures. For SOI-based devices, resistance statistics from repeated measurements on single NWs and NW arrays are used to assess fabrication performance and reproducibility. Wafer-level yield qualification would require extended process-control studies beyond the scope of the present work.",
+          "metadata": {
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:29",
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "page_number": 6,
+            "chunk_index": 29,
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.4161503314971924,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:62",
+          "text": "The fabrication of suspended sub-100 nm Si NWs without furnace-based thermal processing posed a central challenge, as conventional oxidation and LPCVD steps are crucial for sidewall protection but can contribute to residual-stress development and constrain process integration due to their high thermal budgets. This work addressed that challenge by introducing conformal metallic passivation as a furnace-free alternative, enabling reproducible fabrication of single-crystal NWs with line-widths down to 50 nm, aspect ratios up to 100, and scalable array pitches of 5μm. The process is then extended to SOI substrates to realize two-terminal single-NW and NW-array devices, as well as FET architectures, with electrical measurements confirming predictable resistive and transistor responses, and hydrogen sensitivity at sub-10 nW operating power in two-terminal single-NW devices via nominal 2 nm Pd functionalization. By eliminating furnace-based thermal steps, the approach reduces thermal",
+          "metadata": {
+            "source": "mongodb:paper_ocr_results",
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:62",
+            "page_number": 12,
+            "title": "openalex:W7221458118",
+            "chunk_index": 62,
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.46756434440612793,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:28",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026)12:343\nPage 6 of 13\n\nplane dimensions, with a nominal NW CD of 50 nm, CD uniformity and line edge roughness (LER) are evaluated using top-view SEM images for AR = 20, 50, and 100 (Fig. S1 and Text S2). LER values below 7 nm are obtained across all structures, confirming consistent pattern transfer through lithography, etching, and release. The extracted values depend on SEM resolution and contrast; therefore, higher-magnification imaging could further refine the analysis.",
+          "metadata": {
+            "page_number": 6,
+            "source": "mongodb:paper_ocr_results",
+            "title": "openalex:W7221458118",
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:28",
+            "chunk_index": 28,
+            "source_type": "paddleocr_vl_1_6"
+          },
+          "distance": 0.4694744348526001,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q19",
+      "question": "此製程的最高溫度是多少？哪些製程步驟決定了這個熱預算？相較於使用高溫熱氧化或 LPCVD 的傳統方法，低熱預算對殘留應力、製程彈性與後 CMOS 整合有何意義？",
+      "retrieval_query": "此製程的最高溫度是多少？哪些製程步驟決定了這個熱預算？相較於使用高溫熱氧化或 LPCVD 的傳統方法，低熱預算對殘留應力、製程彈性與後 CMOS 整合有何意義？",
+      "collection_name": "autosearch_papers_paddleocr_vl16",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:52",
+          "text": "passivation, enabling high etch selectivity during DRIE while maintaining a low thermal budget. The only thermal step in the process is the \\(180\\,^\\circ C\\) PMMA soft bake, which is inherent to electron-beam lithography and does not compromise structural integrity. The comparison with previously reported processes in Table 1 highlights the substantial reduction in maximum process temperature achieved in this work.",
+          "metadata": {
+            "page_number": 10,
+            "chunk_index": 52,
+            "title": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:52",
+            "source": "mongodb:paper_ocr_results",
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6"
+          },
+          "distance": 0.37396663427352905,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:8",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026)12:343\nPage 3 of 13\n\n970 °C\\(^{34}\\). The SCREAM-based approach involves oxide deposition and employs low-pressure chemical vapor deposition (LPCVD) at 425 °C for sidewall passivation\\(^{37}\\). Finally, hybrid M&NEMS relies on additional Si deposition steps, such as epitaxial growth or doped poly-Si formation, to integrate Si NWs with MEMS, which typically involve high-temperature processing. Reducing this thermal budget is therefore important for simplifying the fabrication and minimizing intrinsic stresses in suspended Si NWs\\(^{44}\\). In addition, furnace-based processing limits process flexibility because it requires ultraclean, metal- and polymer-free substrates to avoid contamination.",
+          "metadata": {
+            "page_number": 3,
+            "title": "openalex:W7221458118",
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:8",
+            "source": "mongodb:paper_ocr_results",
+            "chunk_index": 8
+          },
+          "distance": 0.38297462463378906,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:53",
+          "text": "The low-thermal-budget process avoids furnace-based oxidation or deposition steps that can introduce intrinsic stress in suspended Si NWs. However, residual stress is not directly quantified in the present sub-100 nm NW devices. The absence of visible sagging, buckling, or deformation during SEM inspection is therefore interpreted as evidence of structural integrity after release, rather than as a quantitative measure of stress. Previous studies have shown that intrinsic stress in suspended Si NWs can arise from fabrication and surface effects, including native-oxide formation, and that its quantification requires dedicated Raman, resonant, or calibrated nanomechanical measurements\\(^{44,48,65,66}\\). Accordingly, quantitative residual-stress characterization of the present sub-100 nm NWs is left for future dedicated mechanical studies.\n\nTable 1 Process recipes for sub-100 nm NW fabrication\n\nMaximum temperature [\\(^\\circ\\)C] Furnace-free Time [min] Ref.\n\n\\(1100^\\circ\\) x 30 15",
+          "metadata": {
+            "page_number": 10,
+            "title": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:53",
+            "source_type": "paddleocr_vl_1_6",
+            "document_id": "openalex:W7221458118",
+            "chunk_index": 53,
+            "source": "mongodb:paper_ocr_results"
+          },
+          "distance": 0.41622698307037354,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:0",
+          "text": "Ali et al. Microsystems & Nanoengineering (2026)12:343\nMicrosystems & Nanoengineering\nhttps://doi.org/10.1038/s41378-026-01467-y\nwww.nature.com/micronano\nARTICLE\nOpen Access\nScalable low-thermal-budget fabrication of\nsuspended silicon nanowire devices\nBasit Ali, Arda Deniz Yalcinkaya, Cagri Arslan, Umut Kerimzade and Burhanettin Erdem Alaca\n1,3,4,582\nAbstract\nSilicon nanowires (Si NWs) are versatile one-dimensional building blocks for gas and biochemical sensors, MEMS/NEMS\nphysical transduction platforms, and integrated electronic devices because of their high surface-to-volume ratios and\ncompatibility with semiconductor processing. A key limitation of conventional top-down fabrication is its reliance on\nfurnace-based high-temperature steps, such as thermal oxidation and LPCVD, which can induce residual stress and\nconstrain post-CMOS integration because of thermal-budget limits above \\( 400\\,^\\circ C \\). Here, we present a furnace-free, low-",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "chunk_index": 0,
+            "page_number": 1,
+            "source": "mongodb:paper_ocr_results",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:0"
+          },
+          "distance": 0.440677285194397,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:51",
+          "text": "uniformity, structural stability, and scalability confirm the robustness of the fabrication process for integrated device architectures. Overall, the results demonstrate the functionality of the fabricated NWs across single-NW, array, and transistor configurations on SOI substrates, supporting their use in chemiresistive gas and biochemical sensing after surface functionalization\\(^{10,56,64}\\). A central feature of the developed approach is the elimination of furnace-based high-temperature steps, such as thermal oxidation and LPCVD, commonly used in conventional suspended NW fabrication. These steps can introduce residual stress in nanoscale beams and impose stringent contamination constraints, as they require ultraclean substrates. In contrast, the present process uses sputtered Cr for sidewall passivation, enabling high etch selectivity during DRIE while maintaining a low thermal budget. The only thermal step in the process is the \\(180\\,^\\circ C\\) PMMA soft bake, which is inherent",
+          "metadata": {
+            "chunk_index": 51,
+            "title": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "source_type": "paddleocr_vl_1_6",
+            "page_number": 10,
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:51"
+          },
+          "distance": 0.4434823989868164,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q20",
+      "question": "這項研究目前已完成哪些製程與元件層級的驗證？仍有哪些限制或尚未完成的工作，例如低電壓電晶體最佳化、實際 MEMS/NEMS 感測應用、製程整合或後續感測器驗證？哪些結論已有實驗支持，哪些仍屬未來發展方向？",
+      "retrieval_query": "這項研究目前已完成哪些製程與元件層級的驗證？仍有哪些限制或尚未完成的工作，例如低電壓電晶體最佳化、實際 MEMS/NEMS 感測應用、製程整合或後續感測器驗證？哪些結論已有實驗支持，哪些仍屬未來發展方向？",
+      "collection_name": "autosearch_papers_paddleocr_vl16",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:36",
+          "text": "and predictable electrical behavior, with only minor deviations from ideal scaling arising from contact resistance and non-uniform current distribution, confirming their suitability for device-level implementation.",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:36",
+            "chunk_index": 36,
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "page_number": 7,
+            "source": "mongodb:paper_ocr_results"
+          },
+          "distance": 0.47575318813323975,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:44",
+          "text": "The extracted threshold voltage of approximately \\(24 \\, \\text{V}\\) in the current work, along with other performance parameters such as transconductance and subthreshold swing, is attributed to the electrostatic coupling of the side-gated air-gap test architecture and does not represent an intrinsic limitation of the low-thermal-budget suspended Si NW fabrication process. The lateral air-gap FET serves as an electrical validation structure rather than an optimized low-voltage sensing transistor. The FET measurement is used here to verify gate-dependent modulation of the released junctionless NW channel, while comparison with literature places the present device performance in context rather than claiming optimized low-voltage transistor operation. Lower-voltage operation could be achieved by improving gate coupling through reduced gate-to-NW spacing, replacing the air gap with a dielectric gate medium such as \\(\\text{SiO}_2\\), using higher-permittivity dielectrics to increase gate",
+          "metadata": {
+            "title": "openalex:W7221458118",
+            "chunk_index": 44,
+            "source_type": "paddleocr_vl_1_6",
+            "document_id": "openalex:W7221458118",
+            "source": "mongodb:paper_ocr_results",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:44",
+            "page_number": 9
+          },
+          "distance": 0.49161750078201294,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:29",
+          "text": "The fabrication was demonstrated at the chip level using batch-compatible cleanroom processes, including optical lithography, PECVD/PVD deposition, plasma etching, DRIE release, and stripping/cleaning. The process does not require serial NW placement, transfer printing, individual device assembly, or manual manipulation of released nanostructures, supporting its scalability toward R&D and pilot-line fabrication. Statistical analysis is performed on the overall 20 NWs per geometry from 3 chips, using 100 sampling points per NW to estimate LER, thereby confirming dimensional reproducibility across multiple released structures. For SOI-based devices, resistance statistics from repeated measurements on single NWs and NW arrays are used to assess fabrication performance and reproducibility. Wafer-level yield qualification would require extended process-control studies beyond the scope of the present work.",
+          "metadata": {
+            "chunk_index": 29,
+            "page_number": 6,
+            "title": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "document_id": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:29",
+            "source": "mongodb:paper_ocr_results"
+          },
+          "distance": 0.5071855187416077,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:2",
+          "text": "depletion-mode current modulation in side-gated junctionless FETs, with a threshold voltage of \\( 24 \\, V \\) and\napproximately \\( 40 \\times \\) current modulation. After nominal 2 nm Pd functionalization, single-NW devices exhibit repeatable\n\\( 1\\% \\) \\( H_2 \\) sensing, producing near-complete current suppression of the p-type NW channel at sub-\\( 10 \\, nW \\) operating\npower. By eliminating furnace-based processing, the approach supports post-CMOS-compatible integration, avoids\nhigh-temperature stress-inducing process steps, and establishes a scalable platform for suspended Si NW devices.\nIntroduction\nEmerging applications in biochemical sensing, inertial\nsensing, IoT systems, and low-power electronics continue\nto drive the development of nanoscale building blocks\\(^{1-3}\\).\nAmong these, one-dimensional (1D) structures such as\nnanowires (NWs), nanorods, and nanotubes have attrac-\nted significant attention due to their high surface-to-",
+          "metadata": {
+            "document_id": "openalex:W7221458118",
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:2",
+            "source": "mongodb:paper_ocr_results",
+            "page_number": 1,
+            "chunk_index": 2
+          },
+          "distance": 0.5123169422149658,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:9",
+          "text": "The present work builds on the conceptual framework of SCREAM-based single-crystal Si micromachining, while addressing a different dimensional and thermal-budget regime. The original SCREAM I process enabled low-temperature fabrication of suspended single-crystal Si MEMS using RIE-based patterning, sidewall protection, and metallization, with micrometer-scale beam widths and process temperatures below 300 °C\\(^{36}\\). MacDonald later demonstrated the broader capability of SCREAM for high-aspect-ratio released single-crystal Si MEMS with micrometer-scale minimum features and millimeter-scale suspension spans\\(^{45}\\). Related MacDonald-group work further demonstrated sub-micron/nanometer-scale Si tips, filaments, and fibers integrated with microinstrumentation; however, those studies relied on oxidation-based size reduction or focused on material and electromechanical characterization rather than furnace-free sub-100 nm Si NW device fabrication\\(^{46,47}\\).",
+          "metadata": {
+            "chunk_index": 9,
+            "source": "mongodb:paper_ocr_results",
+            "page_number": 3,
+            "source_type": "paddleocr_vl_1_6",
+            "title": "openalex:W7221458118",
+            "chunk_id": "paddleocr_vl_1_6:openalex:W7221458118:9",
+            "document_id": "openalex:W7221458118"
+          },
+          "distance": 0.5130450129508972,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    }
+  ]
+}

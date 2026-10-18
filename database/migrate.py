@@ -97,7 +97,9 @@ MIGRATION_FILES = [
     "database/migration_v6_p6_1.sql",
     "database/migration_v6_p6_2.sql",
     "database/migration_v6_p6_3.sql",
-    "database/migration_v6_p6_4.sql"
+    "database/migration_v6_p6_4.sql",
+    "database/migration_v6_p6_5.sql",
+    "database/migration_v9_p5_1.sql"
 
 ]
 

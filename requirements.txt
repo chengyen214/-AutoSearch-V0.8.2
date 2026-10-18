@@ -88,3 +88,5 @@ sentence-transformers
 
 
 playwright
+
+PyMuPDF

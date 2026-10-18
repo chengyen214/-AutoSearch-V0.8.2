@@ -1,0 +1,27 @@
+{
+  "document_id": "openalex:W7221458118",
+  "paper_title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+  "round": 4,
+  "questions": [
+    {
+      "id": "Q16",
+      "question": "製程中的 conformal Cr 側壁鍍層與深反應離子蝕刻（DRIE）分別扮演什麼角色？它們如何共同保護奈米線的線寬，並完成懸浮結構的釋放？"
+    },
+    {
+      "id": "Q17",
+      "question": "論文展示了哪些懸浮矽奈米線元件架構，例如雙端電性量測元件、平行奈米線陣列與側閘極 junctionless FET？各種架構的電性量測結果與用途有何不同？"
+    },
+    {
+      "id": "Q18",
+      "question": "論文透過哪些實驗結果支持此製程具有可擴展性、重複性與結構穩定性？請說明不同奈米線長寬比、陣列配置及跨晶片電性量測所提供的證據。"
+    },
+    {
+      "id": "Q19",
+      "question": "此製程的最高溫度是多少？哪些製程步驟決定了這個熱預算？相較於使用高溫熱氧化或 LPCVD 的傳統方法，低熱預算對殘留應力、製程彈性與後 CMOS 整合有何意義？"
+    },
+    {
+      "id": "Q20",
+      "question": "這項研究目前已完成哪些製程與元件層級的驗證？仍有哪些限制或尚未完成的工作，例如低電壓電晶體最佳化、實際 MEMS/NEMS 感測應用、製程整合或後續感測器驗證？哪些結論已有實驗支持，哪些仍屬未來發展方向？"
+    }
+  ]
+}

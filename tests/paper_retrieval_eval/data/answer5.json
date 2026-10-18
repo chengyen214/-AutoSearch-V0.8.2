@@ -1,0 +1,490 @@
+{
+  "document_id": "openalex:W7221558939",
+  "paper_title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy",
+  "round": 5,
+  "question_file": "questions5.json",
+  "top_k": 5,
+  "evaluation_method": "manual_chunk_relevance",
+  "relevance_scale": {
+    "2": "Directly relevant: the chunk contains information that answers the question.",
+    "1": "Partially relevant: the chunk contains useful but incomplete or indirect information.",
+    "0": "Not relevant: the chunk does not provide useful information for answering the question."
+  },
+  "results": [
+    {
+      "question_id": "Q21",
+      "question": "What are the limitations of conventional cancer treatments, and why does the paper investigate g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy?",
+      "retrieval_query": "What are the limitations of conventional cancer treatments, and why does the paper investigate g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221558939:0",
+          "text": "Health Nanotechnology\nMajedi Health Nanotechnology            (2026) 2:18 \nhttps://doi.org/10.1186/s44301-026-00041-9\nREVIEW\nOpen Access\ng-C₃N₄-based smart nanocatalysts \nfor photocatalytic cancer therapy: \nmechanisms, surface engineering, \nand therapeutic applications\nAli Majedi1,2*\n​*​C​o​r​r​e​s​p​o​n​d​e​n​c​e​:​\nAli Majedi\nalimajedi20051@gmail.com\n1Ministry of Education, Esfahan, Iran\n2Nanochemistry, University of Tehran, Isfahan, Iran\n© The Author(s) 2026. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, \nsharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and \nthe source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:0",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "page_number": 1,
+            "document_id": "openalex:W7221558939",
+            "chunk_index": 0
+          },
+          "distance": 0.15670204162597656,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221558939:2",
+          "text": "semiconductor nanomaterial for photocatalytic cancer therapy owing to its tunable bandgap (~2.7 eV), favorable \nbiocompatibility, chemical stability and large surface area. Recent advances in nanotechnology and surface \nengineering have transformed g-C₃N₄ from a conventional photocatalyst into a multifunctional nanotheranostic \nplatform for multimodal cancer treatment. This review provides a comprehensive and up-to-date overview of \ng-C₃N₄-based nanocatalysts, covering photocatalytic mechanisms, engineering strategies, therapeutic applications, \nbiosafety and translational prospects. Under light irradiation, g-C₃N₄ generates reactive oxygen species (ROS) \nthrough photoinduced electron–hole separation, triggering oxidative stress-mediated cancer cell death through \nmultiple regulated and non-regulated cell-death pathways, including apoptosis, ferroptosis, necrosis, and, in specific",
+          "metadata": {
+            "chunk_index": 2,
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:2",
+            "page_number": 1,
+            "document_id": "openalex:W7221558939",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.20781517028808594,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221558939:12",
+          "text": "and translational considerations. Therefore, this review \nprovides a comprehensive and critical analysis of g-C₃N₄-\nbased smart nanocatalysts for photocatalytic cancer \ntherapy, with particular emphasis on how heteroatom \ndoping, heterojunction construction, defect/vacancy \nengineering, noble-metal decoration, and surface func­\ntionalization regulate charge transfer, optical response, \ncatalytic activity, and biological performance. We further",
+          "metadata": {
+            "page_number": 2,
+            "chunk_index": 12,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "document_id": "openalex:W7221558939",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:12"
+          },
+          "distance": 0.2178584337234497,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221558939:47",
+          "text": "integrated analytical framework linking material struc­\nture and surface chemistry → optical and charge-carrier \nbehavior → catalytic/ROS activity → biological inter­\naction → therapeutic efficacy and biosafety. Such an \napproach is particularly important for g-C₃N₄-based \nsmart nanocatalysts, where apparently small changes in \nmorphology, defects, surface functionalization, or inter­\nfacial architecture can substantially alter PDT, PTT, CDT, \ndrug-delivery, and imaging performance. A comprehen­\nsive overview of the key characterization techniques for \ng-C₃N₄-based nanomaterials, together with their rele­\nvance to cancer theranostics, is provided in Table 2.\nComparative advantages and limitations of g-C₃N₄ relative \nto other photocatalytic nanomaterials\nThe development of nanophotocatalysts for cancer \ntherapy has expanded beyond conventional metal-oxide \nsemiconductors to include two-dimensional materials, \ncarbon-based nanomaterials, metal–organic frameworks",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939",
+            "page_number": 7,
+            "chunk_index": 47,
+            "chunk_id": "openalex:W7221558939:47"
+          },
+          "distance": 0.23335731029510498,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221558939:61",
+          "text": "immunological responses, and chronic toxicity remains \ncomparatively limited. Thus, further engineering should \naim not simply to maximize photocatalytic activity but \nto establish a balanced relationship between optical \nperformance, catalytic efficiency, physiological stabil­\nity, targeting capability, and biosafety. A summary of the \ncomparative characteristics of g-C₃N₄ and representative \nnanomaterials for cancer phototherapy and theranostics \nis provided in Table 3.\nTable 3  Comparative characteristics of g-C₃N₄ and representative nanomaterials for cancer phototherapy and theranostics\nNanomaterial\nMajor advantages\nPrincipal limitations\nRelevance to cancer \ntherapy\ng-C₃N₄ [12, 30]\nVisible-light photocatalysis; metal-free composition; \ntunable electronic structure; N-rich surface\nElectron–hole recombination; limited intrinsic \nNIR absorption; reproducibility and long-term \nbiosafety require further validation\nPDT, nanozyme-assisted \ntherapy, drug delivery, \nmultimodal therapy",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "chunk_id": "openalex:W7221558939:61",
+            "page_number": 9,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "chunk_index": 61
+          },
+          "distance": 0.23775750398635864,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q22",
+      "question": "What role do g-C₃N₄-based nanocatalysts play in photocatalytic cancer therapy, and what are their primary therapeutic mechanisms?",
+      "retrieval_query": "What role do g-C₃N₄-based nanocatalysts play in photocatalytic cancer therapy, and what are their primary therapeutic mechanisms?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221558939:0",
+          "text": "Health Nanotechnology\nMajedi Health Nanotechnology            (2026) 2:18 \nhttps://doi.org/10.1186/s44301-026-00041-9\nREVIEW\nOpen Access\ng-C₃N₄-based smart nanocatalysts \nfor photocatalytic cancer therapy: \nmechanisms, surface engineering, \nand therapeutic applications\nAli Majedi1,2*\n​*​C​o​r​r​e​s​p​o​n​d​e​n​c​e​:​\nAli Majedi\nalimajedi20051@gmail.com\n1Ministry of Education, Esfahan, Iran\n2Nanochemistry, University of Tehran, Isfahan, Iran\n© The Author(s) 2026. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, \nsharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and \nthe source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:0",
+            "chunk_index": 0,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "page_number": 1,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939"
+          },
+          "distance": 0.15327352285385132,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221558939:2",
+          "text": "semiconductor nanomaterial for photocatalytic cancer therapy owing to its tunable bandgap (~2.7 eV), favorable \nbiocompatibility, chemical stability and large surface area. Recent advances in nanotechnology and surface \nengineering have transformed g-C₃N₄ from a conventional photocatalyst into a multifunctional nanotheranostic \nplatform for multimodal cancer treatment. This review provides a comprehensive and up-to-date overview of \ng-C₃N₄-based nanocatalysts, covering photocatalytic mechanisms, engineering strategies, therapeutic applications, \nbiosafety and translational prospects. Under light irradiation, g-C₃N₄ generates reactive oxygen species (ROS) \nthrough photoinduced electron–hole separation, triggering oxidative stress-mediated cancer cell death through \nmultiple regulated and non-regulated cell-death pathways, including apoptosis, ferroptosis, necrosis, and, in specific",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:2",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "document_id": "openalex:W7221558939",
+            "page_number": 1,
+            "chunk_index": 2,
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.1816478967666626,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221558939:8",
+          "text": "further demonstrate that g-C₃N₄ can serve not only as \na photocatalytic platform but also as a multifunctional \ntherapeutic and drug-delivery carrier. A recent review \nhighlighted the use of g-C₃N₄-based systems for antican­\ncer drug delivery and described their integration with \ntherapeutic agents and multifunctional nanocompos­\nites [10]. Moreover, emerging experimental studies have \ndemonstrated that engineered C₃N₄-based catalysts can \naddress tumor hypoxia through water-splitting reactions \nand generate highly reactive species under red-light irra­\ndiation, providing a potential route toward overcoming \nthe dependence of conventional photodynamic therapy \non pre-existing molecular oxygen in hypoxic tumors [11]. \nThese developments indicate that rationally engineered \ng-C₃N₄ platforms may overcome some of the major limi­\ntations associated with conventional oxygen-dependent \nphotocatalytic therapy. Multifunctional g-C₃N₄-based",
+          "metadata": {
+            "page_number": 2,
+            "chunk_index": 8,
+            "chunk_id": "openalex:W7221558939:8",
+            "document_id": "openalex:W7221558939",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "source_type": "paper_pdf",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications"
+          },
+          "distance": 0.21281898021697998,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221558939:47",
+          "text": "integrated analytical framework linking material struc­\nture and surface chemistry → optical and charge-carrier \nbehavior → catalytic/ROS activity → biological inter­\naction → therapeutic efficacy and biosafety. Such an \napproach is particularly important for g-C₃N₄-based \nsmart nanocatalysts, where apparently small changes in \nmorphology, defects, surface functionalization, or inter­\nfacial architecture can substantially alter PDT, PTT, CDT, \ndrug-delivery, and imaging performance. A comprehen­\nsive overview of the key characterization techniques for \ng-C₃N₄-based nanomaterials, together with their rele­\nvance to cancer theranostics, is provided in Table 2.\nComparative advantages and limitations of g-C₃N₄ relative \nto other photocatalytic nanomaterials\nThe development of nanophotocatalysts for cancer \ntherapy has expanded beyond conventional metal-oxide \nsemiconductors to include two-dimensional materials, \ncarbon-based nanomaterials, metal–organic frameworks",
+          "metadata": {
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "source_type": "paper_pdf",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939",
+            "chunk_index": 47,
+            "chunk_id": "openalex:W7221558939:47",
+            "page_number": 7
+          },
+          "distance": 0.22119826078414917,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221558939:203",
+          "text": "cascade catalytic nanoreactor for microenvironment remodeling and photo­\ndynamic immunotherapy. Adv Healthcare Mater. 2026;15(24):e71205. ​h​t​t​p​s​:​/​/​\nd​o​i​.​o​r​g​/​1​0​.​1​0​0​2​/​a​d​h​m​.​7​1​2​0​5​.​\n75.\t Huang B, Wang Y, Chen X, Wu Y, Xu K, Xie S, et al. Enhancing the photocata­\nlytic efficacy of g-C3N4 through irradiation modification and composite con­\nstruction with Ti3C2 for photodynamic therapy. Molecules. 2025;30(3):487. \nhttps:/​/doi.or​g/10.33​90/m​olecules30030487.\n76.\t Veeraiyan D, Sahu PN, Patra T, Joshi P, Sillanpää M, Nenavathu BPN, et al. \nTemoporfin loaded g-C3N4/CuO nanocarrier for treatment of hypoxic \ntumors by synergistic chemo-photodynamic therapy. Diamond Relat Mater. \n2025;158:112607.\n77.\t Wang Y, Li S, Gao Y, Du B, Vafaei S, Li M, et al. Synthesis of poly (L-cysteine)/g-\nC3N4 modified glassy carbon electrodes for electrochemical detection of \nmethotrexate as a medicine for treatment of breast cancer in pharmaceutical",
+          "metadata": {
+            "chunk_index": 203,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939",
+            "page_number": 29,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:203"
+          },
+          "distance": 0.23021167516708374,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q23",
+      "question": "What surface engineering strategies are discussed to improve the photocatalytic performance of g-C₃N₄, and how do heteroatom doping, heterojunction construction, and defect engineering work?",
+      "retrieval_query": "What surface engineering strategies are discussed to improve the photocatalytic performance of g-C₃N₄, and how do heteroatom doping, heterojunction construction, and defect engineering work?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221558939:91",
+          "text": "Page 14 of 31\nMajedi Health Nanotechnology            (2026) 2:18 \nvalue of a given surface-engineering strategy should be \nassessed by its ability to address a specific physicochemi­\ncal or tumor-microenvironmental limitation rather than \nby photocatalytic activity alone. The following sections \ntherefore discuss the major g-C₃N₄ modification strate­\ngies in terms of their underlying mechanisms, effects on \nphotocatalytic properties, therapeutic implications, and \nremaining limitations.\nHeteroatom doping\nHeteroatom doping is one of the most widely investi­\ngated strategies for tailoring the electronic and surface \nproperties of g-C₃N₄. By introducing foreign atoms into, \nor adjacent to, the g-C₃N₄ framework, the local elec­\ntronic structure, defect density, band-edge positions, \ncharge-carrier dynamics, and surface reactivity can be \nmodified [76]. These changes may improve visible-light \nutilization, promote charge separation, and alter the",
+          "metadata": {
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "chunk_id": "openalex:W7221558939:91",
+            "chunk_index": 91,
+            "source_type": "paper_pdf",
+            "page_number": 14,
+            "document_id": "openalex:W7221558939"
+          },
+          "distance": 0.1392759084701538,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221558939:89",
+          "text": "Surface engineering strategies\nSurface engineering is a central strategy for overcom­\ning the intrinsic limitations of g-C₃N₄ and adapting its \nphysicochemical properties to the complex require­\nments of cancer therapy. Recent studies have explored \na range of modification approaches, including hetero­\natom doping, heterojunction construction, noble-metal \ndecoration, oxygen-vacancy engineering, and surface \nfunctionalization [75]. These strategies can regulate the \nelectronic structure, band-edge positions, charge-carrier \nseparation, light absorption, surface reactivity, colloidal \nstability, and biological interactions of g-C₃N₄, thereby \ninfluencing its photocatalytic and therapeutic behav­\nior (Fig. 2). Importantly, surface engineering does not \nsimply aim to maximize photocatalytic activity. Ratio­\nnal modification should establish a balance among light \nutilization, charge separation, ROS generation, catalytic \nstability, tumor accumulation, cellular uptake, and bio­",
+          "metadata": {
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "chunk_id": "openalex:W7221558939:89",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source_type": "paper_pdf",
+            "chunk_index": 89,
+            "document_id": "openalex:W7221558939",
+            "page_number": 13
+          },
+          "distance": 0.17337799072265625,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221558939:18",
+          "text": "Recent studies have emphasized that the photocatalytic \nbehavior of g-C₃N₄ is determined not only by its nomi­\nnal bandgap but also by the positions of the band edges, \ndefect states, charge-carrier dynamics, and surface elec­\ntronic structure [23]. Bandgap and electronic-structure \nengineering represent an important strategy for over­\ncoming these intrinsic limitations. Approaches includ­\ning heteroatom doping, vacancy engineering, structural \ndisorder, functional-group modification and incorpora­\ntion of metallic or semiconductor components can alter \nthe electronic structure, band positions, charge density \nand carrier-transfer pathways of g-C₃N₄ [24]. In particu­\nlar, defect engineering can introduce localized electronic \nstates and modulate charge-carrier dynamics, thereby \noffering opportunities to enhance light harvesting and \nfacilitate photogenerated charge transfer. However, the \ninfluence of defects is highly dependent on their type,",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:18",
+            "source_type": "paper_pdf",
+            "chunk_index": 18,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939",
+            "page_number": 3,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.21163582801818848,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221558939:164",
+          "text": "tics should increasingly focus on integrating physico­\nchemical optimization with biological and translational \nrequirements. Advanced surface engineering, includ­\ning heteroatom doping, defect engineering, noble-metal \ndecoration, and rational heterojunction construction, will \nremain important for controlling light absorption, charge \nseparation, interfacial redox reactions, and ROS produc­\ntion [133].\nHowever, future designs should move beyond maxi­\nmizing photocatalytic activity alone and instead establish \nquantitative relationships between material properties, \nROS identity and localization, therapeutic mechanisms, \nand biological safety. A particularly promising direc­\ntion is the development of NIR- and NIR-II-responsive \ng-C₃N₄ systems for deep-tissue applications. Defect engi­\nneering, rare-earth doping, and integration with UCNPs \nor other light-conversion components may extend the \noptical response of g-C₃N₄ toward longer wavelengths.",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:164",
+            "chunk_index": 164,
+            "page_number": 25,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.21803104877471924,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221558939:7",
+          "text": "an attractive semiconductor for photocatalytic and bio­\nmedical applications [5, 6]. Despite these advantages, \npristine g-C₃N₄ exhibits intrinsic limitations, including \nrapid recombination of photogenerated electron–hole \npairs, insufficient utilization of photoexcited charge \ncarriers, a relatively restricted visible-light absorption \nrange and limited surface-active sites [7, 8]. Conse­\nquently, substantial efforts have focused on surface and \nelectronic engineering strategies, including heteroatom \ndoping, heterojunction construction, defect/vacancy \nengineering, noble-metal decoration and surface func­\ntionalization, to regulate charge transfer, broaden the \noptical response, enhance ROS generation and improve \nbiological performance [8, 9]. Recent biomedical studies \nfurther demonstrate that g-C₃N₄ can serve not only as \na photocatalytic platform but also as a multifunctional \ntherapeutic and drug-delivery carrier. A recent review",
+          "metadata": {
+            "chunk_index": 7,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "document_id": "openalex:W7221558939",
+            "source_type": "paper_pdf",
+            "chunk_id": "openalex:W7221558939:7",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "page_number": 2
+          },
+          "distance": 0.2192462682723999,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q24",
+      "question": "How do g-C₃N₄-based nanocatalysts affect light absorption, electron–hole separation, and reactive oxygen species (ROS) generation, and how are these processes related?",
+      "retrieval_query": "How do g-C₃N₄-based nanocatalysts affect light absorption, electron–hole separation, and reactive oxygen species (ROS) generation, and how are these processes related?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221558939:64",
+          "text": "Page 10 of 31\nMajedi Health Nanotechnology            (2026) 2:18 \nPhotocatalytic mechanisms for cancer therapy\nReactive oxygen species generation\nThe photocatalytic activity of g-C₃N₄-based nanomateri­\nals is primarily associated with their ability to generate \nreactive oxygen species (ROS) under appropriate light \nirradiation [59]. Upon absorption of photons with ener­\ngies exceeding the effective bandgap, electrons are pro­\nmoted from the valence band (VB) to the conduction \nband (CB), leaving photogenerated holes in the VB. The \nsubsequent generation, migration, separation, and inter­\nfacial transfer of these charge carriers determine both the \nquantity and chemical identity of the ROS produced at \nthe nanomaterial–biological interface [60].\nImportantly, the therapeutic consequences of ROS gen­\neration depend not only on the total ROS level but also \non ROS identity, lifetime, diffusion range, and subcellular \nsite of formation.\nPhotogenerated electrons in the CB can reduce dis­",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:64",
+            "page_number": 10,
+            "chunk_index": 64,
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications"
+          },
+          "distance": 0.23022806644439697,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221558939:2",
+          "text": "semiconductor nanomaterial for photocatalytic cancer therapy owing to its tunable bandgap (~2.7 eV), favorable \nbiocompatibility, chemical stability and large surface area. Recent advances in nanotechnology and surface \nengineering have transformed g-C₃N₄ from a conventional photocatalyst into a multifunctional nanotheranostic \nplatform for multimodal cancer treatment. This review provides a comprehensive and up-to-date overview of \ng-C₃N₄-based nanocatalysts, covering photocatalytic mechanisms, engineering strategies, therapeutic applications, \nbiosafety and translational prospects. Under light irradiation, g-C₃N₄ generates reactive oxygen species (ROS) \nthrough photoinduced electron–hole separation, triggering oxidative stress-mediated cancer cell death through \nmultiple regulated and non-regulated cell-death pathways, including apoptosis, ferroptosis, necrosis, and, in specific",
+          "metadata": {
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "chunk_index": 2,
+            "chunk_id": "openalex:W7221558939:2",
+            "page_number": 1,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.2644977569580078,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221558939:71",
+          "text": "transfer pathways toward specific ROS-producing reac­\ntions. Therefore, the therapeutic efficacy of g-C₃N₄-based \nphotocatalysts should be evaluated not merely by their \ntotal ROS generation, but by their ability to control ROS \ncomposition, generation site, and temporal persistence in \na manner compatible with the desired cell-death mecha­\nnism. Such mechanistic control provides an important",
+          "metadata": {
+            "page_number": 10,
+            "chunk_index": 71,
+            "document_id": "openalex:W7221558939",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "source_type": "paper_pdf",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "chunk_id": "openalex:W7221558939:71"
+          },
+          "distance": 0.26720964908599854,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221558939:6",
+          "text": "a light-activated approach for generating reactive oxy­\ngen species (ROS) and inducing oxidative damage in \ntumor cells [3]. Unlike conventional photosensitizers, \nsemiconductor photocatalysts can undergo photoin­\nduced electron–hole separation, enabling the subsequent \nformation of multiple reactive species through surface \nredox reactions. However, the therapeutic performance \nof photocatalytic systems is strongly influenced by light \npenetration, charge-carrier recombination, oxygen avail­\nability and the antioxidant-rich tumor microenviron­\nment. Recent advances in nanophotocatalytic cancer \ntherapy have therefore focused on engineering semicon­\nductor systems with improved charge separation, optical \nresponsiveness, ROS generation and tumor selectivity \n[4]. Graphitic carbon nitride (g-C₃N₄) has emerged as \nan attractive semiconductor for photocatalytic and bio­\nmedical applications [5, 6]. Despite these advantages, \npristine g-C₃N₄ exhibits intrinsic limitations, including",
+          "metadata": {
+            "chunk_index": 6,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "chunk_id": "openalex:W7221558939:6",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "page_number": 2,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.27994489669799805,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221558939:10",
+          "text": "peutic consequences of photocatalytic ROS generation \ndepend not only on the overall ROS yield but also on the \nidentity, reactivity, lifetime, and intracellular localization \nof individual ROS species, which can influence distinct \ncellular responses and cell-death pathways. Although \nseveral recent reviews have examined g-C₃N₄ from the \nperspectives of photocatalysis, anticancer drug delivery \nor broader biomedical applications [8–10, 13], the rap­\nidly expanding literature on engineered g-C₃N₄ nano­\nplatforms warrants an integrated analysis that connects \nmaterial design with photocatalytic mechanisms and \ntherapeutic outcomes. In particular, this review focuses \non the interplay among surface and electronic engineer­\ning, charge-carrier dynamics, ROS generation, tumor-\nmicroenvironment modulation, nanozyme-like catalytic \nactivity and multimodal therapeutic responses. Rather \nthan discussing these aspects as independent topics, we",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:10",
+            "document_id": "openalex:W7221558939",
+            "page_number": 2,
+            "source_type": "paper_pdf",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "chunk_index": 10,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+          },
+          "distance": 0.2800678014755249,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    },
+    {
+      "question_id": "Q25",
+      "question": "What quantitative performance metrics and experimental results are reported for g-C₃N₄-based nanocatalysts, and what numerical values and experimental conditions are associated with each result?",
+      "retrieval_query": "What quantitative performance metrics and experimental results are reported for g-C₃N₄-based nanocatalysts, and what numerical values and experimental conditions are associated with each result?",
+      "collection_name": "autosearch_papers_qwen3",
+      "total_results": 5,
+      "top_k": 5,
+      "chunks": [
+        {
+          "rank": 1,
+          "chunk_id": "openalex:W7221558939:132",
+          "text": "redox microenvironment [107]. The catalytic behav­\nior of g-C₃N₄-based nanozymes can arise from intrin­\nsic nitrogen-rich sites, structural defects, heteroatom \nincorporation, or the introduction of redox-active metal \ncenters. Depending on their composition and surface \nstructure, these systems can exhibit oxidase-like (OXD), \nperoxidase-like (POD), catalase-like (CAT), glutathione-\noxidase-like (GSHOx), and superoxide-dismutase-like \n(SOD) activities. Importantly, the presence and mag­\nnitude of a particular enzyme-like activity are strongly \ndependent on the material composition, surface chem­\nistry, pH, temperature, substrate concentration, and \nreaction conditions [108]. A summary of major enzyme-\nmimetic activities experimentally demonstrated in repre­\nsentative g-C₃N₄-based nanozymes, together with their \nrepresentative catalytic reactions and potential therapeu­\ntic roles, is presented in Table 4 [96].\nBeyond individual catalytic reactions, recent advances",
+          "metadata": {
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "chunk_index": 132,
+            "chunk_id": "openalex:W7221558939:132",
+            "page_number": 20,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "document_id": "openalex:W7221558939",
+            "source_type": "paper_pdf"
+          },
+          "distance": 0.3098551630973816,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 2,
+          "chunk_id": "openalex:W7221558939:47",
+          "text": "integrated analytical framework linking material struc­\nture and surface chemistry → optical and charge-carrier \nbehavior → catalytic/ROS activity → biological inter­\naction → therapeutic efficacy and biosafety. Such an \napproach is particularly important for g-C₃N₄-based \nsmart nanocatalysts, where apparently small changes in \nmorphology, defects, surface functionalization, or inter­\nfacial architecture can substantially alter PDT, PTT, CDT, \ndrug-delivery, and imaging performance. A comprehen­\nsive overview of the key characterization techniques for \ng-C₃N₄-based nanomaterials, together with their rele­\nvance to cancer theranostics, is provided in Table 2.\nComparative advantages and limitations of g-C₃N₄ relative \nto other photocatalytic nanomaterials\nThe development of nanophotocatalysts for cancer \ntherapy has expanded beyond conventional metal-oxide \nsemiconductors to include two-dimensional materials, \ncarbon-based nanomaterials, metal–organic frameworks",
+          "metadata": {
+            "source_type": "paper_pdf",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "page_number": 7,
+            "chunk_id": "openalex:W7221558939:47",
+            "document_id": "openalex:W7221558939",
+            "chunk_index": 47,
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications"
+          },
+          "distance": 0.3164826035499573,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 3,
+          "chunk_id": "openalex:W7221558939:207",
+          "text": "S-Scheme nanoheterojunction photocatalyst (LaNi0. 6Fe0. 4O3/g-C3N4). ACS \nOmega. 2024;9(26):28422–36. https:/​/doi.or​g/10.10​21/a​csomega.4c02333.\n85.\t Joseph M, Haridas S, Remello SN. Heterojunction engineering of g-C3N4 with \nCuO for enhanced photocatalytic and photoelectrochemical performance. \nEnergy Technol. 2024;12(4):2301340. https:/​/doi.or​g/10.10​02/e​nte.202301340.\n86.\t Khoshtabiat L, Meshkini A, Matin MM. G-C3N4-based photoresponsive mag­\nnetic nanocatalyst drives type-I photodynamic therapy under visible light \nirradiation, boosting chemo/chemodynamic synergistic therapy of colon \ncancer. Cancer Nanotechnol. 2023;14(1):40. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​1​0​.​1​1​8​6​/​s​1​2​6​4​5​-​0​\n2​3​-​0​0​1​8​8​-​5​.​\n87.\t Leelavathi H, Muralidharan R, Abirami N, Tamizharasan S, Kumarasamy A, Arul­\nmozhi R. Exploration of ZnO decorated g-C3N4 amphiphilic anticancer drugs \nfor antiproliferative activity against human cervical cancer. J Drug Delivery Sci",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:207",
+            "source_type": "paper_pdf",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "document_id": "openalex:W7221558939",
+            "page_number": 30,
+            "chunk_index": 207
+          },
+          "distance": 0.3300648331642151,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 4,
+          "chunk_id": "openalex:W7221558939:206",
+          "text": "catalytic performance: a review of fabrications, applications, and perspec­\ntives. Catalysts. 2024;14(11):825. https:/​/doi.or​g/10.33​90/c​atal14110825.\n82.\t Ahmed MA, Mahmoud SA, Mohamed AA. Unveiling the photocatalytic \npotential of graphitic carbon nitride (g-C3N4): a state-of-the-art review. RSC \nAdv. 2024;14(35):25629–62. https:/​/doi.or​g/10.10​39/D​4RA04234D.\n83.\t Zhao J, Chen J, Tang J, Dai Y, Wang S, Fan W, et al. Artificial intelligence \nassisted label-free surface-enhanced Raman scattering detection of early-\nstage cancer-derived exosomes based on g-C3N4/Ag hybrid substrate \nprepared by electro-synthesis. Chem Eng J. 2024;498:155526. ​h​t​t​p​s​:​/​/​d​o​i​.​o​r​g​/​\n1​0​.​1​0​1​6​/​j​.​c​e​j​.​2​0​2​4​.​1​5​5​5​2​6​.​\n84.\t Zhang K, Wang R, Zhong X, Jiang F. Preparation and application of a novel \nS-Scheme nanoheterojunction photocatalyst (LaNi0. 6Fe0. 4O3/g-C3N4). ACS \nOmega. 2024;9(26):28422–36. https:/​/doi.or​g/10.10​21/a​csomega.4c02333.",
+          "metadata": {
+            "chunk_index": 206,
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "source_type": "paper_pdf",
+            "document_id": "openalex:W7221558939",
+            "page_number": 30,
+            "chunk_id": "openalex:W7221558939:206",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications"
+          },
+          "distance": 0.3315690755844116,
+          "relevance": null,
+          "relevance_notes": ""
+        },
+        {
+          "rank": 5,
+          "chunk_id": "openalex:W7221558939:0",
+          "text": "Health Nanotechnology\nMajedi Health Nanotechnology            (2026) 2:18 \nhttps://doi.org/10.1186/s44301-026-00041-9\nREVIEW\nOpen Access\ng-C₃N₄-based smart nanocatalysts \nfor photocatalytic cancer therapy: \nmechanisms, surface engineering, \nand therapeutic applications\nAli Majedi1,2*\n​*​C​o​r​r​e​s​p​o​n​d​e​n​c​e​:​\nAli Majedi\nalimajedi20051@gmail.com\n1Ministry of Education, Esfahan, Iran\n2Nanochemistry, University of Tehran, Isfahan, Iran\n© The Author(s) 2026. Open Access  This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, \nsharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and \nthe source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this",
+          "metadata": {
+            "chunk_id": "openalex:W7221558939:0",
+            "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+            "source_type": "paper_pdf",
+            "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+            "chunk_index": 0,
+            "page_number": 1,
+            "document_id": "openalex:W7221558939"
+          },
+          "distance": 0.33736884593963623,
+          "relevance": null,
+          "relevance_notes": ""
+        }
+      ]
+    }
+  ]
+}

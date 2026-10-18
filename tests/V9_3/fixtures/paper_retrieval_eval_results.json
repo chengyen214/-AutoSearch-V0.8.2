@@ -1,0 +1,1785 @@
+{
+  "dataset": "C:\\Users\\TUF Gaming\\Desktop\\實驗室\\AutoSearchV2\\tests\\V9_3\\fixtures\\paper_retrieval_eval.json",
+  "collection_name": "autosearch_papers_qwen3",
+  "evaluation_settings": {
+    "top_k": 5
+  },
+  "summary": {
+    "query_count": 10,
+    "document_hit_rate": 1.0,
+    "precision_at_k": 0.8400000000000001,
+    "recall_at_k": 0.96,
+    "mrr": 1.0,
+    "annotated_query_count": 10,
+    "unannotated_query_count": 0,
+    "context_truncated_count": 0,
+    "context_duplicate_chunks_removed": 0,
+    "context_source_traceability_pass_count": 10
+  },
+  "results": [
+    {
+      "id": "E01",
+      "query": "What fabrication approach is used to release suspended silicon nanowires?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221458118:0",
+            "text": "Ali et al. Microsystems & Nanoengineering (2026) 12:343 \nMicrosystems & Nanoengineering\nhttps://doi.org/10.1038/s41378-026-01467-y\nwww.nature.com/micronano\nA R T I C L E\nO p e n A c c e s s\nScalable low-thermal-budget fabrication of\nsuspended silicon nanowire devices\nBasit Ali\n1, Arda Deniz Yalcinkaya\n2, Cagri Arslan3, Umut Kerimzade1,4 and Burhanettin Erdem Alaca\n1,3,4,5\nAbstract\nSilicon nanowires (Si NWs) are versatile one-dimensional building blocks for gas and biochemical sensors, MEMS/NEMS\nphysical transduction platforms, and integrated electronic devices because of their high surface-to-volume ratios and\ncompatibility with semiconductor processing. A key limitation of conventional top-down fabrication is its reliance on\nfurnace-based high-temperature steps, such as thermal oxidation and LPCVD, which can induce residual stress and\nconstrain post-CMOS integration because of thermal-budget limits above 400 °C. Here, we present a furnace-free, low-",
+            "metadata": {
+              "page_number": 1,
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 0,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "chunk_id": "openalex:W7221458118:0",
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.3040124177932739
+          },
+          {
+            "chunk_id": "openalex:W7221458118:10",
+            "text": "used as piezoresistive or resonant transduction elements\ncoupled to larger microstructures; therefore, deterministic\nalignment, robust anchoring, and monolithic integration\nacross widely different length scales are required3,6,9,30. In\nnanoelectronic and FET-type devices, electrical isolation,\ncontact formation, and gate/channel integration impose\nadditional process constraints31–33. Practical suspended Si\nNW technologies must therefore combine nanoscale\nlinewidth control with batch-compatible processing, post-\nprocessing accessibility, low thermal budget, and device-\nlevel integration capability. These requirements motivate\nfabrication routes that preserve the Si NW critical\ndimension during release while remaining compatible\nwith\nsubsequent\nsensing\nand\nelectrical\ndevice\narchitectures.\nSeveral top-down\nfabrication\nstrategies\nhave been\ndeveloped\nto\nrealize\nthe\nsuspended\nSi\nNW\narchitecture8,15,30,34:\n1)\nOne widely used approach deﬁnes Si NWs through",
+            "metadata": {
+              "chunk_index": 10,
+              "source_type": "paper_pdf",
+              "page_number": 2,
+              "document_id": "openalex:W7221458118",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_id": "openalex:W7221458118:10",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y"
+            },
+            "distance": 0.32328933477401733
+          },
+          {
+            "chunk_id": "openalex:W7221458118:11",
+            "text": "electrical\ndevice\narchitectures.\nSeveral top-down\nfabrication\nstrategies\nhave been\ndeveloped\nto\nrealize\nthe\nsuspended\nSi\nNW\narchitecture8,15,30,34:\n1)\nOne widely used approach deﬁnes Si NWs through\nbeam oxidation, in which thermal oxidation reduces\nSi\nmicrobeams\nto\nnanoscale\ncores\nthat\nare\nsubsequently\nreleased\nby\noxide\netch34.\nFor\nexample, oxidation of 300 nm-wide beams can\nyield Si cores with sub-100 nm critical dimensions\n(CD)34. Subsequent studies extended this approach\nto\n<111>\nSi\nand\nsilicon-on-insulator\n(SOI)\nsubstrates, demonstrating FET integration with\nimproved\ndimensional\ncontrol\nand\nfabrication\nyield35.\n2)\nA second approach, an extension of the single-\ncrystal\nreactive\netching\nand\nmetallization\n(SCREAM) methodology36, generates nanoscale Si\nsurface\nprotrusions\nthat\nare\nsubsequently\ntransformed\ninto\nSi\nNWs\nfollowing\nsidewall\npassivation\nand\ndeep\nreactive\nion\netching\n(DRIE)16,37. This approach positions the NWs near\nthe top surface and supports monolithic integration\nwith",
+            "metadata": {
+              "chunk_index": 11,
+              "chunk_id": "openalex:W7221458118:11",
+              "page_number": 2,
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+            },
+            "distance": 0.3249626159667969
+          },
+          {
+            "chunk_id": "openalex:W7221458118:84",
+            "text": "on horizontally suspended silicon Nano-bridges grown via a bottom-up\ntechnique. Adv. Mater. 26, 1929–1934 (2014).\n64.\nAhn, J. H., Yun, J., Choi, Y. K. & Park, I. Palladium nanoparticle decorated silicon\nnanowire ﬁeld-effect transistor with side-gates for hydrogen gas detection.\nAppl. Phys. Lett. 104, 013508 (2014).\n65.\nMuzammil, M. et al. High-throughput resonance testing: a characterization\ntool to study nanowire mechanics. Meas. Sci. Technol. 37, 295004 (2026).\n66.\nBelov, M. et al. Mechanical resonance of clamped silicon nanowires measured\nby optical interferometry. J. Appl. Phys. 103, 074304 (2008).\n67.\nAhn, J. H. et al. Self-heated silicon nanowires for high performance hydrogen\ngas detection. Nanotechnology 26, 095501 (2015).\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 13 of 13",
+            "metadata": {
+              "page_number": 13,
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf",
+              "chunk_index": 84,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_id": "openalex:W7221458118:84"
+            },
+            "distance": 0.333876371383667
+          },
+          {
+            "chunk_id": "openalex:W7221458118:65",
+            "text": "Conclusion\nThe fabrication of suspended sub-100 nm Si NWs\nwithout furnace-based thermal processing posed a central\nchallenge, as conventional oxidation and LPCVD steps are\ncrucial for sidewall protection but can contribute to\nresidual-stress development and constrain process inte-\ngration due to their high thermal budgets. This work\naddressed\nthat\nchallenge\nby\nintroducing\nconformal\nmetallic passivation as a furnace-free alternative, enabling\nreproducible fabrication of single-crystal NWs with line-\nwidths down to 50 nm, aspect ratios up to 100, and\nscalable array pitches of 5 µm. The process is then\nextended to SOI substrates to realize two-terminal single-\nNW and NW-array devices, as well as FET architectures,\nwith\nelectrical\nmeasurements\nconﬁrming\npredictable\nresistive and transistor responses, and hydrogen sensitiv-\nity at sub-10 nW operating power in two-terminal single-\nNW devices via nominal 2 nm Pd functionalization. By\neliminating furnace-based thermal steps, the approach",
+            "metadata": {
+              "page_number": 12,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 65,
+              "chunk_id": "openalex:W7221458118:65",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118"
+            },
+            "distance": 0.33832383155822754
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.8,
+          "recall_at_k": 0.8,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 4,
+          "relevance_by_id": {
+            "openalex:W7221458118:0": 1,
+            "openalex:W7221458118:10": 1,
+            "openalex:W7221458118:11": 2,
+            "openalex:W7221458118:21": 2,
+            "openalex:W7221458118:65": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5076,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221458118:0",
+            "text": "Ali et al. Microsystems & Nanoengineering (2026) 12:343 \nMicrosystems & Nanoengineering\nhttps://doi.org/10.1038/s41378-026-01467-y\nwww.nature.com/micronano\nA R T I C L E\nO p e n A c c e s s\nScalable low-thermal-budget fabrication of\nsuspended silicon nanowire devices\nBasit Ali\n1, Arda Deniz Yalcinkaya\n2, Cagri Arslan3, Umut Kerimzade1,4 and Burhanettin Erdem Alaca\n1,3,4,5\nAbstract\nSilicon nanowires (Si NWs) are versatile one-dimensional building blocks for gas and biochemical sensors, MEMS/NEMS\nphysical transduction platforms, and integrated electronic devices because of their high surface-to-volume ratios and\ncompatibility with semiconductor processing. A key limitation of conventional top-down fabrication is its reliance on\nfurnace-based high-temperature steps, such as thermal oxidation and LPCVD, which can induce residual stress and\nconstrain post-CMOS integration because of thermal-budget limits above 400 °C. Here, we present a furnace-free, low-",
+            "metadata": {
+              "page_number": 1,
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 0,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "chunk_id": "openalex:W7221458118:0",
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:10",
+            "text": "used as piezoresistive or resonant transduction elements\ncoupled to larger microstructures; therefore, deterministic\nalignment, robust anchoring, and monolithic integration\nacross widely different length scales are required3,6,9,30. In\nnanoelectronic and FET-type devices, electrical isolation,\ncontact formation, and gate/channel integration impose\nadditional process constraints31–33. Practical suspended Si\nNW technologies must therefore combine nanoscale\nlinewidth control with batch-compatible processing, post-\nprocessing accessibility, low thermal budget, and device-\nlevel integration capability. These requirements motivate\nfabrication routes that preserve the Si NW critical\ndimension during release while remaining compatible\nwith\nsubsequent\nsensing\nand\nelectrical\ndevice\narchitectures.\nSeveral top-down\nfabrication\nstrategies\nhave been\ndeveloped\nto\nrealize\nthe\nsuspended\nSi\nNW\narchitecture8,15,30,34:\n1)\nOne widely used approach deﬁnes Si NWs through",
+            "metadata": {
+              "chunk_index": 10,
+              "source_type": "paper_pdf",
+              "page_number": 2,
+              "document_id": "openalex:W7221458118",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_id": "openalex:W7221458118:10",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:11",
+            "text": "electrical\ndevice\narchitectures.\nSeveral top-down\nfabrication\nstrategies\nhave been\ndeveloped\nto\nrealize\nthe\nsuspended\nSi\nNW\narchitecture8,15,30,34:\n1)\nOne widely used approach deﬁnes Si NWs through\nbeam oxidation, in which thermal oxidation reduces\nSi\nmicrobeams\nto\nnanoscale\ncores\nthat\nare\nsubsequently\nreleased\nby\noxide\netch34.\nFor\nexample, oxidation of 300 nm-wide beams can\nyield Si cores with sub-100 nm critical dimensions\n(CD)34. Subsequent studies extended this approach\nto\n<111>\nSi\nand\nsilicon-on-insulator\n(SOI)\nsubstrates, demonstrating FET integration with\nimproved\ndimensional\ncontrol\nand\nfabrication\nyield35.\n2)\nA second approach, an extension of the single-\ncrystal\nreactive\netching\nand\nmetallization\n(SCREAM) methodology36, generates nanoscale Si\nsurface\nprotrusions\nthat\nare\nsubsequently\ntransformed\ninto\nSi\nNWs\nfollowing\nsidewall\npassivation\nand\ndeep\nreactive\nion\netching\n(DRIE)16,37. This approach positions the NWs near\nthe top surface and supports monolithic integration\nwith",
+            "metadata": {
+              "chunk_index": 11,
+              "chunk_id": "openalex:W7221458118:11",
+              "page_number": 2,
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:65",
+            "text": "Conclusion\nThe fabrication of suspended sub-100 nm Si NWs\nwithout furnace-based thermal processing posed a central\nchallenge, as conventional oxidation and LPCVD steps are\ncrucial for sidewall protection but can contribute to\nresidual-stress development and constrain process inte-\ngration due to their high thermal budgets. This work\naddressed\nthat\nchallenge\nby\nintroducing\nconformal\nmetallic passivation as a furnace-free alternative, enabling\nreproducible fabrication of single-crystal NWs with line-\nwidths down to 50 nm, aspect ratios up to 100, and\nscalable array pitches of 5 µm. The process is then\nextended to SOI substrates to realize two-terminal single-\nNW and NW-array devices, as well as FET architectures,\nwith\nelectrical\nmeasurements\nconﬁrming\npredictable\nresistive and transistor responses, and hydrogen sensitiv-\nity at sub-10 nW operating power in two-terminal single-\nNW devices via nominal 2 nm Pd functionalization. By\neliminating furnace-based thermal steps, the approach",
+            "metadata": {
+              "page_number": 12,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 65,
+              "chunk_id": "openalex:W7221458118:65",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:84",
+            "text": "on horizontally suspended silicon Nano-bridges grown via a bottom-up\ntechnique. Adv. Mater. 26, 1929–1934 (2014).\n64.\nAhn, J. H., Yun, J., Choi, Y. K. & Park, I. Palladium nanoparticle decorated silicon\nnanowire ﬁeld-effect transistor with side-gates for hydrogen gas detection.\nAppl. Phys. Lett. 104, 013508 (2014).\n65.\nMuzammil, M. et al. High-throughput resonance testing: a characterization\ntool to study nanowire mechanics. Meas. Sci. Technol. 37, 295004 (2026).\n66.\nBelov, M. et al. Mechanical resonance of clamped silicon nanowires measured\nby optical interferometry. J. Appl. Phys. 103, 074304 (2008).\n67.\nAhn, J. H. et al. Self-heated silicon nanowires for high performance hydrogen\ngas detection. Nanotechnology 26, 095501 (2015).\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 13 of 13",
+            "metadata": {
+              "page_number": 13,
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf",
+              "chunk_index": 84,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_id": "openalex:W7221458118:84"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E02",
+      "query": "How does palladium functionalization affect hydrogen sensing in suspended silicon nanowires?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221458118:58",
+            "text": "functionalization. The pristine Si NW shows negligible\nresponse to hydrogen exposure, conﬁrming that the bare\nsuspended Si NW does not provide a measurable hydro-\ngen response under the tested conditions. In contrast,\nafter 2 nm Pd functionalization, the current decreases\nsharply upon hydrogen exposure and recovers after\nhydrogen removal. Since the SOI device layer is p-type,\nthe decrease in current is attributed to Pd-mediated\nhydrogen interactions that increase depletion/effective\nbarrier modulation in the Si NW channel, driving the NW\ntoward a depleted state. The repeatability of the Pd-\nfunctionalized response is shown in Fig. 5b. Repeated\nhydrogen exposure cycles produce reproducible current\nsuppression followed by recovery toward the baseline\nafter hydrogen removal.\nThe sensing performance of the Pd-functionalized sus-\npended Si NW was further quantiﬁed from the transient\ncurrent response. response can be deﬁned via Eq. 3:\nResponse %\nð\nÞ ¼\nIair \u0003 IH2\nIair\n\u0003\n\u0004\n´ 100\nð3Þ",
+            "metadata": {
+              "chunk_index": 58,
+              "page_number": 10,
+              "chunk_id": "openalex:W7221458118:58",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+            },
+            "distance": 0.2762293815612793
+          },
+          {
+            "chunk_id": "openalex:W7221458118:64",
+            "text": "functionalized NW exhibits a pronounced current decrease upon hydrogen exposure and recovery after hydrogen removal. The inset shows a\nschematic illustration of the suspended Si NW after nominal 2 nm Pd functionalization. The Pd layer acts as a catalytic hydrogen-sensitive surface\ndecoration. b Repeated hydrogen exposure cycles for the Pd-functionalized Si NW, demonstrating reproducible hydrogen-induced current\nmodulation and recovery\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 11 of 13",
+            "metadata": {
+              "chunk_id": "openalex:W7221458118:64",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "source_type": "paper_pdf",
+              "chunk_index": 64,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "page_number": 11,
+              "document_id": "openalex:W7221458118"
+            },
+            "distance": 0.2900152802467346
+          },
+          {
+            "chunk_id": "openalex:W7221458118:57",
+            "text": "100 mV, and the current was continuously monitored\nunder repeated hydrogen exposure at a ﬂow rate of 200\nsccm.\nThe inset in Fig. 5a schematically illustrates the Pd-\nfunctionalized suspended Si NW device. The nominal\n2-nm Pd coating serves as a catalytic functional layer for\nhydrogen dissociation. At this thickness level, Pd is\nexpected to form a discontinuous nanoparticle/island-like\ndecoration rather than a continuous metallic ﬁlm, con-\nsistent with previous Pd-decorated Si NW hydrogen\nsensors11,67. The absence of electrical shorting after Pd\nevaporation, together with the preserved measurable\ndevice resistance, conﬁrms that the Pd functionalization\ndoes not form a continuous conductive bridge across the\ndevice.\nThe plot in Fig. 5a compares the normalized current\nresponse of the same Si NW device before and after Pd\nfunctionalization. The pristine Si NW shows negligible\nresponse to hydrogen exposure, conﬁrming that the bare\nsuspended Si NW does not provide a measurable hydro-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "page_number": 10,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 57,
+              "chunk_id": "openalex:W7221458118:57"
+            },
+            "distance": 0.2913118600845337
+          },
+          {
+            "chunk_id": "openalex:W7221458118:84",
+            "text": "on horizontally suspended silicon Nano-bridges grown via a bottom-up\ntechnique. Adv. Mater. 26, 1929–1934 (2014).\n64.\nAhn, J. H., Yun, J., Choi, Y. K. & Park, I. Palladium nanoparticle decorated silicon\nnanowire ﬁeld-effect transistor with side-gates for hydrogen gas detection.\nAppl. Phys. Lett. 104, 013508 (2014).\n65.\nMuzammil, M. et al. High-throughput resonance testing: a characterization\ntool to study nanowire mechanics. Meas. Sci. Technol. 37, 295004 (2026).\n66.\nBelov, M. et al. Mechanical resonance of clamped silicon nanowires measured\nby optical interferometry. J. Appl. Phys. 103, 074304 (2008).\n67.\nAhn, J. H. et al. Self-heated silicon nanowires for high performance hydrogen\ngas detection. Nanotechnology 26, 095501 (2015).\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 13 of 13",
+            "metadata": {
+              "page_number": 13,
+              "chunk_index": 84,
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "source_type": "paper_pdf",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "document_id": "openalex:W7221458118",
+              "chunk_id": "openalex:W7221458118:84"
+            },
+            "distance": 0.2915416955947876
+          },
+          {
+            "chunk_id": "openalex:W7221458118:61",
+            "text": "at 20–30 s. The recovery time, deﬁned as the time\nrequired to recover 90% of the current change after\nhydrogen removal, is approximately 200–250 s. The\nmaximum measured current during the test is approxi-\nmately 67 nA at an applied bias of 100 mV, corresponding\nto a maximum electrical operating power of approxi-\nmately 6.7 nW. These results conﬁrm that Pd functiona-\nlization enables a repeatable hydrogen response in the\nsuspended p-type Si NW at sub-10 nW-level operating\npower.\nThis conﬁrms that the fabricated suspended Si NW\nplatform remains electrically functional after Pd eva-\nporation and can be converted into a hydrogen-sensitive\ndevice through a simple low-temperature post-fabrication\nfunctionalization step. Raw data for hydrogen sensing\nbefore and after Pd functionalization are provided in\nSupplementary Figs. S3–S5.\nFurther simpliﬁcations for the Si NW fabrication can be\nachieved by, for example, replacing positive-tone PMMA",
+            "metadata": {
+              "chunk_index": 61,
+              "chunk_id": "openalex:W7221458118:61",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "page_number": 11,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y"
+            },
+            "distance": 0.30026447772979736
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.8,
+          "recall_at_k": 0.8,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 4,
+          "relevance_by_id": {
+            "openalex:W7221458118:57": 2,
+            "openalex:W7221458118:58": 2,
+            "openalex:W7221458118:61": 2,
+            "openalex:W7221458118:63": 2,
+            "openalex:W7221458118:64": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 4599,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221458118:57",
+            "text": "100 mV, and the current was continuously monitored\nunder repeated hydrogen exposure at a ﬂow rate of 200\nsccm.\nThe inset in Fig. 5a schematically illustrates the Pd-\nfunctionalized suspended Si NW device. The nominal\n2-nm Pd coating serves as a catalytic functional layer for\nhydrogen dissociation. At this thickness level, Pd is\nexpected to form a discontinuous nanoparticle/island-like\ndecoration rather than a continuous metallic ﬁlm, con-\nsistent with previous Pd-decorated Si NW hydrogen\nsensors11,67. The absence of electrical shorting after Pd\nevaporation, together with the preserved measurable\ndevice resistance, conﬁrms that the Pd functionalization\ndoes not form a continuous conductive bridge across the\ndevice.\nThe plot in Fig. 5a compares the normalized current\nresponse of the same Si NW device before and after Pd\nfunctionalization. The pristine Si NW shows negligible\nresponse to hydrogen exposure, conﬁrming that the bare\nsuspended Si NW does not provide a measurable hydro-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "page_number": 10,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "chunk_index": 57,
+              "chunk_id": "openalex:W7221458118:57"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:58",
+            "text": "functionalization. The pristine Si NW shows negligible\nresponse to hydrogen exposure, conﬁrming that the bare\nsuspended Si NW does not provide a measurable hydro-\ngen response under the tested conditions. In contrast,\nafter 2 nm Pd functionalization, the current decreases\nsharply upon hydrogen exposure and recovers after\nhydrogen removal. Since the SOI device layer is p-type,\nthe decrease in current is attributed to Pd-mediated\nhydrogen interactions that increase depletion/effective\nbarrier modulation in the Si NW channel, driving the NW\ntoward a depleted state. The repeatability of the Pd-\nfunctionalized response is shown in Fig. 5b. Repeated\nhydrogen exposure cycles produce reproducible current\nsuppression followed by recovery toward the baseline\nafter hydrogen removal.\nThe sensing performance of the Pd-functionalized sus-\npended Si NW was further quantiﬁed from the transient\ncurrent response. response can be deﬁned via Eq. 3:\nResponse %\nð\nÞ ¼\nIair \u0003 IH2\nIair\n\u0003\n\u0004\n´ 100\nð3Þ",
+            "metadata": {
+              "chunk_index": 58,
+              "page_number": 10,
+              "chunk_id": "openalex:W7221458118:58",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "document_id": "openalex:W7221458118",
+              "source_type": "paper_pdf",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:61",
+            "text": "at 20–30 s. The recovery time, deﬁned as the time\nrequired to recover 90% of the current change after\nhydrogen removal, is approximately 200–250 s. The\nmaximum measured current during the test is approxi-\nmately 67 nA at an applied bias of 100 mV, corresponding\nto a maximum electrical operating power of approxi-\nmately 6.7 nW. These results conﬁrm that Pd functiona-\nlization enables a repeatable hydrogen response in the\nsuspended p-type Si NW at sub-10 nW-level operating\npower.\nThis conﬁrms that the fabricated suspended Si NW\nplatform remains electrically functional after Pd eva-\nporation and can be converted into a hydrogen-sensitive\ndevice through a simple low-temperature post-fabrication\nfunctionalization step. Raw data for hydrogen sensing\nbefore and after Pd functionalization are provided in\nSupplementary Figs. S3–S5.\nFurther simpliﬁcations for the Si NW fabrication can be\nachieved by, for example, replacing positive-tone PMMA",
+            "metadata": {
+              "chunk_index": 61,
+              "chunk_id": "openalex:W7221458118:61",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221458118",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "page_number": 11,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:64",
+            "text": "functionalized NW exhibits a pronounced current decrease upon hydrogen exposure and recovery after hydrogen removal. The inset shows a\nschematic illustration of the suspended Si NW after nominal 2 nm Pd functionalization. The Pd layer acts as a catalytic hydrogen-sensitive surface\ndecoration. b Repeated hydrogen exposure cycles for the Pd-functionalized Si NW, demonstrating reproducible hydrogen-induced current\nmodulation and recovery\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 11 of 13",
+            "metadata": {
+              "chunk_id": "openalex:W7221458118:64",
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "source_type": "paper_pdf",
+              "chunk_index": 64,
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "page_number": 11,
+              "document_id": "openalex:W7221458118"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221458118:84",
+            "text": "on horizontally suspended silicon Nano-bridges grown via a bottom-up\ntechnique. Adv. Mater. 26, 1929–1934 (2014).\n64.\nAhn, J. H., Yun, J., Choi, Y. K. & Park, I. Palladium nanoparticle decorated silicon\nnanowire ﬁeld-effect transistor with side-gates for hydrogen gas detection.\nAppl. Phys. Lett. 104, 013508 (2014).\n65.\nMuzammil, M. et al. High-throughput resonance testing: a characterization\ntool to study nanowire mechanics. Meas. Sci. Technol. 37, 295004 (2026).\n66.\nBelov, M. et al. Mechanical resonance of clamped silicon nanowires measured\nby optical interferometry. J. Appl. Phys. 103, 074304 (2008).\n67.\nAhn, J. H. et al. Self-heated silicon nanowires for high performance hydrogen\ngas detection. Nanotechnology 26, 095501 (2015).\nAli et al. Microsystems & Nanoengineering (2026) 12:343 \nPage 13 of 13",
+            "metadata": {
+              "page_number": 13,
+              "chunk_index": 84,
+              "title": "Scalable low-thermal-budget fabrication of suspended silicon nanowire devices",
+              "source_type": "paper_pdf",
+              "source": "https://www.nature.com/articles/s41378-026-01467-y",
+              "document_id": "openalex:W7221458118",
+              "chunk_id": "openalex:W7221458118:84"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E03",
+      "query": "How can AI and machine learning support the design of g-C3N4-based nanoplatforms?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221558939:169",
+            "text": "biomarkers will therefore be essential.\nArtificial intelligence (AI) and machine learning (ML) \nmay further accelerate the rational design of g-C₃N₄-\nbased nanoplatforms [138]. AI-assisted approaches could \nintegrate synthesis parameters, structural descriptors, \noptical properties, catalytic activity, ROS profiles, cellular \nresponses, and toxicity data to identify relationships that \nare difficult to derive from conventional trial-and-error \napproaches. Predictive models may facilitate optimiza­\ntion of dopant concentration, defect density, heterojunc­\ntion composition, particle size, and surface chemistry. \nHowever, the usefulness of AI models will depend on the \nquality, standardization, and comparability of the under­\nlying experimental datasets. Establishing interoperable \ndatasets and standardized characterization and biologi­\ncal-assessment protocols will therefore be an important \nprerequisite for reliable AI-guided nanomaterial design.",
+            "metadata": {
+              "chunk_index": 169,
+              "page_number": 26,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "document_id": "openalex:W7221558939",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221558939:169"
+            },
+            "distance": 0.22731995582580566
+          },
+          {
+            "chunk_id": "openalex:W7221558939:171",
+            "text": "translating g-C₃N₄ from an experimentally promising \nphotocatalyst into a clinically relevant nanotherapeutic \nplatform.\nA schematic illustration summarizing the major chal­\nlenges and future development directions of g-C₃N₄-\nbased nanoplatforms in cancer therapy is presented in \nFig. 5. The major challenges include limited light penetra­\ntion, tumor hypoxia, elevated intracellular GSH, limited \ntumor targeting and penetration, biosafety concerns, and \ndifficulties in scalable and reproducible synthesis. Emerg­\ning strategies include NIR/NIR-II-responsive architec­\ntures, oxygen self-supplying and oxygen-independent \ncatalytic pathways, GSH-regulating systems, multi­\nfunctional theranostic platforms, advanced targeting \napproaches, and AI-assisted nanomaterial design. Col­\nlectively, these approaches may improve the therapeutic \nprecision, biological safety, and translational potential of \ng-C₃N₄-based nanoplatforms.\nConclusion\nGraphitic carbon nitride (g-C₃N₄)-based smart nano­",
+            "metadata": {
+              "chunk_index": 171,
+              "document_id": "openalex:W7221558939",
+              "chunk_id": "openalex:W7221558939:171",
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "page_number": 26
+            },
+            "distance": 0.33413010835647583
+          },
+          {
+            "chunk_id": "openalex:W7221558939:170",
+            "text": "datasets and standardized characterization and biologi­\ncal-assessment protocols will therefore be an important \nprerequisite for reliable AI-guided nanomaterial design. \nUltimately, successful clinical translation will require a \nshift from proof-of-concept studies toward reproducible, \nmechanism-driven, and clinically relevant evaluation. \nStandardized synthesis, comprehensive physicochemi­\ncal characterization, pharmacokinetic and biodistribu­\ntion studies, long-term toxicity assessment, scalable \nmanufacturing, and clearly defined regulatory pathways \nshould accompany advances in photocatalytic perfor­\nmance. Interdisciplinary collaboration among materials \nscientists, chemists, biomedical engineers, oncologists, \nand computational researchers will be essential for \ntranslating g-C₃N₄ from an experimentally promising \nphotocatalyst into a clinically relevant nanotherapeutic \nplatform.\nA schematic illustration summarizing the major chal­",
+            "metadata": {
+              "chunk_id": "openalex:W7221558939:170",
+              "document_id": "openalex:W7221558939",
+              "source_type": "paper_pdf",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "chunk_index": 170,
+              "page_number": 26,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+            },
+            "distance": 0.3376275300979614
+          },
+          {
+            "chunk_id": "openalex:W7221558939:172",
+            "text": "precision, biological safety, and translational potential of \ng-C₃N₄-based nanoplatforms.\nConclusion\nGraphitic carbon nitride (g-C₃N₄)-based smart nano­\nplatforms have emerged as a transformative class of \nnanomaterials for next-generation cancer therapy. Their \nunique combination of metal-free composition, tunable \nelectronic structure, excellent photostability, favorable \nbiocompatibility, and versatile surface chemistry makes \nthem highly promising candidates for precision oncology. \nRecent advances in surface engineering including hetero­\natom doping, heterojunction construction, noble metal \ndecoration, oxygen vacancy engineering, and biomimetic \nsurface functionalization have substantially enhanced \nthe photocatalytic performance of g-C₃N₄ by improv­\ning light harvesting, accelerating charge separation and \namplifying reactive oxygen species (ROS) generation. \nBeyond conventional photodynamic therapy, g-C₃N₄-\nbased nanoplatforms have evolved into multifunctional",
+            "metadata": {
+              "page_number": 26,
+              "chunk_index": 172,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221558939",
+              "chunk_id": "openalex:W7221558939:172"
+            },
+            "distance": 0.3379090428352356
+          },
+          {
+            "chunk_id": "openalex:W7221558939:168",
+            "text": "opportunities for further therapeutic diversification. \nBeyond apoptosis, ferroptosis represents a promising \ndirection for g-C₃N₄-based nanoplatforms, with reported \nsystems exploiting ROS amplification, glutathione deple­\ntion, and iron-dependent redox reactions to promote \nferroptotic cell death [135]. Other regulated cell-death \npathways, including cuproptosis and immunogenic cell \ndeath, have also begun to be explored in g-C₃N₄-based \nnanoplatforms [136, 137], whereas the potential involve­\nment of pyroptosis warrants further direct investiga­\ntion. Rather than assuming that simultaneous activation \nof multiple pathways is always beneficial, future studies \nshould determine which combinations produce genuine \ntherapeutic synergy and which may increase nonspecific \ntoxicity. Mechanistic validation using pathway-specific \nbiomarkers will therefore be essential.\nArtificial intelligence (AI) and machine learning (ML) \nmay further accelerate the rational design of g-C₃N₄-",
+            "metadata": {
+              "page_number": 26,
+              "chunk_id": "openalex:W7221558939:168",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "chunk_index": 168,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221558939"
+            },
+            "distance": 0.33930838108062744
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.6,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 3,
+          "retrieved_relevant_count": 3,
+          "relevance_by_id": {
+            "openalex:W7221558939:169": 2,
+            "openalex:W7221558939:170": 2,
+            "openalex:W7221558939:171": 1
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5232,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221558939:168",
+            "text": "opportunities for further therapeutic diversification. \nBeyond apoptosis, ferroptosis represents a promising \ndirection for g-C₃N₄-based nanoplatforms, with reported \nsystems exploiting ROS amplification, glutathione deple­\ntion, and iron-dependent redox reactions to promote \nferroptotic cell death [135]. Other regulated cell-death \npathways, including cuproptosis and immunogenic cell \ndeath, have also begun to be explored in g-C₃N₄-based \nnanoplatforms [136, 137], whereas the potential involve­\nment of pyroptosis warrants further direct investiga­\ntion. Rather than assuming that simultaneous activation \nof multiple pathways is always beneficial, future studies \nshould determine which combinations produce genuine \ntherapeutic synergy and which may increase nonspecific \ntoxicity. Mechanistic validation using pathway-specific \nbiomarkers will therefore be essential.\nArtificial intelligence (AI) and machine learning (ML) \nmay further accelerate the rational design of g-C₃N₄-",
+            "metadata": {
+              "page_number": 26,
+              "chunk_id": "openalex:W7221558939:168",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "chunk_index": 168,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221558939"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221558939:169",
+            "text": "biomarkers will therefore be essential.\nArtificial intelligence (AI) and machine learning (ML) \nmay further accelerate the rational design of g-C₃N₄-\nbased nanoplatforms [138]. AI-assisted approaches could \nintegrate synthesis parameters, structural descriptors, \noptical properties, catalytic activity, ROS profiles, cellular \nresponses, and toxicity data to identify relationships that \nare difficult to derive from conventional trial-and-error \napproaches. Predictive models may facilitate optimiza­\ntion of dopant concentration, defect density, heterojunc­\ntion composition, particle size, and surface chemistry. \nHowever, the usefulness of AI models will depend on the \nquality, standardization, and comparability of the under­\nlying experimental datasets. Establishing interoperable \ndatasets and standardized characterization and biologi­\ncal-assessment protocols will therefore be an important \nprerequisite for reliable AI-guided nanomaterial design.",
+            "metadata": {
+              "chunk_index": 169,
+              "page_number": 26,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "document_id": "openalex:W7221558939",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221558939:169"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221558939:170",
+            "text": "datasets and standardized characterization and biologi­\ncal-assessment protocols will therefore be an important \nprerequisite for reliable AI-guided nanomaterial design. \nUltimately, successful clinical translation will require a \nshift from proof-of-concept studies toward reproducible, \nmechanism-driven, and clinically relevant evaluation. \nStandardized synthesis, comprehensive physicochemi­\ncal characterization, pharmacokinetic and biodistribu­\ntion studies, long-term toxicity assessment, scalable \nmanufacturing, and clearly defined regulatory pathways \nshould accompany advances in photocatalytic perfor­\nmance. Interdisciplinary collaboration among materials \nscientists, chemists, biomedical engineers, oncologists, \nand computational researchers will be essential for \ntranslating g-C₃N₄ from an experimentally promising \nphotocatalyst into a clinically relevant nanotherapeutic \nplatform.\nA schematic illustration summarizing the major chal­",
+            "metadata": {
+              "chunk_id": "openalex:W7221558939:170",
+              "document_id": "openalex:W7221558939",
+              "source_type": "paper_pdf",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "chunk_index": 170,
+              "page_number": 26,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221558939:171",
+            "text": "translating g-C₃N₄ from an experimentally promising \nphotocatalyst into a clinically relevant nanotherapeutic \nplatform.\nA schematic illustration summarizing the major chal­\nlenges and future development directions of g-C₃N₄-\nbased nanoplatforms in cancer therapy is presented in \nFig. 5. The major challenges include limited light penetra­\ntion, tumor hypoxia, elevated intracellular GSH, limited \ntumor targeting and penetration, biosafety concerns, and \ndifficulties in scalable and reproducible synthesis. Emerg­\ning strategies include NIR/NIR-II-responsive architec­\ntures, oxygen self-supplying and oxygen-independent \ncatalytic pathways, GSH-regulating systems, multi­\nfunctional theranostic platforms, advanced targeting \napproaches, and AI-assisted nanomaterial design. Col­\nlectively, these approaches may improve the therapeutic \nprecision, biological safety, and translational potential of \ng-C₃N₄-based nanoplatforms.\nConclusion\nGraphitic carbon nitride (g-C₃N₄)-based smart nano­",
+            "metadata": {
+              "chunk_index": 171,
+              "document_id": "openalex:W7221558939",
+              "chunk_id": "openalex:W7221558939:171",
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "page_number": 26
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221558939:172",
+            "text": "precision, biological safety, and translational potential of \ng-C₃N₄-based nanoplatforms.\nConclusion\nGraphitic carbon nitride (g-C₃N₄)-based smart nano­\nplatforms have emerged as a transformative class of \nnanomaterials for next-generation cancer therapy. Their \nunique combination of metal-free composition, tunable \nelectronic structure, excellent photostability, favorable \nbiocompatibility, and versatile surface chemistry makes \nthem highly promising candidates for precision oncology. \nRecent advances in surface engineering including hetero­\natom doping, heterojunction construction, noble metal \ndecoration, oxygen vacancy engineering, and biomimetic \nsurface functionalization have substantially enhanced \nthe photocatalytic performance of g-C₃N₄ by improv­\ning light harvesting, accelerating charge separation and \namplifying reactive oxygen species (ROS) generation. \nBeyond conventional photodynamic therapy, g-C₃N₄-\nbased nanoplatforms have evolved into multifunctional",
+            "metadata": {
+              "page_number": 26,
+              "chunk_index": 172,
+              "source": "https://link.springer.com/10.1186/s44301-026-00041-9",
+              "title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy: mechanisms, surface engineering, and therapeutic applications",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221558939",
+              "chunk_id": "openalex:W7221558939:172"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E04",
+      "query": "Which azo dye shows a selective response to Ni2+ ions?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221570648:41",
+            "text": "1 3\nChemical Papers\nand Pb2+, did not produce any significant color change, and \nthe original yellow color was retained with only slight inten­\nsity variation (Fig.  16). This indicates a highly selective \ncolorimetric response of azo dye 3d toward Ni2+ ions Fig. 3.\nAzo dye 3e showed only very faint yellow coloration \nupon addition of Fe2+, Ni2+, and Cu2+, while Co2+, Zn2+, \nHg2+, and Pb2+ produced almost no visible change. This \nsuggests a very weak and non-selective response of azo \ndye 3e toward the studied metal ions Fig. 4. Overall, these \nresults demonstrate that azo dye 3d exhibits the most dis­\ntinct and selective colorimetric response toward Ni2+ ions, \nhighlighting its potential as a selective chemosensor.\nTo further evaluate selectivity, UV–visible absorption \nspectra of azo dyes 3c–3e (2.5 × 10−5 M) were recorded after \nFig. 11  Calibration plot show­\ning the variation in absorbance of \nazo dye 3d with increasing Ni2+ \nconcentration\n \nFig. 10  Benesi–Hildebrand plot show­",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221570648:41",
+              "page_number": 12,
+              "chunk_index": 41
+            },
+            "distance": 0.16160941123962402
+          },
+          {
+            "chunk_id": "openalex:W7221570648:44",
+            "text": "a visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.\nIn the case of azo dye 3e, minimal spectral changes were \nobserved. The absorption maximum at 365  nm remained \nunchanged with Cu2+ and Hg2+, while Fe2+, Co2+, Ni2+, \nZn2+, and Pb2+ caused only a slight shift to ~368 nm Fig. 7. \nThese small and non-specific changes are consistent with its \nweak and non-selective behaviour. Among all the studied \ncompounds, azo dye 3d shows a clear and distinguishable \nspectral response toward Ni2+ ions, whereas azo dyes 3c \nand 3e do not exhibit significant selectivity under the same \nconditions.\nThe UV–visible spectrum of azo dye 3d shows three \nabsorption bands at 345, 362, and 500  nm, with molar \nabsorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system",
+            "metadata": {
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:44",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "document_id": "openalex:W7221570648",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "chunk_index": 44,
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.22020262479782104
+          },
+          {
+            "chunk_id": "openalex:W7221570648:43",
+            "text": "1 3\nChemical Papers\nthe addition of four equivalents of metal ions. As shown in \nFig. 5, azo dye 3c exhibited only minor spectral changes. A \nslight shift in the absorption maximum from 505 to ~502 nm \nwas observed with Co2+ and Ni2+, while Cu2+ caused a mod­\nerate bathochromic shift to 512 nm. In contrast, Fe2+, Zn2+, \nHg2+, and Pb2+ induced hypsochromic shifts in the range of \n485–492 nm. The absence of a clear and consistent spectral \npattern confirms the non-selective behavior of 3c.\nAzo dye 3d displayed an absorption band at 500  nm, \nwhich showed small bathochromic shifts to 507, 512, 514, \nand 515 nm in the presence of Co2+, Ni2+, Cu2+, and Hg2+ \nions, respectively, while no significant change was observed \nwith Fe2+. Notably, the addition of Ni2+ resulted in the \nappearance of a new absorption band at 560 nm along with \na visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.",
+            "metadata": {
+              "chunk_id": "openalex:W7221570648:43",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "chunk_index": 43,
+              "document_id": "openalex:W7221570648",
+              "source_type": "paper_pdf",
+              "page_number": 13
+            },
+            "distance": 0.23698711395263672
+          },
+          {
+            "chunk_id": "openalex:W7221570648:40",
+            "text": "variations were weak, indicating non-selective interactions \nwith the tested metal ions Fig. 2.\nIn contrast, azo dye 3d exhibited a clear color change \nfrom yellow to pink specifically in the presence of Ni2+ ions. \nOther metal ions, including Fe2+, Co2+, Cu2+, Zn2+, Hg2+, \nO\nN\nN\n+\nO\n–\nO\nN\nN\nO\nO\nN\nN\n+\nO\n–\nO\nN\nN\nO\nNi\n2–\nO\nN\nN\n+\nO\n–\nO\nN\nN\nOH\n+ Ni\n2+\n2\nFig. 9  Proposed sensing mechanism for the detection of Ni2+ ions by compound 3d through the formation of a 2:1 (ligand:metal) coordination \ncomplex\n \nFig. 8  UV–Vis absorption spectral \nchanges observed during the titra­\ntion of azo dye 3d (2.5 × 10−5 M) \nwith incremental addition of \nNi+2ions (1.5 × 10−3 M) in DMF. \nThe molar ratio plot obtained by \nmonitoring the absorbance as a \nfunction of the Ni2+/3d molar ratio. \nThe breakpoint at [Ni2+]/[3d] ≈ 0.5 \nindicates a ligand-to-metal stoichi­\nometry of 2:1 Fig. 9",
+            "metadata": {
+              "chunk_index": 40,
+              "chunk_id": "openalex:W7221570648:40",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "page_number": 11,
+              "document_id": "openalex:W7221570648"
+            },
+            "distance": 0.24710583686828613
+          },
+          {
+            "chunk_id": "openalex:W7221570648:45",
+            "text": "absorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system \nand azo group, while the band at 500 nm corresponds to \nan n→π* transition of the –N=N– group (Natansohn and \nRochon 2002).\nUpon addition of four equivalents of Ni2+ ions, slight \nbathochromic shifts were observed, with new maxima at \n347, 365, and 512 nm. In addition, a new absorption band \nappeared at 560  nm with a molar absorptivity of 0.77 × \n104 M−1 cm−1. This indicates the formation of a coordina­\ntion complex between Ni2+ ions and azo dye 3d. The appear­\nance of this new low-energy band, along with changes in the \nexisting bands, confirms a strong interaction between the \nazo chromophore and Ni2+ ions without significant struc­\ntural change in the dye framework.\nDetermination of the ligand–metal binding stoichiometry\nThe binding stoichiometry between azo dye 3d and Ni2+",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:45",
+              "chunk_index": 45,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "document_id": "openalex:W7221570648"
+            },
+            "distance": 0.2578442096710205
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 5,
+          "relevance_by_id": {
+            "openalex:W7221570648:40": 2,
+            "openalex:W7221570648:41": 2,
+            "openalex:W7221570648:43": 2,
+            "openalex:W7221570648:44": 2,
+            "openalex:W7221570648:45": 1
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5134,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221570648:40",
+            "text": "variations were weak, indicating non-selective interactions \nwith the tested metal ions Fig. 2.\nIn contrast, azo dye 3d exhibited a clear color change \nfrom yellow to pink specifically in the presence of Ni2+ ions. \nOther metal ions, including Fe2+, Co2+, Cu2+, Zn2+, Hg2+, \nO\nN\nN\n+\nO\n–\nO\nN\nN\nO\nO\nN\nN\n+\nO\n–\nO\nN\nN\nO\nNi\n2–\nO\nN\nN\n+\nO\n–\nO\nN\nN\nOH\n+ Ni\n2+\n2\nFig. 9  Proposed sensing mechanism for the detection of Ni2+ ions by compound 3d through the formation of a 2:1 (ligand:metal) coordination \ncomplex\n \nFig. 8  UV–Vis absorption spectral \nchanges observed during the titra­\ntion of azo dye 3d (2.5 × 10−5 M) \nwith incremental addition of \nNi+2ions (1.5 × 10−3 M) in DMF. \nThe molar ratio plot obtained by \nmonitoring the absorbance as a \nfunction of the Ni2+/3d molar ratio. \nThe breakpoint at [Ni2+]/[3d] ≈ 0.5 \nindicates a ligand-to-metal stoichi­\nometry of 2:1 Fig. 9",
+            "metadata": {
+              "chunk_index": 40,
+              "chunk_id": "openalex:W7221570648:40",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "page_number": 11,
+              "document_id": "openalex:W7221570648"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:41",
+            "text": "1 3\nChemical Papers\nand Pb2+, did not produce any significant color change, and \nthe original yellow color was retained with only slight inten­\nsity variation (Fig.  16). This indicates a highly selective \ncolorimetric response of azo dye 3d toward Ni2+ ions Fig. 3.\nAzo dye 3e showed only very faint yellow coloration \nupon addition of Fe2+, Ni2+, and Cu2+, while Co2+, Zn2+, \nHg2+, and Pb2+ produced almost no visible change. This \nsuggests a very weak and non-selective response of azo \ndye 3e toward the studied metal ions Fig. 4. Overall, these \nresults demonstrate that azo dye 3d exhibits the most dis­\ntinct and selective colorimetric response toward Ni2+ ions, \nhighlighting its potential as a selective chemosensor.\nTo further evaluate selectivity, UV–visible absorption \nspectra of azo dyes 3c–3e (2.5 × 10−5 M) were recorded after \nFig. 11  Calibration plot show­\ning the variation in absorbance of \nazo dye 3d with increasing Ni2+ \nconcentration\n \nFig. 10  Benesi–Hildebrand plot show­",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221570648:41",
+              "page_number": 12,
+              "chunk_index": 41
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:43",
+            "text": "1 3\nChemical Papers\nthe addition of four equivalents of metal ions. As shown in \nFig. 5, azo dye 3c exhibited only minor spectral changes. A \nslight shift in the absorption maximum from 505 to ~502 nm \nwas observed with Co2+ and Ni2+, while Cu2+ caused a mod­\nerate bathochromic shift to 512 nm. In contrast, Fe2+, Zn2+, \nHg2+, and Pb2+ induced hypsochromic shifts in the range of \n485–492 nm. The absence of a clear and consistent spectral \npattern confirms the non-selective behavior of 3c.\nAzo dye 3d displayed an absorption band at 500  nm, \nwhich showed small bathochromic shifts to 507, 512, 514, \nand 515 nm in the presence of Co2+, Ni2+, Cu2+, and Hg2+ \nions, respectively, while no significant change was observed \nwith Fe2+. Notably, the addition of Ni2+ resulted in the \nappearance of a new absorption band at 560 nm along with \na visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.",
+            "metadata": {
+              "chunk_id": "openalex:W7221570648:43",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "chunk_index": 43,
+              "document_id": "openalex:W7221570648",
+              "source_type": "paper_pdf",
+              "page_number": 13
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:44",
+            "text": "a visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.\nIn the case of azo dye 3e, minimal spectral changes were \nobserved. The absorption maximum at 365  nm remained \nunchanged with Cu2+ and Hg2+, while Fe2+, Co2+, Ni2+, \nZn2+, and Pb2+ caused only a slight shift to ~368 nm Fig. 7. \nThese small and non-specific changes are consistent with its \nweak and non-selective behaviour. Among all the studied \ncompounds, azo dye 3d shows a clear and distinguishable \nspectral response toward Ni2+ ions, whereas azo dyes 3c \nand 3e do not exhibit significant selectivity under the same \nconditions.\nThe UV–visible spectrum of azo dye 3d shows three \nabsorption bands at 345, 362, and 500  nm, with molar \nabsorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system",
+            "metadata": {
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:44",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "document_id": "openalex:W7221570648",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "chunk_index": 44,
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:45",
+            "text": "absorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system \nand azo group, while the band at 500 nm corresponds to \nan n→π* transition of the –N=N– group (Natansohn and \nRochon 2002).\nUpon addition of four equivalents of Ni2+ ions, slight \nbathochromic shifts were observed, with new maxima at \n347, 365, and 512 nm. In addition, a new absorption band \nappeared at 560  nm with a molar absorptivity of 0.77 × \n104 M−1 cm−1. This indicates the formation of a coordina­\ntion complex between Ni2+ ions and azo dye 3d. The appear­\nance of this new low-energy band, along with changes in the \nexisting bands, confirms a strong interaction between the \nazo chromophore and Ni2+ ions without significant struc­\ntural change in the dye framework.\nDetermination of the ligand–metal binding stoichiometry\nThe binding stoichiometry between azo dye 3d and Ni2+",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:45",
+              "chunk_index": 45,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "document_id": "openalex:W7221570648"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E05",
+      "query": "What evidence supports the selective response of azo dye 3d to Ni2+?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221570648:41",
+            "text": "1 3\nChemical Papers\nand Pb2+, did not produce any significant color change, and \nthe original yellow color was retained with only slight inten­\nsity variation (Fig.  16). This indicates a highly selective \ncolorimetric response of azo dye 3d toward Ni2+ ions Fig. 3.\nAzo dye 3e showed only very faint yellow coloration \nupon addition of Fe2+, Ni2+, and Cu2+, while Co2+, Zn2+, \nHg2+, and Pb2+ produced almost no visible change. This \nsuggests a very weak and non-selective response of azo \ndye 3e toward the studied metal ions Fig. 4. Overall, these \nresults demonstrate that azo dye 3d exhibits the most dis­\ntinct and selective colorimetric response toward Ni2+ ions, \nhighlighting its potential as a selective chemosensor.\nTo further evaluate selectivity, UV–visible absorption \nspectra of azo dyes 3c–3e (2.5 × 10−5 M) were recorded after \nFig. 11  Calibration plot show­\ning the variation in absorbance of \nazo dye 3d with increasing Ni2+ \nconcentration\n \nFig. 10  Benesi–Hildebrand plot show­",
+            "metadata": {
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "chunk_id": "openalex:W7221570648:41",
+              "page_number": 12,
+              "source_type": "paper_pdf",
+              "chunk_index": 41,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "document_id": "openalex:W7221570648"
+            },
+            "distance": 0.1675003170967102
+          },
+          {
+            "chunk_id": "openalex:W7221570648:44",
+            "text": "a visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.\nIn the case of azo dye 3e, minimal spectral changes were \nobserved. The absorption maximum at 365  nm remained \nunchanged with Cu2+ and Hg2+, while Fe2+, Co2+, Ni2+, \nZn2+, and Pb2+ caused only a slight shift to ~368 nm Fig. 7. \nThese small and non-specific changes are consistent with its \nweak and non-selective behaviour. Among all the studied \ncompounds, azo dye 3d shows a clear and distinguishable \nspectral response toward Ni2+ ions, whereas azo dyes 3c \nand 3e do not exhibit significant selectivity under the same \nconditions.\nThe UV–visible spectrum of azo dye 3d shows three \nabsorption bands at 345, 362, and 500  nm, with molar \nabsorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:44",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "chunk_index": 44
+            },
+            "distance": 0.18859273195266724
+          },
+          {
+            "chunk_id": "openalex:W7221570648:43",
+            "text": "1 3\nChemical Papers\nthe addition of four equivalents of metal ions. As shown in \nFig. 5, azo dye 3c exhibited only minor spectral changes. A \nslight shift in the absorption maximum from 505 to ~502 nm \nwas observed with Co2+ and Ni2+, while Cu2+ caused a mod­\nerate bathochromic shift to 512 nm. In contrast, Fe2+, Zn2+, \nHg2+, and Pb2+ induced hypsochromic shifts in the range of \n485–492 nm. The absence of a clear and consistent spectral \npattern confirms the non-selective behavior of 3c.\nAzo dye 3d displayed an absorption band at 500  nm, \nwhich showed small bathochromic shifts to 507, 512, 514, \nand 515 nm in the presence of Co2+, Ni2+, Cu2+, and Hg2+ \nions, respectively, while no significant change was observed \nwith Fe2+. Notably, the addition of Ni2+ resulted in the \nappearance of a new absorption band at 560 nm along with \na visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.",
+            "metadata": {
+              "chunk_index": 43,
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "page_number": 13,
+              "document_id": "openalex:W7221570648",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221570648:43"
+            },
+            "distance": 0.2203311324119568
+          },
+          {
+            "chunk_id": "openalex:W7221570648:47",
+            "text": "azo dye 3d, which possesses multiple coordination sites, \nincluding azo nitrogen (–N=N–), phenolic oxygen (–OH), \nand quinoline nitrogen, facilitating effective chelation with \nthe metal ion. Based on these findings, an octahedral geom­\netry is proposed for the 3d–Ni2+ complex (Fig. 9).\nBinding affinity studies of azo dye 3d with Ni2+\nTo gain further insight into the interaction between azo dye \n3d and Ni2+ ions, the binding affinity was evaluated using \na modified Benesi–Hildebrand Eq.  (1), assuming a 2:1 \n(L2M) stoichiometric ratio. The plot of 1/(A − A₀) versus 1/\n[Ni2+]2 showed excellent linearity with a correlation coef­\nficient of R2 = 0.9964, confirming the validity of the applied \nTable 3  The % cell viability values of HepG2 cells treated with the \ndifferent concentrations of 3C against the Human liver cancer (HepG2) \ncells after the treatment period of 24 h\nMTT ASSAY-Summary- 3C vs HepG2\nCulture condition\n% cell viability\nIC50 conc (μg/ml)\nUntreated\n100\n178.88\nStd control",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:47",
+              "chunk_index": 47,
+              "document_id": "openalex:W7221570648"
+            },
+            "distance": 0.22783160209655762
+          },
+          {
+            "chunk_id": "openalex:W7221570648:20",
+            "text": "gently mixed and allowed to equilibrate for 3 min at room \ntemperature prior to spectral investigations. All measure­\nments were performed using DMF as the reference solvent. \nAmong the investigated dyes, compound 3d exhibited a dis­\ntinct and selective response toward Ni2+ ions; consequently, \nfurther sensing studies were focused on the 3d–Ni2+ system.\nUV–visible and fluorescence spectroscopic titration \nanalysis\nThe interaction between azo dye 3d and Ni2+ ions was \nexamined using UV–visible and fluorescence spectroscopy \nin DMF. For UV–visible titrations, a solution of azo dye 3d \n(2.50 × 10−5 M, 3.0 mL) was titrated with Ni2+ ions (1.50 \n× 10−3 M) in a 1 cm quartz cuvette. After each incremen­\ntal addition, the solution was mixed and equilibrated for \n3 min at room temperature prior to recording the spectra. \nAbsorption measurements were carried out using DMF as \nthe reference.\nFluorescence studies were performed under analogous",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "chunk_index": 20,
+              "page_number": 4,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "chunk_id": "openalex:W7221570648:20",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.2286381721496582
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 5,
+          "relevance_by_id": {
+            "openalex:W7221570648:20": 2,
+            "openalex:W7221570648:41": 2,
+            "openalex:W7221570648:43": 2,
+            "openalex:W7221570648:44": 2,
+            "openalex:W7221570648:47": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5244,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221570648:20",
+            "text": "gently mixed and allowed to equilibrate for 3 min at room \ntemperature prior to spectral investigations. All measure­\nments were performed using DMF as the reference solvent. \nAmong the investigated dyes, compound 3d exhibited a dis­\ntinct and selective response toward Ni2+ ions; consequently, \nfurther sensing studies were focused on the 3d–Ni2+ system.\nUV–visible and fluorescence spectroscopic titration \nanalysis\nThe interaction between azo dye 3d and Ni2+ ions was \nexamined using UV–visible and fluorescence spectroscopy \nin DMF. For UV–visible titrations, a solution of azo dye 3d \n(2.50 × 10−5 M, 3.0 mL) was titrated with Ni2+ ions (1.50 \n× 10−3 M) in a 1 cm quartz cuvette. After each incremen­\ntal addition, the solution was mixed and equilibrated for \n3 min at room temperature prior to recording the spectra. \nAbsorption measurements were carried out using DMF as \nthe reference.\nFluorescence studies were performed under analogous",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "chunk_index": 20,
+              "page_number": 4,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "chunk_id": "openalex:W7221570648:20",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:41",
+            "text": "1 3\nChemical Papers\nand Pb2+, did not produce any significant color change, and \nthe original yellow color was retained with only slight inten­\nsity variation (Fig.  16). This indicates a highly selective \ncolorimetric response of azo dye 3d toward Ni2+ ions Fig. 3.\nAzo dye 3e showed only very faint yellow coloration \nupon addition of Fe2+, Ni2+, and Cu2+, while Co2+, Zn2+, \nHg2+, and Pb2+ produced almost no visible change. This \nsuggests a very weak and non-selective response of azo \ndye 3e toward the studied metal ions Fig. 4. Overall, these \nresults demonstrate that azo dye 3d exhibits the most dis­\ntinct and selective colorimetric response toward Ni2+ ions, \nhighlighting its potential as a selective chemosensor.\nTo further evaluate selectivity, UV–visible absorption \nspectra of azo dyes 3c–3e (2.5 × 10−5 M) were recorded after \nFig. 11  Calibration plot show­\ning the variation in absorbance of \nazo dye 3d with increasing Ni2+ \nconcentration\n \nFig. 10  Benesi–Hildebrand plot show­",
+            "metadata": {
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "chunk_id": "openalex:W7221570648:41",
+              "page_number": 12,
+              "source_type": "paper_pdf",
+              "chunk_index": 41,
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "document_id": "openalex:W7221570648"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:43",
+            "text": "1 3\nChemical Papers\nthe addition of four equivalents of metal ions. As shown in \nFig. 5, azo dye 3c exhibited only minor spectral changes. A \nslight shift in the absorption maximum from 505 to ~502 nm \nwas observed with Co2+ and Ni2+, while Cu2+ caused a mod­\nerate bathochromic shift to 512 nm. In contrast, Fe2+, Zn2+, \nHg2+, and Pb2+ induced hypsochromic shifts in the range of \n485–492 nm. The absence of a clear and consistent spectral \npattern confirms the non-selective behavior of 3c.\nAzo dye 3d displayed an absorption band at 500  nm, \nwhich showed small bathochromic shifts to 507, 512, 514, \nand 515 nm in the presence of Co2+, Ni2+, Cu2+, and Hg2+ \nions, respectively, while no significant change was observed \nwith Fe2+. Notably, the addition of Ni2+ resulted in the \nappearance of a new absorption band at 560 nm along with \na visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.",
+            "metadata": {
+              "chunk_index": 43,
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "page_number": 13,
+              "document_id": "openalex:W7221570648",
+              "source_type": "paper_pdf",
+              "chunk_id": "openalex:W7221570648:43"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:44",
+            "text": "a visible color change. This distinct spectral feature indi­\ncates a specific interaction and strong binding affinity of 3d \ntoward Ni2+ ions Fig. 6.\nIn the case of azo dye 3e, minimal spectral changes were \nobserved. The absorption maximum at 365  nm remained \nunchanged with Cu2+ and Hg2+, while Fe2+, Co2+, Ni2+, \nZn2+, and Pb2+ caused only a slight shift to ~368 nm Fig. 7. \nThese small and non-specific changes are consistent with its \nweak and non-selective behaviour. Among all the studied \ncompounds, azo dye 3d shows a clear and distinguishable \nspectral response toward Ni2+ ions, whereas azo dyes 3c \nand 3e do not exhibit significant selectivity under the same \nconditions.\nThe UV–visible spectrum of azo dye 3d shows three \nabsorption bands at 345, 362, and 500  nm, with molar \nabsorptivity values of 1.87 × 104, 1.85 × 104, and 1.52 × \n104 M−1 cm−1, respectively. The bands at 345 and 362 nm \nare assigned to π→π* transitions of the aromatic system",
+            "metadata": {
+              "document_id": "openalex:W7221570648",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:44",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source_type": "paper_pdf",
+              "chunk_index": 44
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221570648:47",
+            "text": "azo dye 3d, which possesses multiple coordination sites, \nincluding azo nitrogen (–N=N–), phenolic oxygen (–OH), \nand quinoline nitrogen, facilitating effective chelation with \nthe metal ion. Based on these findings, an octahedral geom­\netry is proposed for the 3d–Ni2+ complex (Fig. 9).\nBinding affinity studies of azo dye 3d with Ni2+\nTo gain further insight into the interaction between azo dye \n3d and Ni2+ ions, the binding affinity was evaluated using \na modified Benesi–Hildebrand Eq.  (1), assuming a 2:1 \n(L2M) stoichiometric ratio. The plot of 1/(A − A₀) versus 1/\n[Ni2+]2 showed excellent linearity with a correlation coef­\nficient of R2 = 0.9964, confirming the validity of the applied \nTable 3  The % cell viability values of HepG2 cells treated with the \ndifferent concentrations of 3C against the Human liver cancer (HepG2) \ncells after the treatment period of 24 h\nMTT ASSAY-Summary- 3C vs HepG2\nCulture condition\n% cell viability\nIC50 conc (μg/ml)\nUntreated\n100\n178.88\nStd control",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "title": "Design and synthesis of (2-amino-5-nitrophenyl) (phenyl)methanone-based azo dyes for selective Ni2+ sensing and their anticancer activity",
+              "source": "https://link.springer.com/10.1007/s11696-026-05638-z",
+              "page_number": 13,
+              "chunk_id": "openalex:W7221570648:47",
+              "chunk_index": 47,
+              "document_id": "openalex:W7221570648"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E06",
+      "query": "What monitoring modalities are integrated into the CardioNeural-SoC?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221469030:0",
+            "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "document_id": "openalex:W7221469030",
+              "chunk_index": 0,
+              "chunk_id": "openalex:W7221469030:0",
+              "source_type": "paper_pdf",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "page_number": 1
+            },
+            "distance": 0.2648938298225403
+          },
+          {
+            "chunk_id": "openalex:W7221469030:6",
+            "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+            "metadata": {
+              "chunk_index": 6,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:6",
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "page_number": 3,
+              "document_id": "openalex:W7221469030"
+            },
+            "distance": 0.27055561542510986
+          },
+          {
+            "chunk_id": "openalex:W7221469030:1",
+            "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "chunk_index": 1,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "document_id": "openalex:W7221469030",
+              "chunk_id": "openalex:W7221469030:1",
+              "page_number": 2
+            },
+            "distance": 0.2794238328933716
+          },
+          {
+            "chunk_id": "openalex:W7221469030:28",
+            "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "page_number": 10,
+              "document_id": "openalex:W7221469030",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:28",
+              "chunk_index": 28
+            },
+            "distance": 0.27972716093063354
+          },
+          {
+            "chunk_id": "openalex:W7221469030:31",
+            "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+            "metadata": {
+              "chunk_id": "openalex:W7221469030:31",
+              "chunk_index": 31,
+              "source_type": "paper_pdf",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "document_id": "openalex:W7221469030",
+              "page_number": 11
+            },
+            "distance": 0.29742079973220825
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 5,
+          "relevance_by_id": {
+            "openalex:W7221469030:0": 1,
+            "openalex:W7221469030:1": 2,
+            "openalex:W7221469030:6": 1,
+            "openalex:W7221469030:28": 2,
+            "openalex:W7221469030:31": 1
+          }
+        }
+      },
+      "context": {
+        "total_chars": 4653,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221469030:0",
+            "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "document_id": "openalex:W7221469030",
+              "chunk_index": 0,
+              "chunk_id": "openalex:W7221469030:0",
+              "source_type": "paper_pdf",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "page_number": 1
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:1",
+            "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "chunk_index": 1,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "document_id": "openalex:W7221469030",
+              "chunk_id": "openalex:W7221469030:1",
+              "page_number": 2
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:6",
+            "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+            "metadata": {
+              "chunk_index": 6,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:6",
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "page_number": 3,
+              "document_id": "openalex:W7221469030"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:28",
+            "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "page_number": 10,
+              "document_id": "openalex:W7221469030",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:28",
+              "chunk_index": 28
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:31",
+            "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+            "metadata": {
+              "chunk_id": "openalex:W7221469030:31",
+              "chunk_index": 31,
+              "source_type": "paper_pdf",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "document_id": "openalex:W7221469030",
+              "page_number": 11
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E07",
+      "query": "What verification results are reported for the CardioNeural-SoC design?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221469030:28",
+            "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "source_type": "paper_pdf",
+              "page_number": 10,
+              "chunk_index": 28,
+              "chunk_id": "openalex:W7221469030:28",
+              "document_id": "openalex:W7221469030"
+            },
+            "distance": 0.2884824872016907
+          },
+          {
+            "chunk_id": "openalex:W7221469030:31",
+            "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+            "metadata": {
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:31",
+              "chunk_index": 31,
+              "document_id": "openalex:W7221469030",
+              "page_number": 11,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.3336159586906433
+          },
+          {
+            "chunk_id": "openalex:W7221469030:6",
+            "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+            "metadata": {
+              "document_id": "openalex:W7221469030",
+              "page_number": 3,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "chunk_id": "openalex:W7221469030:6",
+              "source_type": "paper_pdf",
+              "chunk_index": 6,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1"
+            },
+            "distance": 0.3352358341217041
+          },
+          {
+            "chunk_id": "openalex:W7221469030:1",
+            "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "chunk_id": "openalex:W7221469030:1",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221469030",
+              "chunk_index": 1,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "page_number": 2
+            },
+            "distance": 0.337554931640625
+          },
+          {
+            "chunk_id": "openalex:W7221469030:0",
+            "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+            "metadata": {
+              "chunk_id": "openalex:W7221469030:0",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_index": 0,
+              "page_number": 1,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221469030"
+            },
+            "distance": 0.3429899215698242
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 1.0,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 5,
+          "retrieved_relevant_count": 5,
+          "relevance_by_id": {
+            "openalex:W7221469030:0": 1,
+            "openalex:W7221469030:1": 2,
+            "openalex:W7221469030:6": 2,
+            "openalex:W7221469030:28": 2,
+            "openalex:W7221469030:31": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 4653,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221469030:0",
+            "text": "CardioNeural-SoC: An Indigenous RISC-V-Based\nMixed-Signal System- on-Chip for Multi-Modal\nCardiac and Neurological Monitoring —\nArchitecture, RTL Verification, and Pre-Silicon\nSynthesis Results\nN. J.R. Muniraj \nHindusthan College of Engineering and Technology (HICET)\nR. Vishwajith \nHindusthan College of Engineering and Technology (HICET)\nM. Sreelakshmi \nKarpagam Faculty of Medical Sciences and Research\nResearch Article\nKeywords: System-on-Chip (SoC), RISC-V, biopotential analog front-end, electrocardiogram (ECG),\nelectroencephalogram (EEG), photoplethysmography (PPG), arrhythmia detection, seizure-onset\nclassification, low-power VLSI, indigenous semiconductor design, point-of-care monitoring\nPosted Date: October 11th, 2026\nDOI: https://doi.org/10.21203/rs.3.rs-10838876/v1\nLicense:   This work is licensed under a Creative Commons Attribution 4.0 International License.  \nRead Full License\nAdditional Declarations: No competing interests reported.\nPage 1/14",
+            "metadata": {
+              "chunk_id": "openalex:W7221469030:0",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_index": 0,
+              "page_number": 1,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221469030"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:1",
+            "text": "Abstract\nCardiovascular and neurological disease together impose one of the largest preventable disease\nburdens in India, yet every application-specific integrated circuit used in the cardiac and neurological\nmonitoring devices sold domestically is currently imported. This paper presents CardioNeural-SoC, an\nindigenous, mixed-signal System-on-Chip architecture designed to consolidate a 4-channel\nelectrocardiogram (ECG) front-end, a 2-channel electroencephalogram (EEG) front-end, a\nphotoplethysmography (PPG) interface, a 16-bit analog-to-digital converter array, a RISC-V-based digital\nsignal processing core with hardware accelerators for arrhythmia and seizure-onset classification, an\nAES-128-secured Bluetooth Low Energy (BLE 5.3) interface, and an ultra-low-power management unit\nonto a single 28 nm CMOS die. We report the system-level architecture, the full register-transfer-level\n(RTL) functional verification of the integrated design (a 9-test-case regression covering multi-channel",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "chunk_id": "openalex:W7221469030:1",
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221469030",
+              "chunk_index": 1,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "page_number": 2
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:6",
+            "text": "reflected in the price of finished devices and that places ICU-grade and EEG-grade monitoring beyond the\nbudget of many tier-2 hospitals, primary health centres (PHCs), and rural sub-centres. This paper\naddresses that gap by presenting the architecture and pre-silicon implementation of CardioNeural-SoC, a\nsingle-die, RISC-V-based mixed-signal SoC intended to replace the six-to-eight-IC bill-of-materials chain\ncurrently required to assemble a multi-parameter cardiac and neurological monitor.\nThe contribution of this paper is intentionally scoped to what has been concretely implemented and\nverified at the time of writing: a system-level architecture spanning six integrated subsystems; full-chip\nRTL functional verification via a system-level testbench; and gate-level synthesis, timing, power, and area\nresults for the discrete-wavelet-transform (DWT)-based sub-band energy feature extraction block that",
+            "metadata": {
+              "document_id": "openalex:W7221469030",
+              "page_number": 3,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "chunk_id": "openalex:W7221469030:6",
+              "source_type": "paper_pdf",
+              "chunk_index": 6,
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:28",
+            "text": "Feature\nextraction\n(vendor\nfirmware)\nCommercial /\nfabricated\nAcademic 64–\n68 ch. neural\nSoCs (e.g.,\nMoradi 2018;\nZeinolabedin\n2022)\n22–65 nm\nNeural recording only\nOn-chip spike\nsorting /\ncompression\nFabricated, measured\nsilicon\nThis work:\nCardioNeural-\nSoC\n28 nm\n(targeted;\nSCL MPW)\nECG (4-ch) + EEG (2-\nch) + PPG, joint\ncardiac–neural\nclassification\nRISC-V DSP:\nQRS/AF\nclassifier +\nLSTM-lite\nseizure-onset\nblock\nRTL functional\nverification (9/9\ntestbench cases) +\ngate-level synthesis\n(timing/power/area);\npre-silicon\nPage 10/14",
+            "metadata": {
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "source_type": "paper_pdf",
+              "page_number": 10,
+              "chunk_index": 28,
+              "chunk_id": "openalex:W7221469030:28",
+              "document_id": "openalex:W7221469030"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221469030:31",
+            "text": "pending full-custom analog layout and tape-out. Reporting such figures without an actual measurement\nwould misrepresent the project's current technology readiness level. The societal and market case\npresented in Section 3 is similarly a planning-stage estimate derived from the underlying funding\nproposal and should be treated as such pending independent market validation.\n9. Conclusion and Future Work\nThis paper presented CardioNeural-SoC, an indigenous, RISC-V-based mixed-signal SoC architecture\nintended to consolidate ECG, EEG, and PPG acquisition with on-chip arrhythmia and seizure-onset\nclassification onto a single 28 nm die, targeting the Indian monitoring-IC import-substitution market\nestimated at approximately ₹427 crore per year. Full system-level RTL functional verification (9/9 test\ncases passed) and gate-level synthesis of the DWT-based sub-band energy feature extractor (21,703",
+            "metadata": {
+              "source": "https://www.researchsquare.com/article/rs-10838876/v1",
+              "chunk_id": "openalex:W7221469030:31",
+              "chunk_index": 31,
+              "document_id": "openalex:W7221469030",
+              "page_number": 11,
+              "title": "CardioNeural-SoC: An Indigenous RISC-V-Based Mixed-Signal System- on-Chip for Multi-Modal Cardiac and Neurological Monitoring — Architecture, RTL Verification, and Pre-Silicon Synthesis Results",
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E08",
+      "query": "Why is transparency important in the semiconductor supply chain?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221471520:26",
+            "text": "dential, and inconsistent (Kuo, Kuo, and Chen 2022; Ruberti\n2023; Bui 2024). Several researchers argue that transparency\nis crucial for understanding the complex materials, compo-\nnents, and the impacts of resources beyond energy, such as\nwater and minerals, as well as emissions and manufactur-\ning processes involved in semiconductor production, espe-\ncially given the global dispersion of the different steps of the\nsupply chain (Bui 2024; Pasricha and Wolf 2024; Ghulam\nand Abushammala 2023). Further, placing a strong empha-\nsis on transparency also enables collaboration among vari-\nous stakeholders within the supply chain (Bui 2024).\nSome large IT companies, such as Apple, Amazon, Meta,\nMicrosoft, and Google, publicly disclose their carbon emis-\nsions (Pasricha and Wolf 2024; Gupta et al. 2021; Google\n2026; Apple Inc. 2025). Such disclosures are largely vol-\nuntary and self-scoped, with firms determining their own\nboundaries and accounting conventions. They have accord-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 26,
+              "page_number": 4,
+              "chunk_id": "openalex:W7221471520:26",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "distance": 0.30540645122528076
+          },
+          {
+            "chunk_id": "openalex:W7221471520:48",
+            "text": "works that prioritize shared sustainability goals through col-\nlective bargaining power. This envisions a balanced global\nmarket where regions specialize and trade under shared eth-\nical frameworks, avoiding a new cold war, recognizing that\ngreen AI is impossible if the hardware layer relies on redun-\ndant, extraction-heavy supply chains.\n4.3\nOpacity, Transparency and Accountability in\nthe Supply Chain\nOpacity in the semiconductor supply chain is often treated\nas a necessity for security or IP protection. We read partici-\npants’ accounts as indicating that this opacity also functions\nas a shield for impunity. Participants described the industry\nas “monopolistic by design”, where the lack of traceabil-\nity allows resource consumption, forever chemicals, other\nemissions and health hazards faced by workers to remain\nhidden deep in the supply network. This converges with\nlegal-political analyses of AI’s global value chains, which",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:48",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 7,
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 48
+            },
+            "distance": 0.3512696623802185
+          },
+          {
+            "chunk_id": "openalex:W7221471520:101",
+            "text": "556.\nYin, Y.; and Yang, Y. 2025. Sustainable transition of the\nglobal semiconductor industry: Challenges, strategies, and\nfuture directions. Sustainability, 17(7): 3160.\nYoon, C.; Kim, S.; Park, D.; Choi, Y.; Jo, J.; and Lee, K.\n2020. Chemical use and associated health concerns in the\nsemiconductor manufacturing industry. Safety and Health\nat Work, 11(4): 500–508.\nZhang, K. 2024. 1.1 semiconductor industry: Present & fu-\nture. In 2024 IEEE International Solid-State Circuits Con-\nference, ISSCC ’24, 10–15.\nZhang, M.; Yang, W.; Zhao, Z.; Wang, S.; and Huang,\nG. Q. 2024. Do fairness concerns matter for ESG decision-\nmaking? Strategic interactions in digital twin-enabled sus-\ntainable semiconductor supply chain. International Journal\nof Production Economics, 276: 109370.\nZytko, D.; J. Wisniewski, P.; Guha, S.; Baumer, E.; and Lee,\nM. K. 2022. Participatory design of AI systems: Opportu-\nnities and challenges across diverse users, relationships, and",
+            "metadata": {
+              "chunk_id": "openalex:W7221471520:101",
+              "source_type": "paper_pdf",
+              "page_number": 14,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_index": 101,
+              "document_id": "openalex:W7221471520"
+            },
+            "distance": 0.37155550718307495
+          },
+          {
+            "chunk_id": "openalex:W7221471520:75",
+            "text": "and geopolitical challenges of the semiconductor industry.\nThrough a series of six structured activities, participants col-\nlaboratively identified nine interconnected challenge areas,\nco-developed eleven categories of actionable recommenda-\ntions, articulated future visions and ideal scenarios, and pro-\nposed stakeholder-specific measures to realize them. Our\nfindings further synthesize these into three interconnected\nsocio-technical pathways linking present conditions, norma-\ntive goals, and actionable interventions: the sovereignty–\nsustainability tension, supply chain opacity and accountabil-\nity, and the knowledge divide and global inequality.\nCurrent debates tend to treat semiconductors as a mat-\nter of industrial policy, environmental impact, or geopoliti-\ncal competitiveness, almost always considering them within\nseparate disciplinary silos. Our findings emphasize the im-\nportance of inclusive, multi-stakeholder dialogue in shap-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 10,
+              "chunk_index": 75,
+              "chunk_id": "openalex:W7221471520:75",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "distance": 0.38340485095977783
+          },
+          {
+            "chunk_id": "openalex:W7221471520:100",
+            "text": "Williams, E. D.; Ayres, R. U.; and Heller, M. 2002. The\n1.7 kilogram microchip: Energy and material use in the pro-\nduction of semiconductor devices. Environmental Science\n& Technology, 36(24): 5504–5510.\nWu, D.; Ding, H.; and Cheng, Y. 2024. How does environ-\nmental policy affect operations and supply chain manage-\nment: A literature review.\nComputers & Industrial Engi-\nneering, 197: 110580.\nXu, X.; Rahman, F.; Shakya, B.; Vassilev, A.; Forte, D.; and\nTehranipoor, M. 2019.\nElectronics supply chain integrity\nenabled by blockchain. ACM Transactions on Design Au-\ntomation of Electronic Systems, 24(3): 1–25.\nXu, Y.; and Schoonen, M. A. 2000. The absolute energy\npositions of conduction and valence bands of selected semi-\nconducting minerals. American Mineralogist, 85(3-4): 543–\n556.\nYin, Y.; and Yang, Y. 2025. Sustainable transition of the\nglobal semiconductor industry: Challenges, strategies, and\nfuture directions. Sustainability, 17(7): 3160.",
+            "metadata": {
+              "page_number": 14,
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:100",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf",
+              "chunk_index": 100
+            },
+            "distance": 0.4070279002189636
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.6,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 3,
+          "retrieved_relevant_count": 3,
+          "relevance_by_id": {
+            "openalex:W7221471520:26": 2,
+            "openalex:W7221471520:48": 2,
+            "openalex:W7221471520:75": 1
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5139,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221471520:26",
+            "text": "dential, and inconsistent (Kuo, Kuo, and Chen 2022; Ruberti\n2023; Bui 2024). Several researchers argue that transparency\nis crucial for understanding the complex materials, compo-\nnents, and the impacts of resources beyond energy, such as\nwater and minerals, as well as emissions and manufactur-\ning processes involved in semiconductor production, espe-\ncially given the global dispersion of the different steps of the\nsupply chain (Bui 2024; Pasricha and Wolf 2024; Ghulam\nand Abushammala 2023). Further, placing a strong empha-\nsis on transparency also enables collaboration among vari-\nous stakeholders within the supply chain (Bui 2024).\nSome large IT companies, such as Apple, Amazon, Meta,\nMicrosoft, and Google, publicly disclose their carbon emis-\nsions (Pasricha and Wolf 2024; Gupta et al. 2021; Google\n2026; Apple Inc. 2025). Such disclosures are largely vol-\nuntary and self-scoped, with firms determining their own\nboundaries and accounting conventions. They have accord-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 26,
+              "page_number": 4,
+              "chunk_id": "openalex:W7221471520:26",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:48",
+            "text": "works that prioritize shared sustainability goals through col-\nlective bargaining power. This envisions a balanced global\nmarket where regions specialize and trade under shared eth-\nical frameworks, avoiding a new cold war, recognizing that\ngreen AI is impossible if the hardware layer relies on redun-\ndant, extraction-heavy supply chains.\n4.3\nOpacity, Transparency and Accountability in\nthe Supply Chain\nOpacity in the semiconductor supply chain is often treated\nas a necessity for security or IP protection. We read partici-\npants’ accounts as indicating that this opacity also functions\nas a shield for impunity. Participants described the industry\nas “monopolistic by design”, where the lack of traceabil-\nity allows resource consumption, forever chemicals, other\nemissions and health hazards faced by workers to remain\nhidden deep in the supply network. This converges with\nlegal-political analyses of AI’s global value chains, which",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:48",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 7,
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 48
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:75",
+            "text": "and geopolitical challenges of the semiconductor industry.\nThrough a series of six structured activities, participants col-\nlaboratively identified nine interconnected challenge areas,\nco-developed eleven categories of actionable recommenda-\ntions, articulated future visions and ideal scenarios, and pro-\nposed stakeholder-specific measures to realize them. Our\nfindings further synthesize these into three interconnected\nsocio-technical pathways linking present conditions, norma-\ntive goals, and actionable interventions: the sovereignty–\nsustainability tension, supply chain opacity and accountabil-\nity, and the knowledge divide and global inequality.\nCurrent debates tend to treat semiconductors as a mat-\nter of industrial policy, environmental impact, or geopoliti-\ncal competitiveness, almost always considering them within\nseparate disciplinary silos. Our findings emphasize the im-\nportance of inclusive, multi-stakeholder dialogue in shap-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 10,
+              "chunk_index": 75,
+              "chunk_id": "openalex:W7221471520:75",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:100",
+            "text": "Williams, E. D.; Ayres, R. U.; and Heller, M. 2002. The\n1.7 kilogram microchip: Energy and material use in the pro-\nduction of semiconductor devices. Environmental Science\n& Technology, 36(24): 5504–5510.\nWu, D.; Ding, H.; and Cheng, Y. 2024. How does environ-\nmental policy affect operations and supply chain manage-\nment: A literature review.\nComputers & Industrial Engi-\nneering, 197: 110580.\nXu, X.; Rahman, F.; Shakya, B.; Vassilev, A.; Forte, D.; and\nTehranipoor, M. 2019.\nElectronics supply chain integrity\nenabled by blockchain. ACM Transactions on Design Au-\ntomation of Electronic Systems, 24(3): 1–25.\nXu, Y.; and Schoonen, M. A. 2000. The absolute energy\npositions of conduction and valence bands of selected semi-\nconducting minerals. American Mineralogist, 85(3-4): 543–\n556.\nYin, Y.; and Yang, Y. 2025. Sustainable transition of the\nglobal semiconductor industry: Challenges, strategies, and\nfuture directions. Sustainability, 17(7): 3160.",
+            "metadata": {
+              "page_number": 14,
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:100",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf",
+              "chunk_index": 100
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:101",
+            "text": "556.\nYin, Y.; and Yang, Y. 2025. Sustainable transition of the\nglobal semiconductor industry: Challenges, strategies, and\nfuture directions. Sustainability, 17(7): 3160.\nYoon, C.; Kim, S.; Park, D.; Choi, Y.; Jo, J.; and Lee, K.\n2020. Chemical use and associated health concerns in the\nsemiconductor manufacturing industry. Safety and Health\nat Work, 11(4): 500–508.\nZhang, K. 2024. 1.1 semiconductor industry: Present & fu-\nture. In 2024 IEEE International Solid-State Circuits Con-\nference, ISSCC ’24, 10–15.\nZhang, M.; Yang, W.; Zhao, Z.; Wang, S.; and Huang,\nG. Q. 2024. Do fairness concerns matter for ESG decision-\nmaking? Strategic interactions in digital twin-enabled sus-\ntainable semiconductor supply chain. International Journal\nof Production Economics, 276: 109370.\nZytko, D.; J. Wisniewski, P.; Guha, S.; Baumer, E.; and Lee,\nM. K. 2022. Participatory design of AI systems: Opportu-\nnities and challenges across diverse users, relationships, and",
+            "metadata": {
+              "chunk_id": "openalex:W7221471520:101",
+              "source_type": "paper_pdf",
+              "page_number": 14,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_index": 101,
+              "document_id": "openalex:W7221471520"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E09",
+      "query": "How can high capital expenditure and export restrictions contribute to global inequality in AI?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221471520:51",
+            "text": "foundry to the end-device producers. This measure aims to\ntransform Transparency from a corporate buzzword into a\nquantifiable and enforceable metric.\n4.4\nThe Knowledge Divide and Global Inequality\nThe workshop surfaced deep anxieties about the weaponiza-\ntion of access to knowledge. Participants noted that cur-\nrent competitive challenges are not just about market share,\nbut about structural exclusion. High capital expenditures\n(CAPEX) and export restrictions effectively lock the Global\nSouth and smaller nations out of the AI ecosystem, fueling\nan innovational and educational knowledge gap that rein-\nforces power imbalances and the “monopoly by design”. Si-\nmultaneously, labor risks are displaced to regions with com-\npetitors emerging in other areas that may have weaker labor\nprotections, creating a race to the bottom.\nThis exclusion raises important questions about equity\nand participation in the AI ecosystem: if certain regions can-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "chunk_index": 51,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "document_id": "openalex:W7221471520",
+              "page_number": 7,
+              "chunk_id": "openalex:W7221471520:51",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "distance": 0.30822521448135376
+          },
+          {
+            "chunk_id": "openalex:W7221471520:52",
+            "text": "protections, creating a race to the bottom.\nThis exclusion raises important questions about equity\nand participation in the AI ecosystem: if certain regions can-\nnot access or manufacture chips, they are structurally pre-\nvented from shaping the AI future, reduced to consumers of\nblack-boxed technologies imported from the Global North.\nWe link this to inequality and opportunity for nations, and\nargue that the current AI Race is reproducing colonial\ndynamics of resource extraction and technological depen-\ndency (Adams 2024; Mohamed, Png, and Isaac 2020).\nThe ideal future envisioned by participants is one of in-\nclusive competitiveness, where governments take action to\nensure (unlimited) access to technology.\nThe proposed pathway to this future relies on knowl-\nedge redistribution. Recommendations included setting up\nspecific funding calls between regions to bring experts and\nthe know-how and broader talent pools. Crucially, this in-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 7,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:52",
+              "chunk_index": 52
+            },
+            "distance": 0.34417223930358887
+          },
+          {
+            "chunk_id": "openalex:W7221471520:67",
+            "text": "discussed on the impact of training and deploying AI sys-\ntems on the environment (Patterson et al. 2022; Lacoste et al.\n2019; Patterson et al. 2021; Samsi et al. 2023), little has been\ninvestigated on how semiconductor supply chains contribute\nto this footprint. Closing this gap is therefore not only a re-\nsearch task but a precondition for making the sector’s foot-\nprint governable at all.\nSimilarly, questions of inclusivity remain underexplored.\nThe unequal distribution of talent, education, and research\ninfrastructure needed in the semiconductor industry has as a\nconsequence a global divide between compute- and chips-\nrich and poor countries (Lehdonvirta, W´u, and Hawkins\n2024). Unless programs for facilitating knowledge transfer,\nopen curricula, and international training are prioritized, ef-\nforts to strengthen sovereignty in specific countries will al-\nways increase structural inequalities globally. This has di-\nrect implications for equity and participation in the AI era:",
+            "metadata": {
+              "page_number": 9,
+              "chunk_index": 67,
+              "document_id": "openalex:W7221471520",
+              "chunk_id": "openalex:W7221471520:67",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.39959120750427246
+          },
+          {
+            "chunk_id": "openalex:W7221471520:68",
+            "text": "forts to strengthen sovereignty in specific countries will al-\nways increase structural inequalities globally. This has di-\nrect implications for equity and participation in the AI era:\nsocieties excluded from semiconductor access are de facto\nlocked out of meaningful participation in shaping AI fu-\ntures. This exclusion extends to the research communities\nthat study these systems. Scientific venues are typically sited\nwhere an established research community already exists, a\nreasonable criterion in isolation, but circular in effect, since\nregions without such a community are also those where re-\nsearch is least visible as a field one might enter. In regions\nthat receive technologies without participating in their pro-\nduction, hosting research venues could be a way to make this\nwork visible locally and introduce younger students to it as\na possible trajectory.\nAI ethics is often addressed at the software layer, for ex-\nample through analyses of model behavior or data practices.",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:68",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 9,
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 68,
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.41519010066986084
+          },
+          {
+            "chunk_id": "openalex:W7221471520:91",
+            "text": "Com-\npute North vs. compute South: The uneven possibilities of\ncompute-based AI governance around the globe.\nIn Pro-\nceedings of the AAAI/ACM Conference on AI, Ethics, and\nSociety, AIES ’24, 828–838.\nLin, C. K.; Dombrowski, L.; and Bardzell, S. 2025. Whose,\nwhich, and what crisis? A critical analysis of crisis in com-\nputing supply chains. In Proceedings of the Sixth Decennial\nAarhus Conference: Computing X Crisis, AAR ’25, 56–70.\nMii, Y.-J. 2022. Semiconductor innovations, from device to\nsystem. In Proceedings of the 2022 IEEE Symposium on\nVLSI Technology and Circuits, VLSI Technology and Cir-\ncuits ’22, 276–281. IEEE.\nMinistry of Commerce (MOFCOM) and Ministry of Science\nand Technology (MOST), PRC. 2023. Announcement No.\n57 of 2023: Catalogue of Technologies Prohibited or Re-\nstricted from Export (China). Revises and replaces the 2020\ncatalogue; includes rare-earth magnet technologies.\nMoesgen, T.; Salovaara, A.; Epp, F. A.; and Sanchez, C.",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf",
+              "page_number": 12,
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 91,
+              "chunk_id": "openalex:W7221471520:91"
+            },
+            "distance": 0.4288228750228882
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.8,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 4,
+          "retrieved_relevant_count": 4,
+          "relevance_by_id": {
+            "openalex:W7221471520:51": 2,
+            "openalex:W7221471520:52": 2,
+            "openalex:W7221471520:67": 1,
+            "openalex:W7221471520:68": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5186,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221471520:51",
+            "text": "foundry to the end-device producers. This measure aims to\ntransform Transparency from a corporate buzzword into a\nquantifiable and enforceable metric.\n4.4\nThe Knowledge Divide and Global Inequality\nThe workshop surfaced deep anxieties about the weaponiza-\ntion of access to knowledge. Participants noted that cur-\nrent competitive challenges are not just about market share,\nbut about structural exclusion. High capital expenditures\n(CAPEX) and export restrictions effectively lock the Global\nSouth and smaller nations out of the AI ecosystem, fueling\nan innovational and educational knowledge gap that rein-\nforces power imbalances and the “monopoly by design”. Si-\nmultaneously, labor risks are displaced to regions with com-\npetitors emerging in other areas that may have weaker labor\nprotections, creating a race to the bottom.\nThis exclusion raises important questions about equity\nand participation in the AI ecosystem: if certain regions can-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "chunk_index": 51,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "document_id": "openalex:W7221471520",
+              "page_number": 7,
+              "chunk_id": "openalex:W7221471520:51",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:52",
+            "text": "protections, creating a race to the bottom.\nThis exclusion raises important questions about equity\nand participation in the AI ecosystem: if certain regions can-\nnot access or manufacture chips, they are structurally pre-\nvented from shaping the AI future, reduced to consumers of\nblack-boxed technologies imported from the Global North.\nWe link this to inequality and opportunity for nations, and\nargue that the current AI Race is reproducing colonial\ndynamics of resource extraction and technological depen-\ndency (Adams 2024; Mohamed, Png, and Isaac 2020).\nThe ideal future envisioned by participants is one of in-\nclusive competitiveness, where governments take action to\nensure (unlimited) access to technology.\nThe proposed pathway to this future relies on knowl-\nedge redistribution. Recommendations included setting up\nspecific funding calls between regions to bring experts and\nthe know-how and broader talent pools. Crucially, this in-",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 7,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "document_id": "openalex:W7221471520",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:52",
+              "chunk_index": 52
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:67",
+            "text": "discussed on the impact of training and deploying AI sys-\ntems on the environment (Patterson et al. 2022; Lacoste et al.\n2019; Patterson et al. 2021; Samsi et al. 2023), little has been\ninvestigated on how semiconductor supply chains contribute\nto this footprint. Closing this gap is therefore not only a re-\nsearch task but a precondition for making the sector’s foot-\nprint governable at all.\nSimilarly, questions of inclusivity remain underexplored.\nThe unequal distribution of talent, education, and research\ninfrastructure needed in the semiconductor industry has as a\nconsequence a global divide between compute- and chips-\nrich and poor countries (Lehdonvirta, W´u, and Hawkins\n2024). Unless programs for facilitating knowledge transfer,\nopen curricula, and international training are prioritized, ef-\nforts to strengthen sovereignty in specific countries will al-\nways increase structural inequalities globally. This has di-\nrect implications for equity and participation in the AI era:",
+            "metadata": {
+              "page_number": 9,
+              "chunk_index": 67,
+              "document_id": "openalex:W7221471520",
+              "chunk_id": "openalex:W7221471520:67",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:68",
+            "text": "forts to strengthen sovereignty in specific countries will al-\nways increase structural inequalities globally. This has di-\nrect implications for equity and participation in the AI era:\nsocieties excluded from semiconductor access are de facto\nlocked out of meaningful participation in shaping AI fu-\ntures. This exclusion extends to the research communities\nthat study these systems. Scientific venues are typically sited\nwhere an established research community already exists, a\nreasonable criterion in isolation, but circular in effect, since\nregions without such a community are also those where re-\nsearch is least visible as a field one might enter. In regions\nthat receive technologies without participating in their pro-\nduction, hosting research venues could be a way to make this\nwork visible locally and introduce younger students to it as\na possible trajectory.\nAI ethics is often addressed at the software layer, for ex-\nample through analyses of model behavior or data practices.",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:68",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 9,
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 68,
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:91",
+            "text": "Com-\npute North vs. compute South: The uneven possibilities of\ncompute-based AI governance around the globe.\nIn Pro-\nceedings of the AAAI/ACM Conference on AI, Ethics, and\nSociety, AIES ’24, 828–838.\nLin, C. K.; Dombrowski, L.; and Bardzell, S. 2025. Whose,\nwhich, and what crisis? A critical analysis of crisis in com-\nputing supply chains. In Proceedings of the Sixth Decennial\nAarhus Conference: Computing X Crisis, AAR ’25, 56–70.\nMii, Y.-J. 2022. Semiconductor innovations, from device to\nsystem. In Proceedings of the 2022 IEEE Symposium on\nVLSI Technology and Circuits, VLSI Technology and Cir-\ncuits ’22, 276–281. IEEE.\nMinistry of Commerce (MOFCOM) and Ministry of Science\nand Technology (MOST), PRC. 2023. Announcement No.\n57 of 2023: Catalogue of Technologies Prohibited or Re-\nstricted from Export (China). Revises and replaces the 2020\ncatalogue; includes rare-earth magnet technologies.\nMoesgen, T.; Salovaara, A.; Epp, F. A.; and Sanchez, C.",
+            "metadata": {
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "source_type": "paper_pdf",
+              "page_number": 12,
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 91,
+              "chunk_id": "openalex:W7221471520:91"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "E10",
+      "query": "Why should AI ethics include semiconductor hardware rather than focus only on software?",
+      "retrieval": {
+        "top_k": 5,
+        "total_results": 5,
+        "results": [
+          {
+            "chunk_id": "openalex:W7221471520:12",
+            "text": "nance, technological, and social shifts required to bridge\nthe gap between current frictions and these ideal futures.\n5. Semiconductor governance as a first-order concern of\nAI ethics. We highlight the semiconductor supply chain\nas a critical yet often overlooked layer of AI ethics, show-\ning that questions of fairness, sustainability, and global\naccess in AI systems are already being determined at the\nlevel of chip fabrication, supply chain opacity, and export\ncontrols, long before a model is trained or deployed. By\nconnecting algorithmic concerns to material infrastruc-\ntures, we offer actionable insights for stakeholders, from\ngovernments to civil society, and call on the AI ethics\ncommunities to extend their lens upstream, treating hard-\nware governance not as background infrastructure but as\na foundational site of ethical inquiry.\nTogether, these contributions show how participatory\nmethods can transform fragmented debates about semicon-",
+            "metadata": {
+              "document_id": "openalex:W7221471520",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 2,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:12",
+              "source_type": "paper_pdf",
+              "chunk_index": 12
+            },
+            "distance": 0.27114278078079224
+          },
+          {
+            "chunk_id": "openalex:W7221471520:76",
+            "text": "cal competitiveness, almost always considering them within\nseparate disciplinary silos. Our findings emphasize the im-\nportance of inclusive, multi-stakeholder dialogue in shap-\ning the governance structures of this deeply infrastructural-\ntechnological domain. Participants stressed the urgency of\naddressing transparency gaps, knowledge asymmetries, and\nthe unequal distribution of both the benefits and burdens of\nsemiconductor production across the globe.\nBeyond documenting these challenges, this paper makes\na broader claim about what AI ethics needs to pay atten-\ntion to. AI ethics has largely confined its attention to the\nsoftware layer: model behavior, dataset practices, and algo-\nrithmic outputs. Yet, we argue that semiconductors and the\nhardware layer are not only the physical foundation of AI\nsystems; they are also a foundational layer of AI ethics. The\nethical implications of AI systems are not only instantiated\nin the training data selected or the outputs deployed; they are",
+            "metadata": {
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 76,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_id": "openalex:W7221471520:76",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 10,
+              "source_type": "paper_pdf"
+            },
+            "distance": 0.27817702293395996
+          },
+          {
+            "chunk_id": "openalex:W7221471520:0",
+            "text": "Hardware Is an AI Ethics Problem:\nExpert Visions for a Sustainable and Equitable Semiconductor Industry\nNaira Paola Arnez Jordan1, Chiara Ullstein2, Michel Hohendanner2, Jens Grossklags2, Lorenzo\nServadei3, Alejandro Merino-Madrid4, Orestis Papakyriakopoulos1\n1Professorship of Societal Computing, Technical University of Munich, Germany\n2Professorship of Cyber Trust & MDSI, Technical University of Munich, Germany\n3Sony AI\n4International Olympic Committee*\nnaira.arnez@tum.de, chiara.ullstein@tum.de, michel.hohendanner@tum.de, jens.grossklags@in.tum.de,\nLorenzo.Servadei@sony.com, a.merinomadrid@gmail.com, orestis.p@tum.de\nAbstract\nAs the foundation of contemporary AI systems, the semi-\nconductor industry is increasingly shaped by critical so-\ncial, environmental, and geopolitical challenges. Nonethe-\nless, prior research has often examined these issues in iso-\nlation and within disciplinary silos, leaving a gap in under-\nstanding them through an integrative socio-technical, cross-",
+            "metadata": {
+              "chunk_id": "openalex:W7221471520:0",
+              "source_type": "paper_pdf",
+              "chunk_index": 0,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 1,
+              "document_id": "openalex:W7221471520"
+            },
+            "distance": 0.3068279027938843
+          },
+          {
+            "chunk_id": "openalex:W7221471520:2",
+            "text": "harms; and a growing knowledge divide that risks excluding\nsmaller economies from shaping the AI future. Participants\nenvisioned futures centered on interdependence and inclu-\nsive access, proposing measures such as a standardized emis-\nsions labeling system to translate technical data into public\naccountability. They also suggested frameworks for strategic\ninterdependence to balance local resilience with global coop-\neration, and epistemic redistribution initiatives to lower bar-\nriers of entry and democratize access to hardware infrastruc-\nture. We argue that considerations of AI ethics must extend\nbeyond models and data to encompass the hardware infras-\ntructures on which they depend, and that embedding stake-\nholder reflection is critical for anticipatory governance in the\nphysical infrastructure of AI.\nExtended version — https://arxiv.org/abs/2608.07830\n1\nIntroduction\nSemiconductors are crucial components of electronic de-",
+            "metadata": {
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_index": 2,
+              "document_id": "openalex:W7221471520",
+              "chunk_id": "openalex:W7221471520:2",
+              "source_type": "paper_pdf",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 1
+            },
+            "distance": 0.33287906646728516
+          },
+          {
+            "chunk_id": "openalex:W7221471520:28",
+            "text": "conductor infrastructures, as well as the topic itself, remain\nlargely absent from venues such as FAccT, CHI, CSCW, and\nAIES, despite semiconductors forming the physical infras-\ntructure underlying contemporary AI systems. This repre-\nsents a significant gap, as AI ethics research often focuses\nprimarily on downstream algorithmic systems while over-\nlooking the upstream material infrastructures, labor condi-\ntions, environmental externalities, and geopolitical depen-\ndencies that make AI possible.\nBuilding on this foundation, we organized a two-day, in-\nperson participatory workshop that convened experts from\nacademia, industry, and policy. Together, participants iden-\ntified key challenges and risks in the semiconductor sup-\nply chain, co-developed actionable recommendations, envi-\nsioned ideal future scenarios, and proposed concrete mea-\nsures to address systemic vulnerabilities.\n3\nMethodology\n3.1\nWorkshop Contextualization and Structure\nRecognizing\nthe\nimportance\nof\nparticipatory",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 4,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:28",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 28
+            },
+            "distance": 0.34002864360809326
+          }
+        ],
+        "expected_document_hit": true,
+        "metrics": {
+          "metrics_available": true,
+          "precision_at_k": 0.8,
+          "recall_at_k": 1.0,
+          "reciprocal_rank": 1.0,
+          "relevant_chunk_count": 4,
+          "retrieved_relevant_count": 4,
+          "relevance_by_id": {
+            "openalex:W7221471520:2": 2,
+            "openalex:W7221471520:12": 2,
+            "openalex:W7221471520:28": 1,
+            "openalex:W7221471520:76": 2
+          }
+        }
+      },
+      "context": {
+        "total_chars": 5229,
+        "max_context_chars": 6000,
+        "total_chunks": 5,
+        "input_chunks": 5,
+        "duplicates_removed": 0,
+        "truncated": false,
+        "source_traceability": true,
+        "chunks": [
+          {
+            "chunk_id": "openalex:W7221471520:0",
+            "text": "Hardware Is an AI Ethics Problem:\nExpert Visions for a Sustainable and Equitable Semiconductor Industry\nNaira Paola Arnez Jordan1, Chiara Ullstein2, Michel Hohendanner2, Jens Grossklags2, Lorenzo\nServadei3, Alejandro Merino-Madrid4, Orestis Papakyriakopoulos1\n1Professorship of Societal Computing, Technical University of Munich, Germany\n2Professorship of Cyber Trust & MDSI, Technical University of Munich, Germany\n3Sony AI\n4International Olympic Committee*\nnaira.arnez@tum.de, chiara.ullstein@tum.de, michel.hohendanner@tum.de, jens.grossklags@in.tum.de,\nLorenzo.Servadei@sony.com, a.merinomadrid@gmail.com, orestis.p@tum.de\nAbstract\nAs the foundation of contemporary AI systems, the semi-\nconductor industry is increasingly shaped by critical so-\ncial, environmental, and geopolitical challenges. Nonethe-\nless, prior research has often examined these issues in iso-\nlation and within disciplinary silos, leaving a gap in under-\nstanding them through an integrative socio-technical, cross-",
+            "metadata": {
+              "chunk_id": "openalex:W7221471520:0",
+              "source_type": "paper_pdf",
+              "chunk_index": 0,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 1,
+              "document_id": "openalex:W7221471520"
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:2",
+            "text": "harms; and a growing knowledge divide that risks excluding\nsmaller economies from shaping the AI future. Participants\nenvisioned futures centered on interdependence and inclu-\nsive access, proposing measures such as a standardized emis-\nsions labeling system to translate technical data into public\naccountability. They also suggested frameworks for strategic\ninterdependence to balance local resilience with global coop-\neration, and epistemic redistribution initiatives to lower bar-\nriers of entry and democratize access to hardware infrastruc-\nture. We argue that considerations of AI ethics must extend\nbeyond models and data to encompass the hardware infras-\ntructures on which they depend, and that embedding stake-\nholder reflection is critical for anticipatory governance in the\nphysical infrastructure of AI.\nExtended version — https://arxiv.org/abs/2608.07830\n1\nIntroduction\nSemiconductors are crucial components of electronic de-",
+            "metadata": {
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_index": 2,
+              "document_id": "openalex:W7221471520",
+              "chunk_id": "openalex:W7221471520:2",
+              "source_type": "paper_pdf",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 1
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:12",
+            "text": "nance, technological, and social shifts required to bridge\nthe gap between current frictions and these ideal futures.\n5. Semiconductor governance as a first-order concern of\nAI ethics. We highlight the semiconductor supply chain\nas a critical yet often overlooked layer of AI ethics, show-\ning that questions of fairness, sustainability, and global\naccess in AI systems are already being determined at the\nlevel of chip fabrication, supply chain opacity, and export\ncontrols, long before a model is trained or deployed. By\nconnecting algorithmic concerns to material infrastruc-\ntures, we offer actionable insights for stakeholders, from\ngovernments to civil society, and call on the AI ethics\ncommunities to extend their lens upstream, treating hard-\nware governance not as background infrastructure but as\na foundational site of ethical inquiry.\nTogether, these contributions show how participatory\nmethods can transform fragmented debates about semicon-",
+            "metadata": {
+              "document_id": "openalex:W7221471520",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "page_number": 2,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:12",
+              "source_type": "paper_pdf",
+              "chunk_index": 12
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:28",
+            "text": "conductor infrastructures, as well as the topic itself, remain\nlargely absent from venues such as FAccT, CHI, CSCW, and\nAIES, despite semiconductors forming the physical infras-\ntructure underlying contemporary AI systems. This repre-\nsents a significant gap, as AI ethics research often focuses\nprimarily on downstream algorithmic systems while over-\nlooking the upstream material infrastructures, labor condi-\ntions, environmental externalities, and geopolitical depen-\ndencies that make AI possible.\nBuilding on this foundation, we organized a two-day, in-\nperson participatory workshop that convened experts from\nacademia, industry, and policy. Together, participants iden-\ntified key challenges and risks in the semiconductor sup-\nply chain, co-developed actionable recommendations, envi-\nsioned ideal future scenarios, and proposed concrete mea-\nsures to address systemic vulnerabilities.\n3\nMethodology\n3.1\nWorkshop Contextualization and Structure\nRecognizing\nthe\nimportance\nof\nparticipatory",
+            "metadata": {
+              "source_type": "paper_pdf",
+              "page_number": 4,
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "chunk_id": "openalex:W7221471520:28",
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 28
+            },
+            "truncated": false
+          },
+          {
+            "chunk_id": "openalex:W7221471520:76",
+            "text": "cal competitiveness, almost always considering them within\nseparate disciplinary silos. Our findings emphasize the im-\nportance of inclusive, multi-stakeholder dialogue in shap-\ning the governance structures of this deeply infrastructural-\ntechnological domain. Participants stressed the urgency of\naddressing transparency gaps, knowledge asymmetries, and\nthe unequal distribution of both the benefits and burdens of\nsemiconductor production across the globe.\nBeyond documenting these challenges, this paper makes\na broader claim about what AI ethics needs to pay atten-\ntion to. AI ethics has largely confined its attention to the\nsoftware layer: model behavior, dataset practices, and algo-\nrithmic outputs. Yet, we argue that semiconductors and the\nhardware layer are not only the physical foundation of AI\nsystems; they are also a foundational layer of AI ethics. The\nethical implications of AI systems are not only instantiated\nin the training data selected or the outputs deployed; they are",
+            "metadata": {
+              "document_id": "openalex:W7221471520",
+              "chunk_index": 76,
+              "source": "https://ojs.aaai.org/index.php/AIES/article/view/43137",
+              "chunk_id": "openalex:W7221471520:76",
+              "title": "Hardware Is an AI Ethics Problem: Expert Visions for a Sustainable and Equitable Semiconductor Industry",
+              "page_number": 10,
+              "source_type": "paper_pdf"
+            },
+            "truncated": false
+          }
+        ]
+      }
+    }
+  ]
+}

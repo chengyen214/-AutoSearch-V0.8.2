@@ -1,0 +1,27 @@
+{
+  "document_id": "openalex:W7221558939",
+  "paper_title": "g-C₃N₄-based smart nanocatalysts for photocatalytic cancer therapy",
+  "round": 6,
+  "questions": [
+    {
+      "id": "Q26",
+      "question": "How do different g-C₃N₄-based nanocatalysts differ in material composition, structural design, and photocatalytic mechanisms, and what evidence does the paper provide for comparison?"
+    },
+    {
+      "id": "Q27",
+      "question": "What experimental evidence is discussed to evaluate the photocatalytic performance and anticancer effects of g-C₃N₄-based nanocatalysts, and what conclusions can each type of evidence support?"
+    },
+    {
+      "id": "Q28",
+      "question": "How do illumination conditions, material properties, and reactive oxygen species generation affect the therapeutic efficacy of g-C₃N₄-based nanocatalysts against cancer cells, and what evidence supports these relationships?"
+    },
+    {
+      "id": "Q29",
+      "question": "What are the potential advantages and limitations of g-C₃N₄-based smart nanocatalysts regarding biocompatibility, selectivity, therapeutic safety, and clinical translation?"
+    },
+    {
+      "id": "Q30",
+      "question": "What technical challenges and research gaps remain in g-C₃N₄-based photocatalytic cancer therapy, and what future research directions are discussed in the paper?"
+    }
+  ]
+}
